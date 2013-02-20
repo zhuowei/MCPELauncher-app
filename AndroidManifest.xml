@@ -28,5 +28,6 @@
         <activity android:name="com.ipaulpro.afilechooser.FileChooserActivity"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.NerdyStuffActivity"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.ManagePatchesActivity"/>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.AboutAppActivity"/>
     </application>
 </manifest> 
