@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="net.zhuoweizhang.mcpelauncher"
-      android:versionCode="2"
-      android:versionName="1.0.1">
+      android:versionCode="3"
+      android:versionName="1.0.2">
     <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="9"/>
     <uses-permission
         android:name="android.permission.INTERNET"/>
@@ -29,5 +29,26 @@
         <activity android:name="net.zhuoweizhang.mcpelauncher.NerdyStuffActivity"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.ManagePatchesActivity"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.AboutAppActivity"/>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ImportPatchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.mod" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="net.zhuoweizhang.mcpelauncher.AddonInstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest> 
