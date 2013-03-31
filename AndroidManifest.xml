@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="net.zhuoweizhang.mcpelauncher"
-      android:versionCode="3"
-      android:versionName="1.0.2">
-    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="9"/>
+      android:versionCode="5"
+      android:versionName="1.0.4">
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="17"/>
     <uses-permission
         android:name="android.permission.INTERNET"/>
     <uses-permission
@@ -39,6 +39,7 @@
                 <data android:pathPattern=".*\\.mod" />
             </intent-filter>
         </activity>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.NoMinecraftActivity" android:process=":CrashHandler" android:stateNotNeeded="true" android:exported="false"/>
 
         <receiver
             android:name="net.zhuoweizhang.mcpelauncher.AddonInstallReceiver">
