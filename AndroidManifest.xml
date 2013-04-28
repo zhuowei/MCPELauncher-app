@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="net.zhuoweizhang.mcpelauncher"
-      android:versionCode="5"
-      android:versionName="1.0.4">
-    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="17"/>
+      android:versionCode="8"
+      android:versionName="1.0.7">
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="15"/>
     <uses-permission
         android:name="android.permission.INTERNET"/>
     <uses-permission
@@ -37,9 +37,20 @@
                 <data android:mimeType="*/*" />
                 <data android:host="*" />
                 <data android:pathPattern=".*\\.mod" />
+                <data android:pathPattern=".*\\..*\\.mod" />
+                <data android:pathPattern=".*\\..*\\..*\\.mod" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.mod" />
             </intent-filter>
         </activity>
         <activity android:name="net.zhuoweizhang.mcpelauncher.NoMinecraftActivity" android:process=":CrashHandler" android:stateNotNeeded="true" android:exported="false"/>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ImportSkinActivity">
+            <intent-filter>
+                <action android:name="net.zhuoweizhang.mcpelauncher.action.SET_SKIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/png" />
+            </intent-filter>
+        </activity>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ManageAddonsActivity"/>
 
         <receiver
             android:name="net.zhuoweizhang.mcpelauncher.AddonInstallReceiver">
