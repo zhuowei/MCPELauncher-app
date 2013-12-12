@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="net.zhuoweizhang.mcpelauncher"
-      android:versionCode="42"
-      android:versionName="1.5.ultimate_answer_to_life_the_universe_and_everything">
+      android:versionCode="43"
+      android:versionName="1.6">
 
     <permission android:name="net.zhuoweizhang.mcpelauncher.ADDON"
         android:label="@string/permlab_mcpelauncher_addon"
