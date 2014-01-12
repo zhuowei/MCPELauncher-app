@@ -63,12 +63,27 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\.mod" />
             </intent-filter>
         </activity>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportPatchActivity" >
+            <intent-filter>
+                <action android:name="net.zhuoweizhang.mcpelauncher.action.IMPORT_PATCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:mimeType="*/*" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.mod" />
+                <data android:pathPattern=".*\\..*\\.mod" />
+                <data android:pathPattern=".*\\..*\\..*\\.mod" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.mod" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="net.zhuoweizhang.mcpelauncher.NoMinecraftActivity"
             android:exported="false"
             android:process=":CrashHandler"
             android:stateNotNeeded="true" />
-        <activity android:name="net.zhuoweizhang.mcpelauncher.ImportSkinActivity" >
+        <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportSkinActivity" >
             <intent-filter>
                 <action android:name="net.zhuoweizhang.mcpelauncher.action.SET_SKIN" />
 
@@ -77,7 +92,7 @@
                 <data android:mimeType="image/png" />
             </intent-filter>
         </activity>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.ImportTexturepackActivity" >
+        <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportTexturepackActivity" >
             <intent-filter>
                 <action android:name="net.zhuoweizhang.mcpelauncher.action.SET_TEXTUREPACK" />
 
@@ -87,7 +102,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="net.zhuoweizhang.mcpelauncher.ImportScriptActivity"
+            android:name="net.zhuoweizhang.mcpelauncher.api.ImportScriptActivity"
             android:label="@string/pref_zz_manage_scripts" >
             <intent-filter>
                 <action android:name="net.zhuoweizhang.mcpelauncher.action.IMPORT_SCRIPT" />
@@ -132,7 +147,7 @@
             android:value="true" />
         <!--
         <meta-data android:name="com.sec.minimode.icon.portrait.normal" android:resource="@drawable/ic_launcher" />
-        <meta-data android:name="com.sec.minimode.icon.landscape.normal" android:resource="@drawable/ic_launcher" />
+        <meta-data android:name="com.sec.minimode.icon.landscape.normal" android:resource="@drawable/ic_launcher" />
         -->
 
     </application>
