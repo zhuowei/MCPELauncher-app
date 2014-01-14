@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="net.zhuoweizhang.mcpelauncher"
-      android:versionCode="43"
-      android:versionName="1.6">
+      android:versionCode="47"
+      android:versionName="1.6.4">
 
     <permission android:name="net.zhuoweizhang.mcpelauncher.ADDON"
         android:label="@string/permlab_mcpelauncher_addon"
         android:description="@string/permdesc_mcpelauncher_addon"
         android:protectionLevel="dangerous" />
 
-    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="15"/>
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19"/>
     <uses-permission
         android:name="android.permission.INTERNET"/>
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission
         android:name="android.permission.VIBRATE"/>
+    <uses-permission
+        android:name="android.permission.ACCESS_SUPERUSER" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:largeHeap="true">
         <activity android:name="net.zhuoweizhang.mcpelauncher.LauncherAppActivity"
@@ -38,9 +40,10 @@
         <activity android:name="net.zhuoweizhang.mcpelauncher.NerdyStuffActivity"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.ManagePatchesActivity"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.AboutAppActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.ImportPatchActivity">
+        <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportPatchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+                <action android:name="net.zhuoweizhang.mcpelauncher.action.IMPORT_PATCH" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:scheme="file" />
                 <data android:mimeType="*/*" />
@@ -51,21 +54,38 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\.mod" />
             </intent-filter>
         </activity>
+        <activity-alias android:name="net.zhuoweizhang.mcpelauncher.ImportPatchActivity" android:exported="true"
+            android:targetActivity="net.zhuoweizhang.mcpelauncher.api.ImportPatchActivity"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.NoMinecraftActivity" android:process=":CrashHandler" android:stateNotNeeded="true" android:exported="false"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.ImportSkinActivity">
+        <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportSkinActivity">
             <intent-filter>
                 <action android:name="net.zhuoweizhang.mcpelauncher.action.SET_SKIN" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="image/png" />
             </intent-filter>
         </activity>
+        <activity-alias android:name="net.zhuoweizhang.mcpelauncher.ImportSkinActivity" android:exported="true"
+            android:targetActivity="net.zhuoweizhang.mcpelauncher.api.ImportSkinActivity"/>
+
+        <activity
+            android:name="net.zhuoweizhang.mcpelauncher.api.ImportScriptActivity"
+            android:label="@string/pref_zz_manage_scripts" >
+            <intent-filter>
+                <action android:name="net.zhuoweizhang.mcpelauncher.action.IMPORT_SCRIPT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+
         <activity android:name="net.zhuoweizhang.mcpelauncher.ManageAddonsActivity"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.ManageScriptsActivity" android:label="@string/pref_zz_manage_scripts">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="net.zhuoweizhang.mcpelauncher.action.IMPORT_SCRIPT" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="*/*" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
 
         <activity android:name="com.google.ads.AdActivity"
