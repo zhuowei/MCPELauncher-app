@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="net.zhuoweizhang.mcpelauncher"
-      android:versionCode="47"
-      android:versionName="1.6.4">
+      android:versionCode="51"
+      android:versionName="1.6.8">
 
     <permission android:name="net.zhuoweizhang.mcpelauncher.ADDON"
         android:label="@string/permlab_mcpelauncher_addon"
@@ -66,6 +66,16 @@
         </activity>
         <activity-alias android:name="net.zhuoweizhang.mcpelauncher.ImportSkinActivity" android:exported="true"
             android:targetActivity="net.zhuoweizhang.mcpelauncher.api.ImportSkinActivity"/>
+
+        <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportTexturepackActivity" >
+            <intent-filter>
+                <action android:name="net.zhuoweizhang.mcpelauncher.action.SET_TEXTUREPACK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name="net.zhuoweizhang.mcpelauncher.api.ImportScriptActivity"
