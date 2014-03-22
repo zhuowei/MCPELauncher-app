@@ -1,10 +1,12 @@
-package net.zhuoweizhang.mcpelauncher;
+package net.zhuoweizhang.mcpelauncher.ui;
 
 import android.os.*;
 import android.view.*;
 import android.widget.*;
 
 import com.google.ads.*;
+
+import net.zhuoweizhang.mcpelauncher.ui.*;
 
 public class MainMenuOptionsAppActivity extends MainMenuOptionsActivity {
 

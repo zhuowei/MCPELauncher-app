@@ -33,13 +33,13 @@
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.MainMenuOptionsAppActivity"/>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.MainMenuOptionsAppActivity"/>
 
         <!-- aFileChooser -->
         <activity android:name="com.ipaulpro.afilechooser.FileChooserActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.NerdyStuffActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.ManagePatchesActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.AboutAppActivity"/>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.NerdyStuffActivity"/>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManagePatchesActivity"/>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.AboutAppActivity"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportPatchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -54,9 +54,7 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\.mod" />
             </intent-filter>
         </activity>
-        <activity-alias android:name="net.zhuoweizhang.mcpelauncher.ImportPatchActivity" android:exported="true"
-            android:targetActivity="net.zhuoweizhang.mcpelauncher.api.ImportPatchActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.NoMinecraftActivity" android:process=":CrashHandler" android:stateNotNeeded="true" android:exported="false"/>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.NoMinecraftActivity" android:process=":CrashHandler" android:stateNotNeeded="true" android:exported="false"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportSkinActivity">
             <intent-filter>
                 <action android:name="net.zhuoweizhang.mcpelauncher.action.SET_SKIN" />
@@ -64,8 +62,6 @@
                 <data android:mimeType="image/png" />
             </intent-filter>
         </activity>
-        <activity-alias android:name="net.zhuoweizhang.mcpelauncher.ImportSkinActivity" android:exported="true"
-            android:targetActivity="net.zhuoweizhang.mcpelauncher.api.ImportSkinActivity"/>
 
         <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportTexturepackActivity" >
             <intent-filter>
@@ -89,14 +85,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="net.zhuoweizhang.mcpelauncher.ManageAddonsActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.ManageScriptsActivity" android:label="@string/pref_zz_manage_scripts">
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManageAddonsActivity"/>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManageScriptsActivity" android:label="@string/pref_zz_manage_scripts">
             <!--<intent-filter>
                 <action android:name="net.zhuoweizhang.mcpelauncher.action.IMPORT_SCRIPT" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="*/*" />
             </intent-filter>-->
         </activity>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManageTexturepacksActivity"/>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManageSkinsActivity"/>
 
         <activity android:name="com.google.ads.AdActivity"
               android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
