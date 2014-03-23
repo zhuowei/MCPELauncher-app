@@ -134,7 +134,7 @@
         <activity
             android:name="com.google.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-        
+
         <!-- Samsung's multiwindow metadata -->
         <meta-data
             android:name="com.sec.android.support.multiwindow"
