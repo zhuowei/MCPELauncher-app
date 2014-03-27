@@ -1,50 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="net.zhuoweizhang.mcpelauncher"
-      android:versionCode="51"
-      android:versionName="1.6.8">
+    package="net.zhuoweizhang.mcpelauncher"
+    android:versionCode="51"
+    android:versionName="1.6.8" >
 
-    <permission android:name="net.zhuoweizhang.mcpelauncher.ADDON"
-        android:label="@string/permlab_mcpelauncher_addon"
+    <permission
+        android:name="net.zhuoweizhang.mcpelauncher.ADDON"
         android:description="@string/permdesc_mcpelauncher_addon"
+        android:label="@string/permlab_mcpelauncher_addon"
         android:protectionLevel="dangerous" />
 
-    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19"/>
-    <uses-permission
-        android:name="android.permission.INTERNET"/>
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission
-        android:name="android.permission.VIBRATE"/>
-    <uses-permission
-        android:name="android.permission.ACCESS_SUPERUSER" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:largeHeap="true">
-        <activity android:name="net.zhuoweizhang.mcpelauncher.LauncherAppActivity"
-                  android:configChanges="orientation|keyboardHidden"
-                  android:screenOrientation="sensorLandscape"
-                  android:theme="@style/FullscreenTheme">
-            <meta-data android:name="android.app.lib_name"
-                  android:value="minecraftpe"/>
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="net.zhuoweizhang.mcpelauncher.BlockLauncher"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true" >
+        <activity
+            android:name="net.zhuoweizhang.mcpelauncher.LauncherAppActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/FullscreenTheme" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="minecraftpe" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
                 <!-- Samsung's multiwindow intent -->
-                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.MainMenuOptionsAppActivity"/>
-
-        <!-- aFileChooser -->
-        <activity android:name="com.ipaulpro.afilechooser.FileChooserActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.NerdyStuffActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.ManagePatchesActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.AboutAppActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportPatchActivity">
+        <activity android:name="net.zhuoweizhang.mcpelauncher.MainMenuOptionsAppActivity" />
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.NerdyStuffActivity" />
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManagePatchesActivity" />
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.AboutAppActivity" />
+        <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportPatchActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="net.zhuoweizhang.mcpelauncher.action.IMPORT_PATCH" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:scheme="file" />
                 <data android:mimeType="*/*" />
                 <data android:host="*" />
@@ -54,18 +63,31 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\.mod" />
             </intent-filter>
         </activity>
-        <activity-alias android:name="net.zhuoweizhang.mcpelauncher.ImportPatchActivity" android:exported="true"
-            android:targetActivity="net.zhuoweizhang.mcpelauncher.api.ImportPatchActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.NoMinecraftActivity" android:process=":CrashHandler" android:stateNotNeeded="true" android:exported="false"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportSkinActivity">
+
+        <activity-alias
+            android:name="net.zhuoweizhang.mcpelauncher.ImportPatchActivity"
+            android:exported="true"
+            android:targetActivity="net.zhuoweizhang.mcpelauncher.api.ImportPatchActivity" />
+
+        <activity
+            android:name="net.zhuoweizhang.mcpelauncher.ui.NoMinecraftActivity"
+            android:exported="false"
+            android:process=":CrashHandler"
+            android:stateNotNeeded="true" />
+        <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportSkinActivity" >
             <intent-filter>
                 <action android:name="net.zhuoweizhang.mcpelauncher.action.SET_SKIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/png" />
             </intent-filter>
         </activity>
-        <activity-alias android:name="net.zhuoweizhang.mcpelauncher.ImportSkinActivity" android:exported="true"
-            android:targetActivity="net.zhuoweizhang.mcpelauncher.api.ImportSkinActivity"/>
+
+        <activity-alias
+            android:name="net.zhuoweizhang.mcpelauncher.ImportSkinActivity"
+            android:exported="true"
+            android:targetActivity="net.zhuoweizhang.mcpelauncher.api.ImportSkinActivity" />
 
         <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportTexturepackActivity" >
             <intent-filter>
@@ -76,7 +98,6 @@
                 <data android:mimeType="*/*" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="net.zhuoweizhang.mcpelauncher.api.ImportScriptActivity"
             android:label="@string/pref_zz_manage_scripts" >
@@ -88,35 +109,41 @@
                 <data android:mimeType="*/*" />
             </intent-filter>
         </activity>
-
-        <activity android:name="net.zhuoweizhang.mcpelauncher.ManageAddonsActivity"/>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.ManageScriptsActivity" android:label="@string/pref_zz_manage_scripts">
-            <!--<intent-filter>
-                <action android:name="net.zhuoweizhang.mcpelauncher.action.IMPORT_SCRIPT" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="*/*" />
-            </intent-filter>-->
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManageAddonsActivity" />
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManageTexturepacksActivity" />
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManageSkinsActivity" />
+        <activity
+            android:name="net.zhuoweizhang.mcpelauncher.ui.ManageScriptsActivity"
+            android:label="@string/pref_zz_manage_scripts" >
         </activity>
 
-        <activity android:name="com.google.ads.AdActivity"
-              android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
-
-        <receiver
-            android:name="net.zhuoweizhang.mcpelauncher.AddonInstallReceiver">
+        <receiver android:name="net.zhuoweizhang.mcpelauncher.AddonInstallReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
+
                 <data android:scheme="package" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>
 
+        <activity android:name="com.ipaulpro.afilechooser.FileChooserActivity" />
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
         <!-- Samsung's multiwindow metadata -->
-        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true"/>
-        <!--<meta-data android:name="com.sec.minimode.icon.portrait.normal" android:resource="@drawable/ic_launcher" />
-        <meta-data android:name="com.sec.minimode.icon.landscape.normal" android:resource="@drawable/ic_launcher" />-->
+        <meta-data
+            android:name="com.sec.android.support.multiwindow"
+            android:value="true" />
+        <!--
+        <meta-data android:name="com.sec.minimode.icon.portrait.normal" android:resource="@drawable/ic_launcher" />
+        <meta-data android:name="com.sec.minimode.icon.landscape.normal" android:resource="@drawable/ic_launcher" />
+        -->
 
     </application>
-</manifest> 
+
+</manifest>
