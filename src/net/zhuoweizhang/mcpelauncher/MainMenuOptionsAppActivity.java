@@ -6,6 +6,8 @@ import android.widget.*;
 
 import com.google.ads.*;
 
+import net.zhuoweizhang.mcpelauncher.ui.*;
+
 public class MainMenuOptionsAppActivity extends MainMenuOptionsActivity {
 
 	public void onCreate(Bundle icicle) {

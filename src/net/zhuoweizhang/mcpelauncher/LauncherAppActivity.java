@@ -7,6 +7,8 @@ import android.view.*;
 import android.widget.*;
 import com.google.ads.*;
 
+import net.zhuoweizhang.mcpelauncher.ui.LauncherActivity;
+
 public class LauncherAppActivity extends LauncherActivity implements AdListener {
 
 	private InterstitialAd interstitial;
