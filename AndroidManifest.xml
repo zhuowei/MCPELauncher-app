@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.zhuoweizhang.mcpelauncher"
-    android:versionCode="52"
-    android:versionName="1.6.9" >
+    android:versionCode="53"
+    android:versionName="1.6.9 3/4"
+    android:installLocation="auto">
 
     <permission
         android:name="net.zhuoweizhang.mcpelauncher.ADDON"
