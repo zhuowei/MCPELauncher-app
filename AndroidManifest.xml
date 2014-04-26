@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.zhuoweizhang.mcpelauncher"
-    android:versionCode="53"
-    android:versionName="1.6.9 3/4"
+    android:versionCode="54"
+    android:versionName="1.6.10"
     android:installLocation="auto">
 
     <permission
@@ -108,6 +108,17 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:mimeType="*/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file" />
+                <data android:mimeType="*/*" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.js" />
+                <data android:pathPattern=".*\\..*\\.js" />
+                <data android:pathPattern=".*\\..*\\..*\\.js" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.js" />
             </intent-filter>
         </activity>
         <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManageAddonsActivity" />
