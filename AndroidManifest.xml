@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.zhuoweizhang.mcpelauncher"
-    android:versionCode="55"
-    android:versionName="1.7"
+    android:versionCode="59"
+    android:versionName="1.7.4"
     android:installLocation="auto">
 
     <permission
@@ -44,9 +44,13 @@
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="net.zhuoweizhang.mcpelauncher.MainMenuOptionsAppActivity" />
+        <activity android:name="net.zhuoweizhang.mcpelauncher.MainMenuOptionsAppActivity"/>
+        <activity-alias android:name="net.zhuoweizhang.mcpelauncher.ui.MainMenuOptionsActivity"
+            android:targetActivity="net.zhuoweizhang.mcpelauncher.MainMenuOptionsAppActivity"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.ui.NerdyStuffActivity" />
-        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManagePatchesActivity" />
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ManagePatchesAppActivity" />
+        <activity-alias android:name="net.zhuoweizhang.mcpelauncher.ui.ManagePatchesActivity"
+            android:targetActivity="net.zhuoweizhang.mcpelauncher.ManagePatchesAppActivity"/>
         <activity android:name="net.zhuoweizhang.mcpelauncher.ui.AboutAppActivity" />
         <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportPatchActivity" >
             <intent-filter>
@@ -125,9 +129,11 @@
         <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManageTexturepacksActivity" />
         <activity android:name="net.zhuoweizhang.mcpelauncher.ui.ManageSkinsActivity" />
         <activity
-            android:name="net.zhuoweizhang.mcpelauncher.ui.ManageScriptsActivity"
+            android:name="net.zhuoweizhang.mcpelauncher.ManageScriptsAppActivity"
             android:label="@string/pref_zz_manage_scripts" >
         </activity>
+        <activity-alias android:name="net.zhuoweizhang.mcpelauncher.ui.ManageScriptsActivity"
+            android:targetActivity="net.zhuoweizhang.mcpelauncher.ManageScriptsAppActivity"/>
 
         <receiver android:name="net.zhuoweizhang.mcpelauncher.AddonInstallReceiver" >
             <intent-filter>
@@ -144,8 +150,12 @@
 
         <activity android:name="com.ipaulpro.afilechooser.FileChooserActivity" />
         <activity
-            android:name="com.google.ads.AdActivity"
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:theme="@android:style/Theme.Translucent"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
 
         <!-- Samsung's multiwindow metadata -->
         <meta-data

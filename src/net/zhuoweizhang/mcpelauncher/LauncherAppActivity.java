@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.view.*;
 import android.widget.*;
-import com.google.ads.*;
+import com.google.android.gms.ads.*;
 
 import net.zhuoweizhang.mcpelauncher.ui.LauncherActivity;
 
-public class LauncherAppActivity extends LauncherActivity implements AdListener {
+public class LauncherAppActivity extends LauncherActivity {
 
 	private InterstitialAd interstitial;
 	private boolean needsShowAd = false;
@@ -20,10 +20,10 @@ public class LauncherAppActivity extends LauncherActivity implements AdListener 
 		loadInterstitialAdvertisement();
 	}
 
-	@Override
+	/*@Override
 	protected Intent getOptionsActivityIntent() {
 		return new Intent(this, MainMenuOptionsAppActivity.class);
-	}
+	}*/
 
 	@Override
 	public void onPrepareDialog(int dialogId, Dialog dialog) {
@@ -43,12 +43,16 @@ public class LauncherAppActivity extends LauncherActivity implements AdListener 
 
 		AdView adView = (AdView) view.findViewById(0xbeefbeef);
 		if (adView == null) {
-			adView = new AdView(this, AdSize.BANNER, "a151b8f9c5d33b5");
+			adView = new AdView(this);
+			adView.setAdSize(AdSize.BANNER);
+			adView.setAdUnitId(AdConfiguration.AD_UNIT_ID);
 			adView.setId(0xbeefbeef);
 			view.addView(adView);
 		}
-		AdRequest adRequest = new AdRequest();
-		adRequest.addTestDevice("DF28838C26BDFAE7EB063BFEB7A241D3");
+		AdRequest adRequest = new AdRequest.Builder()
+			.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+			.addTestDevice(AdConfiguration.DEVICE_ID_TESTER)
+			.build();
 		adView.loadAd(adRequest);
 	}
 
@@ -62,60 +66,30 @@ public class LauncherAppActivity extends LauncherActivity implements AdListener 
 	}
 
 	protected void loadInterstitialAdvertisement() {
-		if (interstitial == null) {
-			interstitial = new InterstitialAd(this, "a151b8f9c5d33b5");
-			interstitial.setAdListener(this);
-		}
-		AdRequest adRequest = new AdRequest();
-		adRequest.addTestDevice("DF28838C26BDFAE7EB063BFEB7A241D3");
+		interstitial = new InterstitialAd(this);
+		interstitial.setAdUnitId(AdConfiguration.AD_UNIT_ID);
+		interstitial.setAdListener(new AdListener() {
+			public void onAdLoaded() {
+				System.out.println("Ad loaded!");
+				if (needsShowAd) {
+					showAdvertisement();
+				}
+			}
+		});
+		AdRequest adRequest = new AdRequest.Builder()
+			.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+			.addTestDevice("DF28838C26BDFAE7EB063BFEB7A241D3")
+			.build();
 		interstitial.loadAd(adRequest);
 	}
 
 	public void showAdvertisement() {
-		if (interstitial.isReady()) {
+		if (interstitial.isLoaded()) {
+			needsShowAd = false;
 			interstitial.show();
 			loadInterstitialAdvertisement();
-			needsShowAd = false;
 		} else {
 			needsShowAd = true;
-		}
-	}
-
-	/** Called when an ad is clicked and about to return to the application. */
-	@Override
-	public void onDismissScreen(Ad ad) {
-
-	}
-
-	/** Called when an ad was not received. */
-	@Override
-	public void onFailedToReceiveAd(Ad ad, AdRequest.ErrorCode error) {
-	}
-
-	/**
-	 * Called when an ad is clicked and going to start a new Activity that will
-	 * leave the application (e.g. breaking out to the Browser or Maps
-	 * application).
-	 */
-	@Override
-	public void onLeaveApplication(Ad ad) {
-	}
-
-	/**
-	 * Called when an Activity is created in front of the app (e.g. an
-	 * interstitial is shown, or an ad is clicked and launches a new Activity).
-	 */
-	@Override
-	public void onPresentScreen(Ad ad) {
-	}
-
-	/** Called when an ad is received. */
-	@Override
-	public void onReceiveAd(Ad ad) {
-		if (ad == interstitial && needsShowAd) {
-			interstitial.show();
-			loadInterstitialAdvertisement();
-			needsShowAd = false;
 		}
 	}
 }
