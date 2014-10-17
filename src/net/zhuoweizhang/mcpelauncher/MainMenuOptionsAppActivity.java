@@ -58,19 +58,19 @@ public class MainMenuOptionsAppActivity extends MainMenuOptionsActivity {
 
 	@Override
 	public void onPause() {
-		adView.pause();
+		if (adView != null) adView.pause();
 		super.onPause();
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
-		adView.resume();
+		if (adView != null) adView.resume();
 	}
 
 	@Override
 	public void onDestroy() {
-		adView.destroy();
+		if (adView != null) adView.destroy();
 		super.onDestroy();
 	}
 

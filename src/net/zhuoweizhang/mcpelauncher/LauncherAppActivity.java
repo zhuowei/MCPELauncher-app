@@ -67,7 +67,7 @@ public class LauncherAppActivity extends LauncherActivity {
 
 	protected void loadInterstitialAdvertisement() {
 		interstitial = new InterstitialAd(this);
-		interstitial.setAdUnitId(AdConfiguration.AD_UNIT_ID);
+		interstitial.setAdUnitId("ca-app-pub-2652482030334356/8558350222");
 		interstitial.setAdListener(new AdListener() {
 			public void onAdLoaded() {
 				System.out.println("Ad loaded!");
