@@ -1,0 +1,7 @@
+{
+	"clouds":{
+		"vertexShader" : "shaders/cloud.vertex",
+		"fragmentShader" : "shaders/color.fragment"
+	}
+}
+

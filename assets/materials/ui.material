@@ -1,0 +1,67 @@
+{
+	"ui_base":{
+		"states":[
+		        "DisableDepthTest",
+		        "Blending"
+		]
+	},
+
+	"ui_texture_and_color:ui_base": {
+
+		"vertexShader" : "shaders/color_uv.vertex",
+		"fragmentShader" : "shaders/color_texture.fragment"
+	},
+
+	"ui_text:ui_texture_and_color": {
+		"fragmentShader" : "shaders/text.fragment"
+	},
+
+	"ui_fill_color:ui_base": {
+
+		"vertexShader" : "shaders/position.vertex",
+		"fragmentShader" : "shaders/current_color.fragment"
+	},
+
+	"ui_fill_gradient:ui_base": {
+
+		"vertexShader" : "shaders/color.vertex",
+		"fragmentShader" : "shaders/color.fragment"
+	},
+
+	"ui_textured:ui_base": {
+
+		"vertexShader" : "shaders/uv.vertex",
+		"fragmentShader" : "shaders/texture.fragment"
+	},
+
+	"ui_textured_and_glcolor:ui_base": {
+
+		"vertexShader" : "shaders/uv.vertex",
+		"fragmentShader" : "shaders/texture_ccolor.fragment"
+	},
+
+	"ui_item:ui_base": {
+		"vertexShader" : "shaders/color_uv.vertex",
+		"fragmentShader" : "shaders/color_texture.fragment"
+	},
+
+	"ui_invert_overlay:ui_base": {
+
+		"blendSrc":"OneMinusDestColor",
+		"blendDst":"OneMinusSrcColor",
+
+		"vertexShader" : "shaders/position.vertex",
+		"fragmentShader" : "shaders/flat_white.fragment"
+	},
+
+	"ui_cubemap:ui_base": {
+
+		"vertexShader" : "shaders/uv.vertex",
+		"fragmentShader" : "shaders/texture.fragment"
+	},
+
+	"ui_crosshair:ui_invert_overlay":{
+		"vertexShader" : "shaders/uv.vertex",
+		"fragmentShader" : "shaders/texture.fragment"
+	}
+}

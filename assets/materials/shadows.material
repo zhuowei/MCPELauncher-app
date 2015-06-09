@@ -1,0 +1,35 @@
+{
+	"shadow_front": {
+		"states":[
+			"StencilWrite",
+			"DisableColorWrite", 
+			"DisableDepthWrite"
+		],
+
+		"vertexShader" : "shaders/position.vertex",
+		"fragmentShader" : "shaders/flat_white.fragment"
+	},
+
+	"shadow_back": {
+		 "states":[
+			"StencilWrite",
+			"DisableColorWrite", 
+			"DisableDepthWrite",
+			"InvertCulling"
+		],
+
+		"vertexShader" : "shaders/position.vertex",
+		"fragmentShader" : "shaders/flat_white.fragment"
+	},
+
+	"shadow_overlay" : {
+		"states": [
+			"DisableDepthTest",
+			"DisableCulling",
+			"Blending"
+		],
+
+		"vertexShader" : "shaders/color.vertex",
+		"fragmentShader" : "shaders/color_ex.fragment"
+	}
+}

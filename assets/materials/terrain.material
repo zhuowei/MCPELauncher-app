@@ -1,0 +1,36 @@
+{
+	"terrain_opaque": {
+		"vertexShader" : "shaders/renderchunk.vertex",
+		"fragmentShader" : "shaders/renderchunk.fragment",
+
+		"defines":["LOW_PRECISION"]
+	},
+	
+	"terrain_blend:terrain_opaque":{
+		"states":["Blending"],
+
+		"defines":["NEAR_WATER"]
+	},
+
+	"terrain_doubleside:terrain_opaque": {
+		"states": ["DisableCulling"]
+	},
+
+	"terrain_alpha_single_side:terrain_opaque": {
+		"defines":["ALPHA_TEST"]
+	},
+
+	"terrain_alpha:terrain_alpha_single_side": {
+		"states": ["DisableCulling"]
+	},
+	
+	"terrain_far:terrain_opaque": {
+		"defines" : [
+			"FOG",
+			"LOW_PRECISION"]
+	},
+
+	"terrain_fading_in:terrain_far": {
+		"defines" : ["ALLOW_FADE"]
+	}
+}

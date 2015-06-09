@@ -1,0 +1,264 @@
+﻿gui.ok=OK
+
+menu.play=Jogar
+menu.playOnRealms=Jogar no Realms
+
+playscreen.header.local=Jogar
+playscreen.header.realms=Realms
+playscreen.new=Novo
+playscreen.lastPlayed.today=Hoje
+playscreen.lastPlayed.yesterday=Ontem
+playscreen.lastPlayed.daysAgo=Há %1 dias
+playscreen.lastPlayed.weeksAgo=Há %1 semanas
+playscreen.lastPlayed.longAgo=Há muito tempo
+playscreen.remoteWorld=Mundo remoto em:
+
+createWorldScreen.gameMode.survival.desc=Recursos limitados, precisas de ferramentas. Podes magoar-te. Cuidado com os Monstros.
+createWorldScreen.gameMode.creative.desc=Destrói e coloca blocos facilmente. Sem danos, voar e outras coisas giras.
+createWorldScreen.gameMode.survival=Sobrevivência
+createWorldScreen.gameMode.creative=Criativo
+createWorldScreen.header.local=Criar um Mundo
+createWorldScreen.header.realms=Criar um Servidor Realms
+createWorldScreen.header.realmsReset=Reiniciar o teu Realm?
+createWorldScreen.header.editLocal=Edita o teu Mundo
+createWorldScreen.action.local=Cria um Mundo!
+createWorldScreen.action.realms=Cria um Mundo!
+createWorldScreen.action.realmsReset=Reinicia o Realm!
+createWorldScreen.action.editLocal=Tornar Infinito!
+createWorldScreen.advanced=Avançado
+createWorldScreen.delete=Apagar
+createWorldScreen.levelName=Nome
+createWorldScreen.levelSeed=Semear
+createWorldScreen.alwaysDay=Sempre Dia
+createWorldScreen.gameMode=Modo de Jogo
+createWorldScreen.worldType=Tipo de Mundo
+createWorldScreen.progress.local=A criar um novo mundo...
+createWorldScreen.progress.realms=A reiniciar o teu realm...
+
+generator.old=Antigo
+generator.infinite=Infinito
+generator.flat=Plano
+
+externalServerScreen.header=Adicionar Servidor Externo
+externalServerScreen.addServer=Adicionar Servidor
+externalServerScreen.serverName=Nome
+externalServerScreen.serverNameInput=Nome do Servidor
+externalServerScreen.serverAddress=Endereço IP
+externalServerScreen.serverAddressInput=IP ou Endereço do Servidor
+externalServerScreen.serverPort=Porta
+externalServerScreen.serverPortInput=Porta do Servidor
+externalServerScreen.label=Adicionar servidor por IP/Endereço.
+
+progressScreen.generating=A gerar o mundo
+progressScreen.cantConnect=Não foi possível ligar ao servidor. Tenta novamente.
+progressScreen.message.locating=A procurar o servidor
+progressScreen.message.building=A construir o terreno
+progressScreen.message.waitingForRealms=À espera da minecraftApp Realms
+progressScreen.message.done=Feito!
+
+disconnectionScreen.disconnected=Desligado do Servidor
+disconnectionScreen.noReason=Foste desligado
+disconnectionScreen.outdatedClient=Não foi possível ligar: Cliente desatualizado!
+disconnectionScreen.outdatedServer=Não foi possível ligar: Servidor desatualizado!
+disconnectionScreen.cantConnect=Não foi possível ligar ao mundo.
+disconnectionScreen.serverFull=Servidor cheio!
+disconnectionScreen.noWIFI=Para jogares em servidores externos deves ligar através de Wifi
+disconnectionScreen.invalidSkin=Skin inválida!
+
+worldError.corrupted=está danificado e não pode ser iniciado.
+worldError.notFound=não encontrado.
+worldError.IO=não pode ser aberto.
+worldError.notSupported=tem um formato não suportado.
+worldError.invalidArguments=foi criado com argumentos inválidos.
+worldError.unknown=tem um problema desconhecido.
+
+furnaceScreen.header=Fornalha
+furnaceScreen.input=Entrada
+furnaceScreen.fuel=Combustível
+furnaceScreen.result=Resultado
+
+chestScreen.header.large=Baú Grande
+chestScreen.header.small=Baú
+chestScreen.header.player=Inventário
+
+pauseScreen.back=Voltar ao jogo
+pauseScreen.quit=Sair para o início
+pauseScreen.options=Opções
+pauseScreen.header=Menu de Jogo
+
+chatScreen.hide=Ocultar
+
+crafting.cannotCreate=Não tens todos os ingredientes
+crafting.noRecipesInventory=Para fabricares precisas de apanhar blocos!
+crafting.noRecipesWorkbench=Para fabricares precisas de apanhar blocos!
+crafting.noRecipesStonecutter=Para fabricares precisas de materiais de pedra!
+
+deathScreen.quit=Menu
+deathScreen.message=Morreste!
+
+options.category.game=Jogo
+options.category.input=Controlos
+options.category.graphics=Gráficos
+options.category.audio=Som
+
+options.group.audio=Som
+options.group.game=Jogo
+options.group.realms=Convidado para o Realms Alpha?
+options.group.input=Controlos
+options.group.feedback=Comentários
+options.group.graphics=Gráficos
+options.group.graphics.experimental=Experimental
+
+options.languageWarning=As traduções para outros idiomas podem não estar 100% corretas
+options.sound=Volume do Som
+options.hidegui=Ocultar GUI
+options.graphics=Gráficos Bonitos
+options.guiScale=Tamanho do D-pad
+options.thirdperson=Vista na Terceira Pessoa
+options.servervisible=Multijogador em Servidor Local
+options.lefthanded=Canhoto
+options.usetouchscreen=Jogar com Ecrã Tátil
+options.usetouchpad=Controlos Divididos
+options.destroyvibration=Destruir Bloco (vibrar)
+options.fancyskies=Céus Lindos
+options.animatetextures=Água animada
+options.dpadscale=Tamanho do D-pad
+options.name=Nome
+options.worldsizelimit=Limitar Tamanho do Mundo
+options.invertYAxis=Inverter Eixo Y
+
+gui.login=Iniciar Sessão
+gui.logout=Encerrar Sessão
+
+action.hint.exit.minecart=Toca em saltar para saíres da vagoneta
+action.hint.exit.boat=Desacelera para saíres do barco
+
+action.interact.milk=Ordenhar
+action.interact.moostew=Ordenhar Guisado
+action.interact.mooshear=Tosquiar
+action.interact.shear=Tosquiar
+action.interact.feed=Alimentar
+action.interact.wolfcollar=Pintar
+action.interact.stand=De pé
+action.interact.sit=Sentar
+action.interact.tame=Domesticar
+action.interact.ride.minecart=Embarcar
+action.interact.ride.boat=Embarcar
+action.interact.exit.boat=Sair do barco
+action.interact.creeper=Acender
+action.interact.fishing=Pescar
+
+tile.stonecutter.name=Corta-pedra
+tile.netherreactor.name=Núcleo do Reator do Nether
+tile.netherreactor.wrongPattern=Não é o padrão correto!
+tile.netherreactor.active=Ativo!
+tile.netherreactor.playersTooFar=Todos os jogadores devem estar perto de um reator.
+tile.netherreactor.builtTooHigh=O reator do Nether deve ser construído mais abaixo.
+tile.netherreactor.builtTooLow=O reator do Nether deve ser construído mais acima.
+tile.beetroot.name=Beterraba
+
+item.beetrootSoup.name=Sopa de Beterraba
+item.beetroot.name=Beterraba
+item.seeds_beetroot.name=Sementes de Beterraba
+item.monsterPlacer.entity.Creeper.name=Gerar Creeper
+item.monsterPlacer.entity.Skeleton.name=Gerar Esqueleto
+item.monsterPlacer.entity.Spider.name=Gerar Aranha
+item.monsterPlacer.entity.Giant.name=Gerar Gigante
+item.monsterPlacer.entity.Zombie.name=Gerar Morto-Vivo
+item.monsterPlacer.entity.Slime.name=Gerar Slime
+item.monsterPlacer.entity.Ghast.name=Gerar Ghast
+item.monsterPlacer.entity.PigZombie.name=Gerar Homem-Porco Morto-Vivo
+item.monsterPlacer.entity.Enderman.name=Invocar Enderman
+item.monsterPlacer.entity.Silverfish.name=Gerar Peixe Prateado
+item.monsterPlacer.entity.CaveSpider.name=Gerar Aranha da Caverna
+item.monsterPlacer.entity.Blaze.name=Gerar Blaze
+item.monsterPlacer.entity.LavaSlime.name=Gerar Cubo de Magma
+item.monsterPlacer.entity.MushroomCow.name=Gerar Vacogumelo
+item.monsterPlacer.entity.Villager.name=Gerar Aldeão
+item.monsterPlacer.entity.VillagerGolem.name=Gerar Golem de Ferro
+item.monsterPlacer.entity.SnowMan.name=Gerar Golem de Neve
+item.monsterPlacer.entity.EnderDragon.name=Gerar Ender Dragon
+item.monsterPlacer.entity.Pig.name=Gerar Porco
+item.monsterPlacer.entity.Sheep.name=Gerar Ovelha
+item.monsterPlacer.entity.Cow.name=Gerar Vaca
+item.monsterPlacer.entity.Chicken.name=Gerar Galinha
+item.monsterPlacer.entity.Squid.name=Gerar Lula
+item.monsterPlacer.entity.Wolf.name=Gerar Lobo
+item.monsterPlacer.entity.Ozelot.name=Gerar Ocelote
+item.monsterPlacer.entity.Cat.name=Gerar Gato
+item.monsterPlacer.entity.Bat.name=Gerar Morcego
+
+skins.browse=Percorrer
+skins.custom=Personaliz.
+skins.information.selectSkin=Seleciona o modelo correto para a tua skin.
+skins.information.invalidCustomSkin=Isso não é uma skin do Minecraft, tolinho.
+skins.information.ingame=Não é possível alterar a tua skin no jogo. Acede às Opções a partir do menu principal.
+
+skins.skinpackHeader.standard=Padrão
+skins.skinpackHeader.packs=Pacotes de skins
+
+skin.name.alex=Alex
+skin.name.steve=Steve
+
+skins.buy.description=Para utilizares esta skin bloqueada, tens de comprar o seguinte pacote de skins:
+skins.buy.waitingForPurchase=A compra está em curso! Não deve demorar.
+skins.buy.noConnection=Não foi possível estabelecer ligação à loja. Verifica a tua ligação à Internet?
+skins.buy.purchaseFailed=Não foi possível completar a tua compra. Verifica a tua ligação à Internet?
+skins.buy.buyButton=Comprar
+skins.buy.cancelButton=Cancelar
+skins.buy.closeButton=Fechar
+
+skins.show.restorePurchaseButton=Restaurar
+skins.restore.button=Restaurar
+skins.restore.description=Estamos a restaurar as tuas skins!
+skins.restore.failed=Não foi possível restaurar as tuas skins. Verifica a tua ligação à Internet?
+
+skinpack.CityFolk=Cidadão
+skin.CityFolk.Chef=Chefe
+skin.CityFolk.Baker=Padeiro
+skin.CityFolk.BakersWife=Esposa do padeiro
+skin.CityFolk.Barmaid=Empregada de bar
+skin.CityFolk.Barman=Empregado de bar
+skin.CityFolk.Baron=Barão
+skin.CityFolk.Baroness=Baronesa
+skin.CityFolk.Blacksmith=Ferreiro
+skin.CityFolk.Butcher=Talhante
+skin.CityFolk.Carpenter=Carpinteiro
+skin.CityFolk.HolyMan=Santo
+skin.CityFolk.HolyWoman=Santa
+skin.CityFolk.Jailer=Carcereiro
+skin.CityFolk.King=Rei
+skin.CityFolk.Mage=Mago
+skin.CityFolk.Postman=Carteiro
+skin.CityFolk.Queen=Rainha
+skin.CityFolk.Shoemaker=Sapateiro
+skin.CityFolk.Victorian=Vitoriano
+skin.CityFolk.Watchman=Vigilante
+skin.CityFolk.WeaponSmith=Armeiro
+
+skinpack.TownFolk=Morador
+skin.TownFolk.Bard=Bardo
+skin.TownFolk.Castaway=Náufrago
+skin.TownFolk.FarmGirl=Lavradora
+skin.TownFolk.FemaleRogue=Ladina
+skin.TownFolk.Farmer=Agricultor
+skin.TownFolk.Bandit=Bandido
+skin.TownFolk.Forester=Guarda-florestal
+skin.TownFolk.Gardener=Jardineiro
+skin.TownFolk.GardenGirl=Moça do jardim
+skin.TownFolk.Mime=Mímico
+skin.TownFolk.Miner=Mineiro
+skin.TownFolk.Monk=Monge
+skin.TownFolk.OldLady=Idosa
+skin.TownFolk.OldMan=Idoso
+skin.TownFolk.Peasant=Camponês
+skin.TownFolk.Rogue=Enganador
+skin.TownFolk.ShopGirl=Moça da loja
+skin.TownFolk.Shopkeeper=Gerente de loja
+skin.TownFolk.StrongMan=Homem Forte
+skin.TownFolk.Thief=Ladrão
+skin.TownFolk.TownCrier=Arauto da cidade
+skin.TownFolk.TownswomanBlue=Moradora em azul
+skin.TownFolk.Townswoman=Citadina
+skin.TownFolk.Vagrant=Vadio
+skin.TownFolk.Witch=Bruxa

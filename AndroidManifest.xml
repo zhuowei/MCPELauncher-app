@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.zhuoweizhang.mcpelauncher"
-    android:versionCode="65"
-    android:versionName="1.7.10"
+    android:versionCode="82"
+    android:versionName="1.9.8"
     android:installLocation="auto">
 
     <permission
@@ -20,6 +20,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Kamcord -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:name="net.zhuoweizhang.mcpelauncher.BlockLauncher"
@@ -79,6 +81,11 @@
             android:exported="false"
             android:process=":CrashHandler"
             android:stateNotNeeded="true" />
+        <activity
+            android:name="net.zhuoweizhang.mcpelauncher.ui.MinecraftNotSupportedActivity"
+            android:exported="false"
+            android:process=":CrashHandler"
+            android:stateNotNeeded="true" />
         <activity android:name="net.zhuoweizhang.mcpelauncher.api.ImportSkinActivity" >
             <intent-filter>
                 <action android:name="net.zhuoweizhang.mcpelauncher.action.SET_SKIN" />
@@ -134,6 +141,7 @@
         </activity>
         <activity-alias android:name="net.zhuoweizhang.mcpelauncher.ui.ManageScriptsActivity"
             android:targetActivity="net.zhuoweizhang.mcpelauncher.ManageScriptsAppActivity"/>
+        <activity android:name="net.zhuoweizhang.mcpelauncher.ui.TexturePacksActivity" android:label="@string/pref_texture_pack"/>
 
         <!--<receiver android:name="net.zhuoweizhang.mcpelauncher.AddonInstallReceiver" >
             <intent-filter>
@@ -149,6 +157,13 @@
         </receiver>-->
 
         <activity android:name="com.ipaulpro.afilechooser.FileChooserActivity" />
+
+        <activity
+            android:name="net.zhuoweizhang.mcpelauncher.ui.GetSubstrateActivity"
+            android:exported="false"
+            android:process=":CrashHandler"
+            android:stateNotNeeded="true" />
+
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:theme="@android:style/Theme.Translucent"
@@ -156,6 +171,42 @@
 
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
+
+        <!-- Kamcord -->
+
+        <activity
+            android:name="com.kamcord.android.ui.KamcordActivity"
+            android:configChanges="keyboardHidden|keyboard"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:windowActionBar="false"
+            android:theme="@style/KamcordTheme"
+            android:hardwareAccelerated="true" >
+        </activity>
+
+        <activity
+            android:name="com.kamcord.android.ui.ReplayActivity"
+            android:label="Watch"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:parentActivityName="com.kamcord.android.ui.KamcordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamcord.android.KamcordActivity" />
+        </activity>
+
+        <activity
+            android:name="com.kamcord.android.ui.WebActivity"
+            android:label="Login"
+            android:theme="@style/KamcordLoginTheme"
+            android:parentActivityName="com.kamcord.android.ui.KamcordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamcord.android.KamcordActivity" />
+        </activity>
+
+        <service android:name="com.kamcord.android.UploadService" />
 
         <!-- Samsung's multiwindow metadata -->
         <meta-data
