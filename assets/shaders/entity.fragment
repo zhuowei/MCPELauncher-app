@@ -16,6 +16,16 @@ varying vec4 fogColor;
 	varying vec4 changeColor;
 #endif
 
+#ifdef GLINT
+	varying vec2 layer1UV;
+	varying vec2 layer2UV;
+	varying vec4 tileLightColor;
+#endif
+
+vec4 glintBlend(vec4 dest, vec4 source) {
+	// glBlendFuncSeparate(GL_SRC_COLOR, GL_ONE, GL_ONE, GL_ZERO)
+	return vec4(source.rgb * source.rgb, source.a) + vec4(dest.rgb, 0.0);
+}
 
 #ifdef USE_EMISSIVE
 #define NEEDS_DISCARD(C)	(C.a + C.r + C.g + C.b == 0.0)
@@ -26,18 +36,27 @@ varying vec4 fogColor;
 void main()
 {
 	vec4 color = vec4(1.0);
+
 #ifndef COLOR_BASED
 	color = texture2D( TEXTURE_0, uv );
 
 	#ifdef ALPHA_TEST
 		if(NEEDS_DISCARD(color))
-		 	discard;
+			discard;
 	#endif
 #endif
 
 #ifdef USE_COLOR_MASK
-	color.rgb = mix( color, color*changeColor, color.a).rgb;
-	color.a = 1.0;
+	#ifdef GLINT
+		// Applies color mask to glint texture instead and blends with original color
+		vec4 layer1 = texture2D(TEXTURE_1, layer1UV).rgbr * changeColor;
+		vec4 layer2 = texture2D(TEXTURE_1, layer2UV).rgbr * changeColor;
+		vec4 glint = (layer1 + layer2) * tileLightColor;
+	#else
+		// Original color mask behavior
+		color.rgb = mix(color.rgb, color.rgb*changeColor.rgb, color.a);
+		color.a = 1.0;
+	#endif
 #endif
 
 #ifdef USE_OVERLAY
@@ -54,6 +73,12 @@ void main()
 
 	//apply fog
 	color.rgb = mix( color.rgb, fogColor.rgb, fogColor.a );
+
+#ifdef USE_COLOR_MASK
+	#ifdef GLINT
+		color = glintBlend(color, glint);
+	#endif
+#endif
 
 	//WARNING do not refactor this 
 	gl_FragColor = color;

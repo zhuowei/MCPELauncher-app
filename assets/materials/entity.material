@@ -3,7 +3,7 @@
 		"vertexShader" : "shaders/entity.vertex",
 		"fragmentShader" : "shaders/entity.fragment"
 	},
-	
+
 	"entity_flat_color": {
 		"vertexShader" : "shaders/position.vertex",
 		"fragmentShader" : "shaders/current_color.fragment"
@@ -21,13 +21,7 @@
 	},
 
 	"entity_nocull:entity": {
-		"states":["DisableCulling"],
-
-		"defines":["FLIP_BACKFACES"]
-	},
-
-	"entity_alphatest:entity_nocull": {
-		"defines":["ALPHA_TEST"]
+		"states":["DisableCulling"]
 	},
 
 	"entity_alphatest:entity_nocull": {
@@ -35,17 +29,26 @@
 	},
 
 	"entity_alphablend:entity_nocull": {
-		"defines":["ALPHA_TEST", "Blending"]
+		"states" : [
+			"Blending"]
 	},
 
 	"entity_emissive:entity": {
 		"defines":["USE_EMISSIVE"]
 	},
 
-	"entity_emissive_alpha:entity_nocull": {
+    "entity_emissive_alpha:entity_nocull": {
 		"defines":[
-			"ALPHA_TEST",
+            "ALPHA_TEST",
 			"USE_EMISSIVE"]
+    },
+
+	"entity_custom:entity": {
+		"states":["Blending"],
+		"defines":["ALPHA_TEST", "Blending", "USE_OVERLAY", "USE_MASK"],
+
+		"blendSrc": "SourceColor",
+		"blendDst": "Zero"
 	},
 
 	"slime_outer:entity": {
@@ -60,6 +63,33 @@
 		"states":["PolygonOffset"],
 
 		"polygonOffsetLevel":-6
-	}
-}
+	},
 
+	"charged_creeper:entity_static": {
+		"defines": [ "USE_UV_ANIM" ],
+		"states": [ "Blending", "DisableCulling", "DisableDepthWrite" ],
+		"blendSrc":"One",
+		"blendDst":"One"
+	},
+	
+	"item_in_hand_glint:item_in_hand": {
+		"defines": [
+			"GLINT",
+			"USE_COLOR_MASK"
+		]
+	},
+
+	"entity_glint:entity": {
+		"defines":[
+			"GLINT",
+			"USE_COLOR_MASK"
+		]
+	},
+
+	"entity_alphatest_glint:entity_alphatest": {
+		"defines":[
+			"GLINT",
+			"USE_COLOR_MASK"
+		]
+    }
+}

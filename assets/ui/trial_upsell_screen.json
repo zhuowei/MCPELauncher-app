@@ -1,0 +1,332 @@
+{
+  "namespace": "trialUpsell",
+
+  "menu_background": {
+    "type": "custom",
+    "renderer": "background_renderer"
+  },
+
+  "normal_stroke_button": {
+    "type": "image",
+    "texture": "gui/newgui/NormalButtonStroke.png",
+    "z_order": 2,
+    "nineslice_size": 4.0,
+    "uv": [ 0, 0 ],
+    "uv_size": [ 12, 12 ]
+  },
+
+  "normal_description_label": {
+    "type": "label",
+    "size": [ 50, 30 ],
+    "color": [ 0.25, 0.25, 0.25, 1.0 ],
+    "alignment": "left",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "z_order": 2
+  },
+
+  "trialTime": {
+    "type": "custom",
+    "renderer": "trial_time_renderer",
+    "size": [ 0, 10 ],
+    "offset": [ -5, 5 ],
+    "alignment": "right",
+    "z_order": 2,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right"
+  },
+
+  "trial_label": {
+    "type": "label",
+    "size": [ 50, 10 ],
+    "offset": [ 0, 5 ],
+    "color": [ 0.25, 0.25, 0.25, 1.0 ],
+    "alignment": "center",
+    "z_order": 2,
+    "text": "trial.upsell.trialLabel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle"
+  },
+
+  "trial_description_panel": {
+    "type": "panel",
+    "offset": [ 6, -10 ],
+    "controls": [
+      { "line1@normal_description_label": { "text": "trial.upsell.description.line1" } },
+      { "line2@normal_description_label": { "offset": [ 0, 10 ], "text": "trial.upsell.description.line2" } },
+      { "line3@normal_description_label": { "offset": [ 0, 20 ], "text": "trial.upsell.description.line3" } },
+      { "line4@normal_description_label": { "offset": [ 0, 30 ], "text": "trial.upsell.description.line4" } },
+      { "line5@normal_description_label": { "offset": [ 0, 40 ], "text": "trial.upsell.description.line5" } }
+    ]
+  },
+
+  "trial_expired_description_panel": {
+    "type": "panel",
+    "offset": [ 4, -30 ],
+    "controls": [
+      { "line1@normal_description_label": { "text": "trial.upsell.expiredDescription.line1" } },
+      { "line2@normal_description_label": { "offset": [ 0, 10 ], "text": "trial.upsell.expiredDescription.line2" } },
+      { "line3@normal_description_label": { "offset": [ 0, 30 ], "text": "trial.upsell.expiredDescription.line3" } },
+      { "line4@normal_description_label": { "offset": [ 0, 40 ], "text": "trial.upsell.expiredDescription.line4" } },
+      { "line5@normal_description_label": { "offset": [ 0, 50 ], "text": "trial.upsell.expiredDescription.line5" } },
+      { "line6@normal_description_label": { "offset": [ 0, 60 ], "text": "trial.upsell.expiredDescription.line6" } },
+      { "line7@normal_description_label": { "offset": [ 0, 70 ], "text": "trial.upsell.expiredDescription.line7" } }
+    ]
+  },
+
+  "continue_button": {
+    "type": "button",
+    "size": [ 40, 20 ],
+    "anchor_to": "bottom_left",
+    "anchor_from": "bottom_left",
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "controls": [
+      { "default@common.button_default_state": { } },
+      { "hover@common.button_default_state": { } },
+      { "pressed@common.button_default_state": { } }
+    ]
+  },
+
+  "root_panel": {
+    "type": "panel",
+    "size": [ 210, 125 ],
+    "anchor_to": "center",
+    "anchor_from": "center"
+  },
+
+  "common_panel": {
+    "type": "panel",
+    "controls": [
+      { "bg_image@normal_stroke_button": { "z_order": 1 } },
+      { "@trial_label": { } },
+      {
+        "buy@common.button": {
+          "offset": [ 4, -5 ],
+          "anchor_to": "bottom_left",
+          "anchor_from": "bottom_left",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_buy_game",
+              "condition": "hover"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_buy_game",
+              "condition": "focus"
+            }
+          ],
+          "controls": [
+            {
+              "default@common.button_default_state": {
+                "uv": [ 0, 66 ],
+                "controls": [
+                  {
+                    "@common.button_text": {
+                      "text": "demo.help.buy"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "hover@common.button_default_state": {
+                "controls": [
+                  {
+                    "@common.button_text": {
+                      "text": "demo.help.buy",
+                      "color": [ 1.0, 1.0, 0.2 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "pressed@common.button_default_state": {
+                "alpha": 0.65,
+                "controls": [
+                  {
+                    "@common.button_text": {
+                      "text": "demo.help.buy",
+                      "color": [ 1.0, 1.0, 0.2 ],
+                      "alpha": 0.65
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "continue@common.button": {
+          "offset": [ -4, -5 ],
+          "anchor_to": "bottom_right",
+          "anchor_from": "bottom_right",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_continue",
+              "condition": "hover"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_continue",
+              "condition": "focus"
+            }
+          ],
+          "controls": [
+            {
+              "default@common.button_default_state": {
+                "uv": [ 0, 66 ],
+                "controls": [
+                  {
+                    "@common.button_text": {
+                      "text": "demo.help.later"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "hover@common.button_default_state": {
+                "controls": [
+                  {
+                    "@common.button_text": {
+                      "text": "demo.help.later",
+                      "color": [ 1.0, 1.0, 0.2 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "pressed@common.button_default_state": {
+                "alpha": 0.65,
+                "controls": [
+                  {
+                    "@common.button_text": {
+                      "text": "demo.help.later",
+                      "color": [ 1.0, 1.0, 0.2 ],
+                      "alpha": 0.65
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "upsell_panel": {
+    "type": "panel",
+    "controls": [
+      { "@trial_description_panel": { } }
+    ]
+  },
+
+  "upsell_expired_panel": {
+    "type": "panel",
+    "controls": [
+      { "@trial_expired_description_panel": { } }
+    ]
+  },
+
+  "screen": {
+    "type": "screen",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "condition": "none"
+      },
+      {
+        "from_button_id": "button.menu_up",
+        "to_button_id": "button.menu_up",
+        "condition": "none",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_down",
+        "to_button_id": "button.menu_down",
+        "condition": "none",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "to_button_id": "button.menu_left",
+        "condition": "none",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "to_button_id": "button.menu_right",
+        "condition": "none",
+        "scope": "view"
+      }
+    ],
+    "controls": [
+      { "@menu_background": { } },
+      { "@trialTime": { } },
+      {
+        "@root_panel": {
+          "controls": [
+            { "@common_panel": { } },
+            { "@trial_description_panel": { } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "expired_screen": {
+    "type": "screen",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "condition": "none"
+      },
+      {
+        "from_button_id": "button.menu_up",
+        "to_button_id": "button.menu_up",
+        "condition": "none",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_down",
+        "to_button_id": "button.menu_down",
+        "condition": "none",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "to_button_id": "button.menu_left",
+        "condition": "none",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "to_button_id": "button.menu_right",
+        "condition": "none",
+        "scope": "view"
+      }
+    ],
+    "controls": [
+      { "@menu_background": { } },
+      { "@trialTime": { } },
+      {
+        "@root_panel": {
+          "controls": [
+            { "@common_panel": { } },
+            { "@trial_expired_description_panel": { } }
+          ]
+        }
+      }
+    ]
+  }
+}

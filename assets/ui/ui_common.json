@@ -1,0 +1,324 @@
+{
+  "namespace": "common",
+
+  "button": {
+    "type": "button",
+    "z_order": 1,
+    "size": [ 100, 20 ],
+    "sound_name": "random.click",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "focus_enabled": true,
+    "button_mappings": [
+      {"from_button_id": "button.menu_select",
+       "to_button_id": "button.menu_select",
+       "condition": "hover"
+      },
+      {"from_button_id": "button.menu_ok",
+       "to_button_id": "button.menu_select",
+       "condition": "focus"
+      }
+    ]
+  },
+
+  "tab": {
+    "type": "tab",
+    "z_order": 1,
+    "size": [ 100, 20 ],
+    "button_mappings": [
+      {"from_button_id": "button.menu_select",
+       "to_button_id": "button.menu_select",
+       "condition": "hover"
+      },
+      {"from_button_id": "button.menu_ok",
+       "to_button_id": "button.menu_select",
+       "condition": "focus"
+      }
+    ]
+  },
+  
+  "tab_button@tab": {
+    "sound_name": "random.click",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed"
+  },
+  
+  "button_text": {
+    "type": "label",
+    "z_order": 4,
+    "shadow": true
+  },
+
+  "button_default_state": {
+    "type": "image",
+    "texture": "gui/gui.png",
+    "z_order": 2,
+    "nineslice_size": 3.0,
+    "uv": [ 0, 86 ],
+    "uv_size": [ 200, 20 ],
+    "tiled": true
+  },
+
+  "scroll": {
+    "type": "scrollbar",
+    "z_order": 6,
+    "sound_name": "random.click",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "focus_enabled": false,
+    "scrollbar_box_track_button" : "button.scrollbar_skip_track",
+    "button_mappings": [
+      {"from_button_id": "button.menu_select",
+       "to_button_id": "button.scrollbar_skip_track",
+       "condition": "hover"
+      }
+    ]
+  },
+
+  "scroll_box": {
+    "type": "scrollbar_box",
+    "z_order": 7,
+    "size": [ 16, 16 ],
+    "sound_name": "random.click",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "focus_enabled": false,
+    "contained": true,
+    "draggable": "vertical",
+    "button_mappings": [
+      {"from_button_id": "button.menu_select",
+       "to_button_id": "button.menu_select",
+       "condition": "gesture"
+      }
+    ]
+  },
+
+  /////////////////////////////////////////////////////////////////////////////
+  // Gamepad helper common
+  /////////////////////////////////////////////////////////////////////////////
+
+  "gamepad_helper_common": {
+    "type": "panel",
+    "z_order": -1,
+    "bindings": [
+      {"binding_name": "#gamepad_helper_visible",
+       "binding_name_override": "#visible" }
+    ]
+  },
+
+  "gamepad_helper_description": {
+    "type": "label",
+    "anchor_from": "right_middle",
+    "anchor_to": "left_middle",
+    "alignment": "left",
+    "z_order": 101,
+    "offset": [ 1, 3 ],
+    "shadow": true
+  },
+
+  "gamepad_helper_icon": {
+    "type": "image",
+    "texture": "gui/spritesheet.png",
+    "z_order": 100
+  },
+
+  // Buttons
+  /////////////////////////////////////////////////////////////////////////////
+
+  "gamepad_icon_button_text": {
+    "type": "label",
+    "alignment": "center",
+    "text": "<NOT SET>",
+    "z_order": 101,
+    "offset": [ 0, 1 ]
+  },
+
+  "gamepad_icon_button@gamepad_helper_icon": {
+    "uv": [ 241, 115 ],
+    "uv_size": [ 15, 13 ],
+    "size": [ 15, 13 ]
+  },
+
+  "gamepad_helper_a@gamepad_helper_common": {
+    "controls": [
+      {"@gamepad_icon_button": {
+        "controls": [
+          {"@gamepad_icon_button_text": {
+            "text": "A",
+            "color": [ 0.0, 1.0, 0.0 ]
+          }},
+          {"@gamepad_helper_description": {
+            "text": "#button_a_description",
+            "bindings": [
+              {"binding_name": "#button_a_description",
+               "binding_type": "global" }
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  "gamepad_helper_b@gamepad_helper_common": {
+    "controls": [
+      {"@gamepad_icon_button": {
+        "controls": [
+          {"@gamepad_icon_button_text": {
+            "text": "B",
+            "color": [ 1.0, 0.0, 0.0 ]
+          }},
+          {"@gamepad_helper_description": {
+            "text": "#button_b_description",
+            "bindings": [
+              {"binding_name": "#button_b_description",
+               "binding_type": "global" }
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  "gamepad_helper_x@gamepad_helper_common": {
+    "controls": [
+      {"@gamepad_icon_button": {
+        "controls": [
+          {"@gamepad_icon_button_text": {
+            "text": "X",
+            "color": [ 0.0, 0.0, 1.0 ]
+          }},
+          {"@gamepad_helper_description": {
+            "text": "#button_x_description",
+            "bindings": [
+              {"binding_name": "#button_x_description",
+               "binding_type": "global" }
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  "gamepad_helper_y@gamepad_helper_common": {
+    "controls": [
+      {"@gamepad_icon_button": {
+        "controls": [
+          {"@gamepad_icon_button_text": {
+            "text": "Y",
+            "color": [ 1.0, 1.0, 0.0 ]
+          }},
+          {"@gamepad_helper_description": {
+            "text": "#button_y_description",
+            "bindings": [
+              {"binding_name": "#button_y_description",
+               "binding_type": "global" }
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  // Triggers
+  /////////////////////////////////////////////////////////////////////////////
+
+  "gamepad_icon_right_trigger@gamepad_helper_icon": {
+    "uv": [ 222, 71 ],
+    "uv_size": [ 13, 27 ],
+    "size": [ 13, 27 ]
+  },
+
+  "gamepad_icon_left_trigger@gamepad_helper_icon": {
+    "uv": [ 241, 71 ],
+    "uv_size": [ 13, 27 ],
+    "size": [ 13, 27 ]
+  },
+
+  "gamepad_helper_left_trigger@gamepad_helper_common": {
+    "controls": [
+      {"@gamepad_icon_left_trigger": {
+        "controls": [
+          {"@gamepad_helper_description": {
+            "text": "#button_left_trigger_description",
+            "bindings": [
+              {"binding_name": "#button_left_trigger_description",
+               "binding_type": "global" }
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  "gamepad_helper_right_trigger@gamepad_helper_common": {
+    "controls": [
+      {"@gamepad_icon_right_trigger": {
+        "controls": [
+          {"@gamepad_helper_description": {
+            "text": "#button_right_trigger_description",
+            "bindings": [
+              {"binding_name": "#button_right_trigger_description",
+               "binding_type": "global" }
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  // D-Pad
+  /////////////////////////////////////////////////////////////////////////////
+
+  "gamepad_icon_dpad@gamepad_helper_icon": {
+    "uv": [ 219, 107 ],
+    "uv_size": [ 21, 21 ],
+    "size": [ 21, 21 ]
+  },
+
+  "gamepad_helper_dpad@gamepad_helper_common": {
+    "controls": [
+      {"@gamepad_icon_dpad": {
+        "controls": [
+          {"@gamepad_helper_description": {
+            "text": "#button_dpad_description",
+            "bindings": [
+              {"binding_name": "#button_dpad_description",
+               "binding_type": "global" }
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  // Thumbstick
+  /////////////////////////////////////////////////////////////////////////////
+
+  "gamepad_icon_thumbstick@gamepad_helper_icon": {
+    "uv": [ 223, 58 ],
+    "uv_size": [ 12, 9 ],
+    "size": [ 12, 9 ]
+  },
+
+  "gamepad_helper_thumbstick@gamepad_helper_common": {
+    "controls": [
+      {"@gamepad_icon_thumbstick": {
+        "controls": [
+          {"@gamepad_helper_description": {
+            "text": "#button_thumbstick_description",
+            "bindings": [
+              {"binding_name": "#button_thumbstick_description",
+               "binding_type": "global" }
+            ]
+          }}
+        ]
+      }}
+    ]
+  }
+}

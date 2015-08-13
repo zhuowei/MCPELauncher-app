@@ -40,11 +40,11 @@ void main()
 
 #if defined(FOG) || defined(NEAR_WATER)
 		#ifdef FANCY
-		vec3 relPos = VIEW_POS - (POSITION.xyz + CHUNK_ORIGIN);
-		float cameraDepth = length(relPos);
-	#else
-		float cameraDepth = pos.z;
-	#endif
+			vec3 relPos = VIEW_POS - (POSITION.xyz + CHUNK_ORIGIN);
+			float cameraDepth = length(relPos);
+		#else
+			float cameraDepth = pos.z;
+		#endif
 #endif
 
 ///// apply fog
@@ -63,14 +63,7 @@ void main()
 #ifdef NEAR_WATER
 	#ifdef FANCY  /////enhance water
 		float F = dot(normalize(relPos), UNIT_Y);
-
-		//if both NEAR_WATER and FOG are defined, it's forced fog and we're underwater
-		#ifndef FOG  //over water
-			F = 1.0 - max(F, 0.1);
-		#else //under water
-			color.a = 0.7; //disable fake transparency and be transparent
-		#endif
-
+		F = 1.0 - max(F, 0.1);
 		F = 1.0 - mix(F*F*F*F, 1.0, min(1.0, cameraDepth / FAR_CHUNKS_DISTANCE));
 
 		color.rg -= vec2(F * DIST_DESATURATION);
@@ -82,6 +75,9 @@ void main()
 		vec4 nearColor = mix(traspColor, depthColor, color.a);
 		color = mix(surfColor, nearColor, F);
 	#else
+		// Completely insane, but if I don't have these two lines in here, the water doesn't render on a Nexus 6
+		vec4 surfColor = vec4(color.rgb, 1.0);
+		color = surfColor;
 		color.a = pos.z / FAR_CHUNKS_DISTANCE + 0.5;
 	#endif //FANCY
 #endif

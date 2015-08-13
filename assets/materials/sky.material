@@ -4,7 +4,7 @@
 			"DisableDepthWrite",
 			"Blending"],
 
-		"blendSrc": "One",
+		"blendSrc": "SourceAlpha",
 		"blendDst": "One",
 
 		"vertexShader" : "shaders/uv.vertex",

@@ -1,7 +1,6 @@
 {
 "textures":[
 "font/default8.png",
-"gui/amazon/boston_buttons.png",
 "gui/background.png",
 "gui/bg32.png",
 "gui/cursor.png",

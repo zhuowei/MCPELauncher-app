@@ -1,35 +1,97 @@
 {
-	"shadow_front": {
-		"states":[
-			"StencilWrite",
-			"DisableColorWrite", 
-			"DisableDepthWrite"
-		],
+    "shadow_front": {
+        "states": [
+            "StencilWrite",
+            "DisableColorWrite",
+            "DisableDepthWrite",
+            "EnableStencilTest"
+        ],
 
-		"vertexShader" : "shaders/position.vertex",
-		"fragmentShader" : "shaders/flat_white.fragment"
-	},
+        "vertexShader": "shaders/position.vertex",
+        "fragmentShader": "shaders/flat_white.fragment",
 
-	"shadow_back": {
-		 "states":[
-			"StencilWrite",
-			"DisableColorWrite", 
-			"DisableDepthWrite",
-			"InvertCulling"
-		],
+        "frontFace": {
+            "stencilFunc": "Always",
+            "stencilFailOp": "Keep",
+            "stencilDepthFailOp": "Keep",
+            "stencilPassOp": "Replace"
+        },
 
-		"vertexShader" : "shaders/position.vertex",
-		"fragmentShader" : "shaders/flat_white.fragment"
-	},
+        "backFace": {
+            "stencilFunc": "Always",
+            "stencilFailOp": "Keep",
+            "stencilDepthFailOp": "Keep",
+            "stencilPassOp": "Replace"
+        },
 
-	"shadow_overlay" : {
-		"states": [
-			"DisableDepthTest",
-			"DisableCulling",
-			"Blending"
-		],
+        "stencilRef": 0,
+        "stencilReadMask": 255,
+        "stencilWriteMask": 1
+    },
 
-		"vertexShader" : "shaders/color.vertex",
-		"fragmentShader" : "shaders/color_ex.fragment"
-	}
+    "shadow_back": {
+        "states": [
+            "StencilWrite",
+            "DisableColorWrite",
+            "DisableDepthWrite",
+            "InvertCulling",
+            "EnableStencilTest"
+        ],
+
+        "vertexShader": "shaders/position.vertex",
+        "fragmentShader": "shaders/flat_white.fragment",
+
+        "frontFace": {
+            "stencilFunc": "Always",
+            "stencilFailOp": "Keep",
+            "stencilDepthFailOp": "Keep",
+            "stencilPassOp": "Replace"
+        },
+
+        "backFace": {
+            "stencilFunc": "Always",
+            "stencilFailOp": "Keep",
+            "stencilDepthFailOp": "Keep",
+            "stencilPassOp": "Replace"
+        },
+
+        "stencilRef": 1,
+        "stencilReadMask": 255,
+        "stencilWriteMask": 1
+    },
+
+    "shadow_overlay": {
+        "states": [
+            "DisableDepthTest",
+            "DisableCulling",
+            "Blending",
+            "EnableStencilTest"
+        ],
+
+        "vertexShader": "shaders/color.vertex",
+        "fragmentShader": "shaders/color_ex.fragment",
+
+        "frontFace": {
+            "stencilFunc": "Equal",
+            "stencilPass": "Replace"
+        },
+
+        "backFace": {
+            "stencilFunc": "Equal",
+            "stencilPass": "Replace"
+        },
+
+        "stencilRef": 1,
+        "stencilReadMask": 255,
+        "stencilWriteMask": 0
+    },
+
+    "water_hole_front:shadow_front" : { 
+        "stencilRef" :  1
+    },
+
+    "water_hole_back:shadow_back" : { 
+        "stencilRef" :  0
+    }
+
 }
