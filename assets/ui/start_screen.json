@@ -95,7 +95,7 @@
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "size": [ 48, 80 ],
-          "offset": [ "-20%", "10%" ],
+          "offset": [ "-20%", "0%" ],
           "controls": [
             {
               "paper_doll": {
@@ -193,21 +193,21 @@
       {
         "gamepad_helpers": {
           "type": "panel",
-          "offset": [ "-2%", "32%" ],
-          "size": [ "35%", 10 ],
+          "offset": [ -10 , "40%" ],
+          "size": [ 100, 10 ],
           "controls": [
             {
               "@common.gamepad_helper_a": {
-                "size": [ "50%", "100%" ],
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle"
+              "size": [ "50%", "100%" ],
+              "anchor_from": "left_middle",
+              "anchor_to": "left_middle"
               }
             },
             {
               "@common.gamepad_helper_b": {
-                "size": [ "50%", "100%" ],
-                "anchor_from": "center",
-                "anchor_to": "left_middle"
+               "size": [ "50%", "100%" ],
+               "anchor_from": "center",
+               "anchor_to": "left_middle"
               }
             }
           ]
@@ -307,7 +307,7 @@
         "button_panel": {
           "type": "panel",
           "size": [ 100, 64 ],
-          "offset": [ 0, "15%" ],
+          "offset": [ 0, "7.5%" ],
           "anchor_from": "center",
           "anchor_to": "center",
           "controls": [
@@ -695,8 +695,8 @@
       }},
       {"gamepad_helpers": {
         "type": "panel",
-        "offset": [ "-2%", "32%" ],
-        "size": [ "35%", 10 ],
+        "offset": [ "-5%" , "40%" ],
+        "size": [ 100, 10 ],
         "controls": [
           {"@common.gamepad_helper_a": { 
              "size": ["50%", "100%"],

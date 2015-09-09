@@ -1,24 +1,23 @@
 #include "ShaderConstants.fxh"
 
-// be sure to change the shader type to pertex shader and shader model to ps_40 (in visual studio)
+struct PS_Input {
+	float4 position : SV_Position;
 
-struct PS_Input
-{
-    float4 position : SV_Position;
-
-    float4 light : LIGHT;
-    float4 fogColor : FOG_COLOR;
-
-    float2 uv : TEXCOORD_0;
-
-#ifdef USE_OVERLAY
-    float4 overlayColor : OVERLAY_COLOR;
-#endif
+	float4 light : LIGHT;
+	float4 fogColor : FOG_COLOR;
 
 #ifdef GLINT
-	float2 layer1UV : UV_1;
-	float2 layer2UV : UV_2;
+	// there is some alignment issue on the Windows Phone 1320 that causes the position
+	// to get corrupted if this is two floats and last in the struct memory wise
+	float4 layerUV : GLINT_UVS;
 #endif
+
+#ifdef USE_OVERLAY
+	float4 overlayColor : OVERLAY_COLOR;
+#endif
+
+	float2 uv : TEXCOORD_0;
+
 };
 
 struct PS_Output
@@ -55,8 +54,8 @@ void main( in PS_Input PSInput, out PS_Output PSOutput )
 #ifdef USE_COLOR_MASK
 	#ifdef GLINT
 		// Applies color mask to glint texture instead and blends with original color
-		float4 layer1 = TEXTURE_1.Sample(TextureSampler1, frac(PSInput.layer1UV)).rgbr * CHANGE_COLOR;
-		float4 layer2 = TEXTURE_1.Sample(TextureSampler1, frac(PSInput.layer2UV)).rgbr * CHANGE_COLOR;
+		float4 layer1 = TEXTURE_1.Sample(TextureSampler1, frac(PSInput.layerUV.xy)).rgbr * CHANGE_COLOR;
+		float4 layer2 = TEXTURE_1.Sample(TextureSampler1, frac(PSInput.layerUV.zw)).rgbr * CHANGE_COLOR;
 		float4 glint = (layer1 + layer2) * TILE_LIGHT_COLOR;
 	#else
 		color.rgb = lerp( color, color * CHANGE_COLOR, color.a ).rgb;

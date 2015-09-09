@@ -102,6 +102,7 @@ addServer.resourcePack.disabled=Отключено	#
 addServer.resourcePack.enabled=Включены	#
 addServer.resourcePack.prompt=Запрашивать	#
 addServer.title=Информация о сервере	#
+addServer.alreadyAdded=Этот сервер уже добавлен	#
 
 advMode.allEntities=Используйте "@e" для обращения ко всем объектам	#
 advMode.allPlayers=Используйте "@a" для выбора всех игроков	#
@@ -610,7 +611,9 @@ controls.reset=Сброс	#
 controls.resetAll=Сбросить настройки	#
 controls.title=Управление	#
 
+crafting.badCombination=Нет действительного выхода для этого предмета	#
 crafting.cannotCreate=У вас не хватает ингредиентов.	#
+crafting.insufficientLevel=У вас слишком низкий уровень	#
 crafting.noRecipesInventory=Вам нужно собрать блоки, чтобы создать что-либо!	#
 crafting.noRecipesStonecutter=Вам нужны материалы из камня, чтобы создать что-либо!	#
 crafting.noRecipesWorkbench=Вам нужно собрать блоки, чтобы создать что-либо!	#
@@ -692,7 +695,7 @@ createWorld.customize.presets.title=Выбор шаблона	#
 
 createWorldScreen.action.editLocal=Сделайте бесконечным!	#
 createWorldScreen.action.local=Создайте мир!	#
-createWorldScreen.action.realms=Создайте Realm!	#
+createWorldScreen.action.realms=Создайте мир!	#
 createWorldScreen.action.realmsReset=Сбросьте Realm!	#
 createWorldScreen.advanced=Доп. настройки	#
 createWorldScreen.alwaysDay=Всегда день	#
@@ -703,7 +706,7 @@ createWorldScreen.delete.confirm=Удалить мир без возможнос
 createWorldScreen.game.settings=Настройки игры	#
 createWorldScreen.gameMode=Режим игры	#
 createWorldScreen.gameMode.creative=Творческий	#
-createWorldScreen.gameMode.creative.desc=Легко разрушайте и размещайте блоки. Полеты и другие клевые примочки - и без нанесения ущерба.	#
+createWorldScreen.gameMode.creative.desc=Неограниченные ресурсы, отсутствие урона, возможность летать. Достижения не регистрируются – даже если позже вы переключитесь в режим выживания.	#
 createWorldScreen.gameMode.survival=Выживание	#
 createWorldScreen.gameMode.survival.desc=Ресурсы ограничены, вам понадобятся инструменты. Вы можете пострадать. Берегитесь монстров.	#
 createWorldScreen.header.delete=Постоянство мира	#
@@ -720,47 +723,47 @@ createWorldScreen.seed.desc=Введите ключ, чтобы сгенерир
 createWorldScreen.worldType=Вид мира	#
 
 death.attack.anvil=%1$s раздавлен(а) упавшей наковальней	#
-death.attack.arrow=%1$s застрелен(а) %2$s	#
-death.attack.arrow.item=%1$s застрелен(а) %2$s с помощью %3$s	#
+death.attack.arrow=%1$s застрелен(а), убийца: %2$s	#
+death.attack.arrow.item=%1$s застрелен(а), убийца %2$s, %3$s	#
 death.attack.cactus=%1$s закололся(лась) до смерти	#
-death.attack.cactus.player=%1$s наткнулся(лась) на кактус, пытаясь убежать от %2$s	#
+death.attack.cactus.player=%1$s наткнулся(лась) на кактус, преследователь: %2$s	#
 death.attack.drown=%1$s утонул(а)	#
-death.attack.drown.player=%1$s утонул(а), пытаясь убежать от %2$s	#
+death.attack.drown.player=%1$s утонул(а), преследователь: %2$s	#
 death.attack.explosion=%1$s взорвался(лась)	#
-death.attack.explosion.player=%1$s был(а) взорван(а) %2$s	#
+death.attack.explosion.player=%1$s был(а) взорван(а), убийца: %2$s	#
 death.attack.fall=%1$s ударился(лась) о землю слишком сильно	#
 death.attack.fallingBlock=%1$s раздавлен(а) падающим блоком	#
-death.attack.fireball=%1$s убит(а) огненным шаром %2$s	#
-death.attack.fireball.item=%1$s убит(а) огненным шаром %2$s с помощью %3$s	#
+death.attack.fireball=%1$s убит(а) огненным шаром, убийца: %2$s	#
+death.attack.fireball.item=%1$s убит(а) огненным шаром, убийца: %2$s, %3$s	#
 death.attack.generic=%1$s умер(ла)	#
-death.attack.indirectMagic=%1$s был(а) убит(а) %2$s с помощью магии	#
-death.attack.indirectMagic.item=%1$s был(а) убит(а) %2$s с помощью %3$s	#
+death.attack.indirectMagic=%1$s был(а) убит(а), убийца: %2$s, магия	#
+death.attack.indirectMagic.item=%1$s был(а) убит(а), убийца: %2$s, %3$s	#
 death.attack.inFire=%1$s сгорел(а) заживо	#
-death.attack.inFire.player=%1$s сгорел(а) в огне, борясь с %2$s	#
+death.attack.inFire.player=%1$s сгорел(а) в огне, противник: %2$s	#
 death.attack.inWall=%1$s задохнулся(лась) в стене	#
 death.attack.lava=%1$s решил(а) поплавать в лаве	#
-death.attack.lava.player=%1$s упал(а) в лаву, убегая от %2$s	#
+death.attack.lava.player=%1$s упал(а) в лаву, преследователь: %2$s	#
 death.attack.lightningBolt=В игрока %1$s ударила молния	#
 death.attack.magic=%1$s был(а) убит(а) магией	#
-death.attack.mob=%1$s был(а) убит(а) %2$s	#
+death.attack.mob=%1$s был(а) убит(а), убийца: %2$s	#
 death.attack.onFire=%1$s сгорел(а) заживо	#
-death.attack.onFire.player=%1$s был(а) сожжен(а) дотла, пока боролся(лась) с %2$s	#
+death.attack.onFire.player=%1$s был(а) сожжен(а) дотла, противник: %2$s	#
 death.attack.outOfWorld=%1$s выпал(а) из мира	#
-death.attack.player=%1$s был(а) убит(а) %2$s	#
-death.attack.player.item=%1$s был(а) убит(а) %2$s с помощью %3$s	#
+death.attack.player=%1$s был(а) убит(а), убийца: %2$s	#
+death.attack.player.item=%1$s был(а) убит(а), убийца: %2$s, %3$s	#
 death.attack.starve=%1$s умер(ла) от голода	#
-death.attack.thorns=%1$s был(а) убит(а), пытаясь навредить %2$s	#
+death.attack.thorns=%1$s был(а) убит(а), пытаясь навредить персонажу %2$s	#
 death.attack.thrown=%2$s избил(а) %1$s досмерти	#
-death.attack.thrown.item=%1$s был(а) избит(а) %2$s с помощью %3$s	#
+death.attack.thrown.item=%1$s был(а) избит(а), убийца: %2$s, %3$s	#
 death.attack.wither=%1$s высох(ла)	#
 death.fell.accident.generic=%1$s упал(а) с высокого места	#
 death.fell.accident.ladder=%1$s сорвался(лась) с лестницы	#
 death.fell.accident.vines=%1$s сорвался(лась) с лианы	#
 death.fell.accident.water=%1$s выпал(а) из воды	#
-death.fell.assist=%1$s был(а) обречен(а) на падение, благодаря %2$s	#
-death.fell.assist.item=%1$s был(а) обречен(а) на падение %2$s с помощью %3$s	#
-death.fell.finish=%1$s упал(а) с высоты и был(а) прикончен(а) %2$s	#
-death.fell.finish.item=%1$s упал(а) с высоты и был(а) прикончен(а) %2$s с помощью %3$s	#
+death.fell.assist=%1$s был(а) обречен(а) на падение, убийца: %2$s	#
+death.fell.assist.item=%1$s был(а) обречен(а) на падение, убийца: %2$s, %3$s	#
+death.fell.finish=%1$s упал(а) с высоты и был(а) прикончен(а), убийца: %2$s	#
+death.fell.finish.item=%1$s упал(а) с высоты и был(а) прикончен(а), убийца: %2$s, %3$s	#
 death.fell.killer=%1$s был(а) обречен(а) на падение	#
 
 deathScreen.deleteWorld=Удалить мир	#
@@ -819,7 +822,7 @@ disconnectionScreen.invalidName=Недействительное имя!	#
 disconnectionScreen.invalidSkin=Неверный скин!	#
 disconnectionScreen.loggedinOtherLocation=Вход выполнен с другого места	#
 disconnectionScreen.noReason=Вы отключены	#
-disconnectionScreen.noWIFI=Для игры на внешних серверах необходимо подключение к Интернету через сеть Wi-Fi.	#
+disconnectionScreen.noInternet=Не удается подключиться к миру.  Проверьте интернет-соединение и попробуйте еще раз.	#
 disconnectionScreen.outdatedClient=Не удалось подключиться: устаревший клиент!	#
 disconnectionScreen.outdatedServer=Не удалось подключиться: устаревший сервер!	#
 disconnectionScreen.serverFull=Сервер заполнен!	#
@@ -1928,7 +1931,7 @@ key.hotbar.7=Слот 7	#
 key.hotbar.8=Слот 8	#
 key.hotbar.9=Слот 9	#
 key.inventory=Инвентарь	#
-key.jump=Прыжок	#
+key.jump=Прыгнуть/лететь вверх	#
 key.left=Влево	#
 key.mouseButton=Кнопка %1$s	#
 key.pickItem=Выбор блока	#
@@ -1936,7 +1939,7 @@ key.playerlist=Список игроков	#
 key.right=Шаг вправо	#
 key.screenshot=Сделать снимок экрана	#
 key.smoothCamera=Переключить кинематографическую камеру	#
-key.sneak=Красться	#
+key.sneak=Красться/лететь вниз	#
 key.spectatorOutlines=Выделять игроков (зрителей)	#
 key.sprint=Бег	#
 key.streamCommercial=Показывать рекламу в трансляции	#
@@ -2118,6 +2121,7 @@ options.sensitivity=Чувствительность	#
 options.sensitivity.max=СУПЕР СКОРОСТЬ!!!	#
 options.sensitivity.min=Минимальная	#
 options.servervisible=Сетевая игра на локальном сервере	#
+options.xboxlivevisible=Многопользовательская игра Xbox Live	#
 options.skinCustomisation=Персонализация скина...	#
 options.skinCustomisation.title=Персонализация скина	#
 options.snooper=Отправка данных	#
@@ -2272,7 +2276,7 @@ potion.weakness.postfix=Зелье слабости	#
 potion.wither=Иссушитель	#
 potion.wither.postfix=Зелье иссушения	#
 
-progressScreen.cantConnect=Не удалось подключиться к серверу. Попробуйте еще раз.	#
+progressScreen.cantConnect=Не удалось подключиться к миру. Проверьте интернет-соединение и попробуйте еще раз.	#
 progressScreen.generating=Создание мира...	#
 progressScreen.message.building=Генерация ландшафта	#
 progressScreen.message.done=Готово!	#
@@ -2348,7 +2352,7 @@ selectWorld.mapType.normal=Нормальный	#
 selectWorld.moreWorldOptions=Дополнительные настройки мира...	#
 selectWorld.newWorld=Новый мир	#
 selectWorld.newWorld.copyOf=Копия мира %s	#
-selectWorld.realmsComingSoon=Вскоре выходит функция Realms!!							## NOTE: "Realms" is the name of a service and doesn't get localized.
+selectWorld.realmsComingSoon=Вскоре выходит функция Realms!									## NOTE: "Realms" is the name of a service and doesn't get localized.
 selectWorld.realmsLearnMore=Подробные сведения о функции Realms см. здесь: https://minecraft.net/realms	## NOTE: "Realms" is the name of a service and doesn't get localized.
 selectWorld.recreate=Пересоздать	#
 selectWorld.rename=Переименовать	#
@@ -2936,30 +2940,28 @@ trial.pauseScreen.buyGame=Купить Minecraft	#
 trial.survival.welcome=У вас начинается пробное пользование Minecraft!	#
 trial.survival.remainingTime=осталось %d мин.	#
 
+trial.noInvitesOrJoining=Для игры вместе с друзьями необходимо купить полную версию игры	#
+
 trial.upsell.trialLabel=Пробное пользование Minecraft	#
 
-## NOTE: The following five lines are shown as a single paragraph in the game. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line.
-trial.upsell.description.line1=В этой пробной версии установлено ограничение в	#
-trial.upsell.description.line2=90 минут игры. Изготавливайте предметы, стройте,	#
-trial.upsell.description.line3=исследуйте и получайте удовольствие! Ваш мир	#
-trial.upsell.description.line4=может быть сохранен, но для этого надо	#
-trial.upsell.description.line5=купить полную версию.	#
+trial.upsell.description=Эта пробная версия включает 90 минут игры. Изготавливайте предметы, стройте, исследуйте мир и получайте удовольствие! Но помните, что чтобы сохранить созданный мир, необходимо купить полную версию игры.	#
 
-## NOTE: The following seven lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line. In particular, please note that line7 is a continuation of the bullet in line6
-trial.upsell.expiredDescription.line1=Время истекло. Купите игру	#
-trial.upsell.expiredDescription.line2=для разблокирования полной версии игры:	#
-trial.upsell.expiredDescription.line3=-Исследование безграничных миров	#
-trial.upsell.expiredDescription.line4=-Игра с друзьями	#
-trial.upsell.expiredDescription.line5=-Изготовление сотен предметов	#
-trial.upsell.expiredDescription.line6=-Открытие загадочных сооружений	#
-trial.upsell.expiredDescription.line7=и царств	#
+## NOTE: The following five lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
+## as opposed to trying to literally translate each line.
+trial.upsell.expiredDescription.line1=Время истекло. Купите игру, чтобы получить доступ ко всем ее функциям:	#
+trial.upsell.expiredDescription.line2=-Исследование безграничных миров	#
+trial.upsell.expiredDescription.line3=-Игра с друзьями	#
+trial.upsell.expiredDescription.line4=-Изготовление сотен предметов	#
+trial.upsell.expiredDescription.line5=-Открытие загадочных сооружений и областей	#
 
 ## Xbox Live Strings
 xbox.signin.error.line1=Войдите в свою учетную запись Xbox Live	#
 xbox.signin.error.line2=для игры с друзьями, 	#
 xbox.signin.error.line3=набора очков и получения достижений.	#
 xbox.connection.error=Нет подключения к Xbox Live.	#
+
+xbox.disconectionscreen.notSignedIn=Для игры с друзьями, набора очков и получения достижений необходимо войти в свою учетную запись Xbox Live.	#
+xbox.disconectionscreen.multiplayerNotAllowed=Эта учетная запись не позволяет участвовать в многопользовательской игре через Xbox Live.	#
+xbox.disconectionscreen.accessDenied=Чтобы присоединиться к игре, сначала необходимо завести в игре друзей.	#
 
 platform.model.unknown=неизвестно	#

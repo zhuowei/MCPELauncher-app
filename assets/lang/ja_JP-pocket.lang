@@ -102,6 +102,7 @@ addServer.resourcePack.disabled=無効	#
 addServer.resourcePack.enabled=有効	#
 addServer.resourcePack.prompt=プロンプト	#
 addServer.title=サーバー情報の編集	#
+addServer.alreadyAdded=このサーバーはすでに追加されています	#
 
 advMode.allEntities="@e" を使用すると全てのエンティティを対象	#
 advMode.allPlayers="@a"で全プレイヤーを対象	#
@@ -570,10 +571,10 @@ controller.buttonTip.new=新規	#
 controller.buttonTip.place.one=1 つ置く	#
 controller.buttonTip.place=置く	#
 controller.buttonTip.quick.move=クイック移動	#
-controller.buttonTip.removeFuel=燃料を取り出す	#
-controller.buttonTip.removeFuelInput=燃料を取り出す / 入力を削除	#
+controller.buttonTip.removeFuel=燃料を取り除く	#
+controller.buttonTip.removeFuelInput=燃料を取り除く / 入力を削除	#
 controller.buttonTip.removeInput=入力を削除	#
-controller.buttonTip.removeMaterial=素材を取り出す	#
+controller.buttonTip.removeMaterial=素材を取り除く	#
 controller.buttonTip.renameItem=アイテムの名前を変更	#
 controller.buttonTip.select.enchant=エンチャントを選択	#
 controller.buttonTip.select.item=アイテムを選択	#
@@ -610,7 +611,9 @@ controls.reset=リセット	#
 controls.resetAll=キー設定のリセット	#
 controls.title=キー設定	#
 
+crafting.badCombination=無効なアイテムです	#
 crafting.cannotCreate=材料が揃っていません	#
+crafting.insufficientLevel=レベルが低すぎます	#
 crafting.noRecipesInventory=作るにはブロックを集める必要があります!	#
 crafting.noRecipesStonecutter=作るには石の素材が必要です!	#
 crafting.noRecipesWorkbench=作るにはブロックを集める必要があります!	#
@@ -703,7 +706,7 @@ createWorldScreen.delete.confirm=ワールドを完全に削除しますか？	#
 createWorldScreen.game.settings=ゲーム設定	#
 createWorldScreen.gameMode=ゲームモード	#
 createWorldScreen.gameMode.creative=クリエイティブ	#
-createWorldScreen.gameMode.creative.desc=簡単にブロックを破壊したり配置することができます。ダメージはなく、空を飛べたり、その他にもいいことがあります	#
+createWorldScreen.gameMode.creative.desc=無制限の資源。ダメージはなく、空を飛べます。後にサバイバルモードに変更しても、実績を得ることはできません。	#
 createWorldScreen.gameMode.survival=サバイバル	#
 createWorldScreen.gameMode.survival.desc=資源が限られています。道具が必要です。怪我をするかもしれません。モンスターに気をつけましょう	#
 createWorldScreen.header.delete=ワールドの永続性	#
@@ -819,7 +822,7 @@ disconnectionScreen.invalidName=名前が無効です。	#
 disconnectionScreen.invalidSkin=無効なスキンです!	#
 disconnectionScreen.loggedinOtherLocation=他の場所からログインしています	#
 disconnectionScreen.noReason=接続が切断されました	#
-disconnectionScreen.noWIFI=外部サーバーでプレイするには WiFi を通して接続している必要があります	#
+disconnectionScreen.noInternet=ワールドに接続できませんでした。インターネット接続の状態をご確認の上、もう一度お試しください。	#
 disconnectionScreen.outdatedClient=接続できませんでした:クライアントが期限切れです!	#
 disconnectionScreen.outdatedServer=接続できませんでした:サーバ－が期限切れです!	#
 disconnectionScreen.serverFull=サーバーが満員です!	#
@@ -1928,7 +1931,7 @@ key.hotbar.7=ホットバースロット7	#
 key.hotbar.8=ホットバースロット8	#
 key.hotbar.9=ホットバースロット9	#
 key.inventory=持ち物	#
-key.jump=ジャンプ	#
+key.jump=ジャンプ/上昇	#
 key.left=左	#
 key.mouseButton=ボタン %1$s	#
 key.pickItem=ブロック選択	#
@@ -1936,7 +1939,7 @@ key.playerlist=プレイヤーリスト	#
 key.right=右	#
 key.screenshot=スクリーンショット撮影	#
 key.smoothCamera=カメラ動作の切り替え	#
-key.sneak=スニーク	#
+key.sneak=しのび足/下降	#
 key.spectatorOutlines=ハイライトプレイヤー (スペクテイター)	#
 key.sprint=ダッシュ	#
 key.streamCommercial=配信コマーシャルを表示	#
@@ -2058,7 +2061,7 @@ options.fullscreen=フルスクリーン	#
 options.gamma=明るさ	#
 options.gamma.max=明るい	#
 options.gamma.min=暗い	#
-options.graphics=素敵なグラフィック	#
+options.graphics=高画質	#
 options.graphics.fancy=描画優先	#
 options.graphics.fast=処理優先	#
 options.group.audio=サウンド	#
@@ -2118,6 +2121,7 @@ options.sensitivity=マウス感度	#
 options.sensitivity.max=猛スピード!!!	#
 options.sensitivity.min=*あくび*	#
 options.servervisible=ローカルサーバー マルチプレイ	#
+options.xboxlivevisible=Xbox Live マルチプレイヤー	#
 options.skinCustomisation=スキンのカスタマイズ...	#
 options.skinCustomisation.title=スキンのカスタマイズ	#
 options.snooper=情報収集を許可	#
@@ -2272,7 +2276,7 @@ potion.weakness.postfix=弱化のポーション	#
 potion.wither=ウィザー	#
 potion.wither.postfix=衰退のポーション	#
 
-progressScreen.cantConnect=サーバーに接続できませんでした。もう一度お試しください	#
+progressScreen.cantConnect=ワールドに接続できませんでした。インターネット接続の状態をご確認の上、もう一度お試しください。	#
 progressScreen.generating=ワールドを生成中	#
 progressScreen.message.building=地形を構築中	#
 progressScreen.message.done=完了!	#
@@ -2936,30 +2940,28 @@ trial.pauseScreen.buyGame=Minecraft を購入	#
 trial.survival.welcome=Minecraft 試用版へようこそ!	#
 trial.survival.remainingTime=残り %d 分	#
 
+trial.noInvitesOrJoining=フレンドと遊ぶには完全版のゲームをご購入ください	#
+
 trial.upsell.trialLabel=Minecraft 試用版	#
 
-## NOTE: The following five lines are shown as a single paragraph in the game. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line.
-trial.upsell.description.line1=試用版では、90	#
-trial.upsell.description.line2=分間プレイをお楽しみいただけます。作ったり、建設したり、	#
-trial.upsell.description.line3=探検したりしてみましょう! 作成したワールドは	#
-trial.upsell.description.line4=完全版を購入すると	#
-trial.upsell.description.line5=セーブできます。	#
+trial.upsell.description=この試用版ではプレイ時間は 90 分に制限されています。いろいろなものを作り、建設し、探索し、大いに楽しんでください! 完全版をご購入いだければワールドは保存されます。	#
 
-## NOTE: The following seven lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line. In particular, please note that line7 is a continuation of the bullet in line6
-trial.upsell.expiredDescription.line1=時間切れです。 完全版を購入して	#
-trial.upsell.expiredDescription.line2=アンロックしましょう:	#
-trial.upsell.expiredDescription.line3=-無限の世界を探検しよう	#
-trial.upsell.expiredDescription.line4=-フレンドとプレイしよう	#
-trial.upsell.expiredDescription.line5=-アイテムをたくさん作ろう	#
-trial.upsell.expiredDescription.line6=-ミステリアスな構造物やRealmsを	#
-trial.upsell.expiredDescription.line7=探しに行こう	#
+## NOTE: The following five lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
+## as opposed to trying to literally translate each line.
+trial.upsell.expiredDescription.line1=時間切れです。 すべての機能をアンロックするには完全版をご購入ください。	#
+trial.upsell.expiredDescription.line2=-無限の世界を探検しよう	#
+trial.upsell.expiredDescription.line3=-フレンドとプレイしよう	#
+trial.upsell.expiredDescription.line4=-アイテムをたくさん作ろう	#
+trial.upsell.expiredDescription.line5=-不思議な物や場所を発見しよう	#
 
 ## Xbox Live Strings
 xbox.signin.error.line1=Xbox Live アカウントでサインインすれば、	#
 xbox.signin.error.line2=フレンドとプレイしたり、	#
 xbox.signin.error.line3=ゲーマー スコアや実績を獲得できます	#
 xbox.connection.error=Xbox Live に接続されていません	#
+
+xbox.disconectionscreen.notSignedIn=フレンドとプレイするには、Xbox Live アカウントでサインインしてください。	#
+xbox.disconectionscreen.multiplayerNotAllowed=このアカウントでの Xbox Live マルチプレイヤーゲームへの参加は許可されていません。	#
+xbox.disconectionscreen.accessDenied=参加するにはこの中の誰かがあなたのフレンドである必要があります。	#
 
 platform.model.unknown=不明	#

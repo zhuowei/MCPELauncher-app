@@ -102,6 +102,7 @@ addServer.resourcePack.disabled=Desabilitado	#
 addServer.resourcePack.enabled=Habilitado	#
 addServer.resourcePack.prompt=Perguntar	#
 addServer.title=Editar Informações do Servidor	#
+addServer.alreadyAdded=Este servidor já foi adicionado.	#
 
 advMode.allEntities=Use "@e" para usar em todas as entidades	#
 advMode.allPlayers=Use "@a" para usar em todos(as) os(as) jogadores(as)	#
@@ -591,8 +592,8 @@ controllerLayoutScreen.cancel=Cancelar	#
 controllerLayoutScreen.confirmation.reset=Redefinir todos os botãos para o padrão?	#
 controllerLayoutScreen.confirmation.unassigned=Salvar com ações não atribuídas?	#
 controllerLayoutScreen.confirmation.unsaved=Sair sem salvar?	#
-controllerLayoutScreen.cycleItemLeft=Item de ciclo à esquerda	#
-controllerLayoutScreen.cycleItemRight=Item de ciclo à direita	#
+controllerLayoutScreen.cycleItemLeft= Mudar de item (esquerda)	#
+controllerLayoutScreen.cycleItemRight= Mudar de item (direita)	#
 controllerLayoutScreen.flyDownSlow=Voar para baixo devagar	#
 controllerLayoutScreen.flyUpSlow=Voar para cima devagar	#
 controllerLayoutScreen.mobEffects=Efeitos da multidão	#
@@ -610,7 +611,9 @@ controls.reset=Redefinir	#
 controls.resetAll=Redefinir Teclas	#
 controls.title=Controles	#
 
+crafting.badCombination=Nenhuma saída válida para esse item.	#
 crafting.cannotCreate=Você não tem todos os ingredientes	#
+crafting.insufficientLevel=Seu nível é baixo demais.	#
 crafting.noRecipesInventory=Você precisa coletar blocos para construir!	#
 crafting.noRecipesStonecutter=Você precisa de materiais de pedra para construir!	#
 crafting.noRecipesWorkbench=Você precisa coletar blocos para construir!	#
@@ -703,7 +706,7 @@ createWorldScreen.delete.confirm=Excluir mundo para sempre?	#
 createWorldScreen.game.settings=Configurações do jogo	#
 createWorldScreen.gameMode=Modo de Jogo	#
 createWorldScreen.gameMode.creative=Criativo	#
-createWorldScreen.gameMode.creative.desc=Destrua e coloque blocos facilmente. Sem sofrer danos, voe e faça outras coisas legais.	#
+createWorldScreen.gameMode.creative.desc=Recursos ilimitados. Sem danos. Voando. Sem conquistas mesmo se mais tarde você mudar para o modo de Sobrevivência.	#
 createWorldScreen.gameMode.survival=Sobrevivência	#
 createWorldScreen.gameMode.survival.desc=Recursos limitados, você precisará de ferramentas. Você pode se machucar. Cuidado com os monstros.	#
 createWorldScreen.header.delete=Permanência do mundo	#
@@ -819,7 +822,7 @@ disconnectionScreen.invalidName=Nome inválido!	#
 disconnectionScreen.invalidSkin=Skin inválida!	#
 disconnectionScreen.loggedinOtherLocation=Entrada por outra localização	#
 disconnectionScreen.noReason=Você foi desconectado	#
-disconnectionScreen.noWIFI=Você precisa estar conectado a um Wi-Fi para jogar em servidores externos	#
+disconnectionScreen.noInternet=Não foi possível conectar ao mundo. Verifique sua conexão à Internet e tente novamente.	#
 disconnectionScreen.outdatedClient=Não foi possível conectar: Cliente desatualizado!	#
 disconnectionScreen.outdatedServer=Não foi possível conectar: Servidor desatualizado!	#
 disconnectionScreen.serverFull=O servidor está cheio!	#
@@ -1928,7 +1931,7 @@ key.hotbar.7=Slot 7 da Barra Rápida	#
 key.hotbar.8=Slot 8 da Barra Rápida	#
 key.hotbar.9=Slot 9 da Barra Rápida	#
 key.inventory=Inventário	#
-key.jump=Pular	#
+key.jump=Pular/Voar Acima	#
 key.left=Andar Para a Esquerda	#
 key.mouseButton=Botão %1$s	#
 key.pickItem=Escolher Bloco	#
@@ -1936,7 +1939,7 @@ key.playerlist=Listar Jogadores	#
 key.right=Andar Para a Direita	#
 key.screenshot=Tirar Screenshot	#
 key.smoothCamera=Alternar Câmera Cinematográfica	#
-key.sneak=Esgueirar	#
+key.sneak=Agachar/Voar Abaixo	#
 key.spectatorOutlines=Realçar Jogadores (Espectadores)	#
 key.sprint=Correr	#
 key.streamCommercial=Mostrar Anúncios de Transmissão	#
@@ -2042,7 +2045,7 @@ options.difficulty.hard=Difícil	#
 options.difficulty.hardcore=Hardcore	#
 options.difficulty.normal=Normal	#
 options.difficulty.peaceful=Pacífico	#
-options.dpadscale=Tamanho dos botões direcionais	#
+options.dpadscale=Tam. dos Direcionais	#
 options.entityShadows=Sombras de Entidade	#
 options.fancyskies=Detalhes do céu	#
 options.farWarning1=Recomenda-se uma instalação do Java de 64 bits	#
@@ -2068,7 +2071,7 @@ options.group.graphics=Gráficos	#
 options.group.graphics.experimental=Experimental	#
 options.group.input=Controles	#
 options.group.realms=Convidado para o Realms Alpha?	#
-options.guiScale=Tamanho dos botões direcionais	#
+options.guiScale=Tam. dos direcionais	#
 options.guiScale.auto=Automática	#
 options.guiScale.large=Grande	#
 options.guiScale.normal=Normal	#
@@ -2118,6 +2121,7 @@ options.sensitivity=Sensibilidade	#
 options.sensitivity.max=HIPER-RÁPIDO!!!	#
 options.sensitivity.min=*ronc*	#
 options.servervisible=Multijogador em servidor local	#
+options.xboxlivevisible=Xbox Live Multiplayer	#
 options.skinCustomisation=Customização da Skin...	#
 options.skinCustomisation.title=Customização da Skin	#
 options.snooper=Permitir Snooper	#
@@ -2160,7 +2164,7 @@ options.thirdperson=Visão em terceira pessoa	#
 options.title=Opções	#
 options.touchscreen=Modo Touchscreen	#
 options.usetouchpad=Dividir controles	#
-options.swapJumpAndSneak=Troca entre saltar e esgueirar-se	#
+options.swapJumpAndSneak=Troca entre saltar e agachar-se	#
 options.usetouchscreen=Jogar com toques	#
 options.vbo=Usar VBOs	#
 options.video=Opções de Vídeo...	#
@@ -2272,7 +2276,7 @@ potion.weakness.postfix=Poção da Fraqueza	#
 potion.wither=Wither	#
 potion.wither.postfix=Poção da Decomposição	#
 
-progressScreen.cantConnect=Não foi possível se conectar ao servidor. Tente novamente.	#
+progressScreen.cantConnect=Não foi possível conectar ao servidor. Verifique sua conexão à Internet e tente novamente.	#
 progressScreen.generating=Gerando mundo	#
 progressScreen.message.building=Construindo terreno	#
 progressScreen.message.done=Pronto!	#
@@ -2457,7 +2461,7 @@ stat.climbOneCm=Distância Escalada	#
 stat.crafted=Vezes Fabricado	#
 stat.craftItem=%1$s Fabricado	#
 stat.createWorld=Mundos criados	#
-stat.crouchOneCm=Distância Esgueirada	#
+stat.crouchOneCm=Distância Agachada	#
 stat.damageDealt=Dano Causado	#
 stat.damageTaken=Dano Sofrido	#
 stat.deaths=Número de Mortes	#
@@ -2936,30 +2940,28 @@ trial.pauseScreen.buyGame=Comprar Minecraft	#
 trial.survival.welcome=Boas-vindas à Avaliação de Minecraft!	#
 trial.survival.remainingTime=%d minutos restantes	#
 
+trial.noInvitesOrJoining=Compre a versão completa para poder jogar com seus amigos.	#
+
 trial.upsell.trialLabel=Avaliação de Minecraft	#
 
-## NOTE: The following five lines are shown as a single paragraph in the game. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line.
-trial.upsell.description.line1=Nesta avaliação você tem um limite de 90	#
-trial.upsell.description.line2=minutos para jogar. Confeccione, construa,	#
-trial.upsell.description.line3=explore e divirta-se! Seu mundo será	#
-trial.upsell.description.line4=preservado, se você escolher	#
-trial.upsell.description.line5=comprar a versão completa.	#
+trial.upsell.description=Nesta versão de teste, você tem o tempo de jogo limitado a 90 minutos. Crie, construa, explore e divirta-se! Seu mundo será preservado até você decidir comprar a versão completa.	#
 
-## NOTE: The following seven lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line. In particular, please note that line7 is a continuation of the bullet in line6
-trial.upsell.expiredDescription.line1=O tempo expirou. Adquira	#
-trial.upsell.expiredDescription.line2=para desbloquear o jogo completo:	#
-trial.upsell.expiredDescription.line3=-Explore mundos ilimitados	#
-trial.upsell.expiredDescription.line4=-Jogue com seus amigos	#
-trial.upsell.expiredDescription.line5=-Confeccione centenas de itens	#
-trial.upsell.expiredDescription.line6=-Descubra estruturas misteriosas	#
-trial.upsell.expiredDescription.line7=e territórios idem	#
+## NOTE: The following five lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
+## as opposed to trying to literally translate each line.
+trial.upsell.expiredDescription.line1=O tempo expirou. Adquira Minecraft para desbloquear o jogo completo:	#
+trial.upsell.expiredDescription.line2=-Explore mundos ilimitados	#
+trial.upsell.expiredDescription.line3=-Jogue com seus amigos	#
+trial.upsell.expiredDescription.line4=-Confeccione centenas de itens	#
+trial.upsell.expiredDescription.line5=-Descubra estruturas e territórios misteriosos	#
 
 ## Xbox Live Strings
 xbox.signin.error.line1=Faça logon com sua conta do Xbox Live para jogar com amigos, ganhar gamerscore e conquistas.	#
 xbox.signin.error.line2=para jogar com amigos,	#
 xbox.signin.error.line3=ganhar gamerscore e conquistas.	#
 xbox.connection.error=Sem conexão ao Xbox Live.	#
+
+xbox.disconectionscreen.notSignedIn=Faça logon com sua conta do Xbox Live para jogar com amigos, ganhar gamerscore e conquistas.	#
+xbox.disconectionscreen.multiplayerNotAllowed=Esta conta não dá permissão para participar do multijogador no Xbox Live.	#
+xbox.disconectionscreen.accessDenied=Você precisa ser amigo de alguém neste jogo para poder participar.	#
 
 platform.model.unknown=DESCONHECIDO	#

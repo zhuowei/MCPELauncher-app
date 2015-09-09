@@ -1,6 +1,5 @@
 #include "ShaderConstants.fxh"
 
-
 struct VS_Input
 {
     float3 position : POSITION;
@@ -19,15 +18,17 @@ struct PS_Input
     float4 light : LIGHT;
     float4 fogColor : FOG_COLOR;
 
-    float2 uv : TEXCOORD_0;
+#ifdef GLINT
+	// there is some alignment issue on the Windows Phone 1320 that causes the position
+	// to get corrupted if this is two floats and last in the struct memory wise
+	float4 layerUV : GLINT_UVS;
+#endif
 
 #ifdef USE_OVERLAY
-    float4 overlayColor : OVERLAY_COLOR;
+	float4 overlayColor : OVERLAY_COLOR;
 #endif
-#ifdef GLINT
-	float2 layer1UV : UV_1;
-	float2 layer2UV : UV_2;
-#endif
+
+    float2 uv : TEXCOORD_0;
 };
 
 static const float AMBIENT = 0.45;
@@ -106,8 +107,8 @@ void main( in VS_Input VSInput, out PS_Input PSInput )
 #endif
 
 #ifdef GLINT
-	PSInput.layer1UV = calculateLayerUV(VSInput.texCoords, UV_OFFSET.x, UV_ROTATION.x);
-	PSInput.layer2UV = calculateLayerUV(VSInput.texCoords, UV_OFFSET.y, UV_ROTATION.y);
+	PSInput.layerUV.xy = calculateLayerUV(VSInput.texCoords, UV_OFFSET.x, UV_ROTATION.x);
+	PSInput.layerUV.zw = calculateLayerUV(VSInput.texCoords, UV_OFFSET.y, UV_ROTATION.y);
 #endif
 
     //fog

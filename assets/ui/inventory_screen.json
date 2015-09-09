@@ -148,6 +148,20 @@
     ]
   },
   
+  "crafting_out_durability_bar@durability_bar": {
+    "bindings": [
+      { "binding_name": "#crafting_out_durability_visible",
+        "binding_name_override": "#progress_bar_visible"
+      },
+      { "binding_name": "#crafting_out_durability_total_amount",
+        "binding_name_override": "#progress_bar_total_amount"
+      },
+      { "binding_name": "#crafting_out_durability_current_amount",
+        "binding_name_override": "#progress_bar_current_amount"
+      }
+    ]
+  },
+  
   "durability_bar_grabbed@durability_bar": {
     "z_order": 50,
     "offset": [ -2, 5 ],
@@ -789,7 +803,8 @@
           { "binding_name": "#survival_crafting_output_item_stack_count",
             "binding_name_override": "#inventory_stack_count" }
         ] 
-      }}
+      }},
+      {"@crafting_out_durability_bar": {}}
     ]
   },
   
@@ -831,7 +846,8 @@
           { "binding_name": "#work_bench_output_item_stack_count",
             "binding_name_override": "#inventory_stack_count" }
         ] 
-      }}
+      }},
+      {"@crafting_out_durability_bar": {}}
     ]
   },
 
@@ -867,7 +883,8 @@
           { "binding_name": "#stone_cutter_output_item_stack_count",
             "binding_name_override": "#inventory_stack_count" }
         ] 
-      }}
+      }},
+      {"@crafting_out_durability_bar": {}}
     ]
   },
 

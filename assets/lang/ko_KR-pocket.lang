@@ -77,21 +77,21 @@ achievement.theEnd2.desc=엔더 드래곤을 격파하세요	#
 achievement.unknown=???	#
 
 action.hint.exit.boat=속도를 낮춰 배에서 나오기	#
-action.hint.exit.minecart=점프를 탭해 광물 수레에서 나오기	#
+action.hint.exit.minecart=화면을 탭하여 광차에서 나오기	#
 action.interact.creeper=점화	#
 action.interact.exit.boat=보트 하선	#
-action.interact.feed=먹이	#
-action.interact.fishing=물고기	#
-action.interact.milk=우유	#
-action.interact.mooshear=가위	#
-action.interact.moostew=우유 스튜	#
+action.interact.feed=먹이주기	#
+action.interact.fishing=낚시하기	#
+action.interact.milk=착유하기	#
+action.interact.mooshear=전모하기	#
+action.interact.moostew=스튜 얻기	#
 action.interact.ride.boat=승선	#
 action.interact.ride.minecart=타기	#
-action.interact.shear=가위	#
+action.interact.shear=전모하기	#
 action.interact.sit=앉기	#
 action.interact.stand=서기	#
 action.interact.tame=길들이기	#
-action.interact.wolfcollar=염색	#
+action.interact.wolfcollar=염색하기	#
 
 addServer.add=완료	#
 addServer.enterIp=서버 주소	#
@@ -102,6 +102,7 @@ addServer.resourcePack.disabled=비활성화됨	#
 addServer.resourcePack.enabled=활성화됨	#
 addServer.resourcePack.prompt=프롬프트	#
 addServer.title=서버 정보 편집	#
+addServer.alreadyAdded=이 서버는 이미 추가되었습니다	#
 
 advMode.allEntities="@e"를 사용하여 모든 엔티티를 대상으로 정합니다	#
 advMode.allPlayers="@a"를 사용하여 모든 플레이어를 대상으로 정합니다	#
@@ -263,7 +264,7 @@ commands.gamerule.norule='%s'은(는) 존재하지 않는 규칙입니다	#
 commands.gamerule.success=게임 규칙이 업데이트 되었습니다	#
 commands.gamerule.usage=/gamerule <규칙 이름> [값]	#
 commands.generic.boolean.invalid='%s'은 참과 거짓이 아닙니다	#
-commands.generic.double.tooBig=입력한 숫자(%s)가 너무 큽니다. 최대 %s 이하여야 합니다.	#
+commands.generic.double.tooBig=입력한 숫자(%.2f)가 너무 큽니다. 최대 %.2f 이하여야 합니다.	#
 commands.generic.double.tooSmall=입력한 숫자(%s)가 너무 작습니다. 최소 %s 이상이여야 합니다.	#
 commands.generic.entity.invalidType=엔티티 형식 '%s' 은(는) 올바르지 않습니다	#
 commands.generic.entity.invalidUuid=제공된 엔티티 UUID가 잘못된 형식입니다	#
@@ -585,7 +586,7 @@ controller.buttonTip.take=획득	#
 controller.buttonTip.takeItem=아이템 얻기	#
 
 controllerLayoutScreen.actions=행동	#
-controllerLayoutScreen.bindings=계정 연결	#
+controllerLayoutScreen.bindings=바인딩	#
 controllerLayoutScreen.button=버튼	#
 controllerLayoutScreen.cancel=취소	#
 controllerLayoutScreen.confirmation.reset=모든 버튼을 기본값으로 재설정하시겠습니까?	#
@@ -610,7 +611,9 @@ controls.reset=초기화	#
 controls.resetAll=키 설정 초기화	#
 controls.title=조작	#
 
+crafting.badCombination=해당 아이템에 대한 올바른 출력이 없습니다	#
 crafting.cannotCreate=모든 재료를 가지고 있지 않습니다	#
+crafting.insufficientLevel=레벨이 너무 낮습니다	#
 crafting.noRecipesInventory=만들려면 블록을 모아야 합니다!	#
 crafting.noRecipesStonecutter=만들려면 돌 재료를 모아야 합니다!	#
 crafting.noRecipesWorkbench=만들려면 블록을 모아야 합니다!	#
@@ -703,9 +706,9 @@ createWorldScreen.delete.confirm=월드를 영구적으로 삭제하겠습니까
 createWorldScreen.game.settings=게임 설정	#
 createWorldScreen.gameMode=게임 모드	#
 createWorldScreen.gameMode.creative=크리에이티브	#
-createWorldScreen.gameMode.creative.desc=블록을 쉽게 파괴하고 쌓을 수 있어요. 날 수 있으며 죽지 않아요. 그리고 다른 멋진 것들도 준비되어 있어요.	#
+createWorldScreen.gameMode.creative.desc=자원이 무제한입니다. 대미지를 입지 않으며 날 수 있습니다. 이후에 서바이벌 모드로 전환해도 도전 과제를 받지 않습니다.	#
 createWorldScreen.gameMode.survival=생존	#
-createWorldScreen.gameMode.survival.desc=한정된 자원. 도구가 필요합니다. 다칠지도 몰라요. 괴물을 조심하세요.	#
+createWorldScreen.gameMode.survival.desc=한정된 자원. 도구가 필요합니다. 다칠지도 몰라요. 몬스터를 조심하세요.	#
 createWorldScreen.header.delete=월드 영구성	#
 createWorldScreen.header.editLocal=월드 편집하기	#
 createWorldScreen.header.local=월드 생성하기	#
@@ -819,7 +822,7 @@ disconnectionScreen.invalidName=이름이 잘못되었습니다!	#
 disconnectionScreen.invalidSkin=유효하지 않은 스킨!	#
 disconnectionScreen.loggedinOtherLocation=다른 위치에서 로그인했습니다.	#
 disconnectionScreen.noReason=연결이 끊겼습니다	#
-disconnectionScreen.noWIFI=외부 서버에서 플레이하려면 Wifi 연결이 필요합니다	#
+disconnectionScreen.noInternet=월드에 연결할 수 없습니다.  인터넷 연결을 다시 한번 확인하고 시도하십시오.	#
 disconnectionScreen.outdatedClient=연결할 수 없습니다: 오래된 클라이언트!	#
 disconnectionScreen.outdatedServer=연결할 수 없습니다: 오래된 서버!	#
 disconnectionScreen.serverFull=서버가 모두 찼습니다!	#
@@ -1928,7 +1931,7 @@ key.hotbar.7=핫바 슬롯 7	#
 key.hotbar.8=핫바 슬롯 8	#
 key.hotbar.9=핫바 슬롯 9	#
 key.inventory=소지품	#
-key.jump=점프	#
+key.jump=점프/위로 비행	#
 key.left=왼쪽 움직임	#
 key.mouseButton=버튼 %1$s	#
 key.pickItem=블록 선택	#
@@ -1936,7 +1939,7 @@ key.playerlist=접속자 목록	#
 key.right=오른쪽 움직임	#
 key.screenshot=스크린샷 찍기	#
 key.smoothCamera=시네마틱 카메라 토글	#
-key.sneak=웅크리기	#
+key.sneak=조용히 걷기/아래로 비행	#
 key.spectatorOutlines=하이라이트 플레이어 (관람자)	#
 key.sprint=달리기	#
 key.streamCommercial=스트림 광고 보이기	#
@@ -2077,7 +2080,7 @@ options.hidden=숨겨진	#
 options.hidegui=GUI 숨기기	#
 options.invertMouse=마우스 반전	#
 options.invertYAxis=Y축 반전	#
-options.keyboardLayout=키보드 배치	#
+options.keyboardLayout=키보드 레이아웃	#
 options.language=언어...	#
 options.languageWarning=번역은 100% 완벽하지 않을 수도 있습니다	#
 options.lefthanded=왼손모드	#
@@ -2118,6 +2121,7 @@ options.sensitivity=마우스 감도	#
 options.sensitivity.max=겁나 빠름!!!	#
 options.sensitivity.min=하~품...	#
 options.servervisible=로컬 서버 멀티플레이어	#
+options.xboxlivevisible=Xbox Live 멀티 플레이	#
 options.skinCustomisation=사용자 지정 스킨...	#
 options.skinCustomisation.title=사용자 지정 스킨	#
 options.snooper=기기정보 수집 허용	#
@@ -2272,7 +2276,7 @@ potion.weakness.postfix=나약의 포션	#
 potion.wither=위더	#
 potion.wither.postfix=부패 포션	#
 
-progressScreen.cantConnect=서버에 연결할 수 없습니다. 다시 시도하십시오.	#
+progressScreen.cantConnect=월드에 연결할 수 없습니다.  인터넷 연결을 다시 한번 확인한 후 시도하십시오.	#
 progressScreen.generating=월드 만드는 중	#
 progressScreen.message.building=지형 구축 중	#
 progressScreen.message.done=완료!	#
@@ -2834,7 +2838,7 @@ tile.stonebricksmooth.cracked.name=금 간 석재 벽돌	#
 tile.stonebricksmooth.default.name=석재 벽돌	#
 tile.stonebricksmooth.mossy.name=이끼 낀 석재 벽돌	#
 tile.stonebricksmooth.name=석재 벽돌	#
-tile.stonecutter.name=석재 절단기	#
+tile.stonecutter.name=돌 절단기	#
 tile.stoneMoss.name=이끼 낀 돌	#
 tile.stoneSlab.brick.name=벽돌 반 블록	#
 tile.stoneSlab.cobble.name=조약돌 반 블록	#
@@ -2936,30 +2940,28 @@ trial.pauseScreen.buyGame=Minecraft 구입하기	#
 trial.survival.welcome=Minecraft 체험에 오신 걸 환영합니다!	#
 trial.survival.remainingTime=%d분 남음	#
 
+trial.noInvitesOrJoining=친구들과 함께 플레이하려면 전체 게임을 구매하십시오	#
+
 trial.upsell.trialLabel=Minecraft 체험	#
 
-## NOTE: The following five lines are shown as a single paragraph in the game. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line.
-trial.upsell.description.line1=이 체험판에서는 한정된 90	#
-trial.upsell.description.line2=분의 시간 동안 제작하고, 만들고,	#
-trial.upsell.description.line3=탐험하며 즐거운 시간을 보내세요! 당신의 월드는	#
-trial.upsell.description.line4=정식 버전을 구입하기로 결정한 경우	#
-trial.upsell.description.line5=그대로 유지됩니다.	#
+trial.upsell.description=체험판에서는 90분까지만 플레이할 수 있습니다. 제작하고 건설하고, 탐색하며 즐기세요! 정식 버전을 구매하기로 선택한 경우 월드는 보존됩니다.	#
 
-## NOTE: The following seven lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line. In particular, please note that line7 is a continuation of the bullet in line6
-trial.upsell.expiredDescription.line1=시간이 만료되었습니다. 전체 게임을	#
-trial.upsell.expiredDescription.line2=잠금 해제하려면 구입하세요:	#
-trial.upsell.expiredDescription.line3=-무제한의 월드를 탐험하세요	#
-trial.upsell.expiredDescription.line4=-친구와 함께 플레이하세요	#
-trial.upsell.expiredDescription.line5=-수백 개의 아이템을 제작하세요	#
-trial.upsell.expiredDescription.line6=-기이한 건축물과 realm을	#
-trial.upsell.expiredDescription.line7=발견하세요	#
+## NOTE: The following five lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
+## as opposed to trying to literally translate each line.
+trial.upsell.expiredDescription.line1=시간이 만료되었습니다. 정식 버전을 잠금 해제하려면 구매하세요:	#
+trial.upsell.expiredDescription.line2=-무제한의 월드를 탐험하세요	#
+trial.upsell.expiredDescription.line3=-친구와 함께 플레이하세요	#
+trial.upsell.expiredDescription.line4=-수백 개의 아이템을 제작하세요	#
+trial.upsell.expiredDescription.line5=-신비한 구조와 Realm을 탐색하세요	#
 
 ## Xbox Live Strings
 xbox.signin.error.line1=Xbox Live에 로그인하세요.	#
 xbox.signin.error.line2=친구들과 플레이하고,	#
 xbox.signin.error.line3=게이머 점수와 도전 과제를 얻을 수 있습니다.	#
 xbox.connection.error=Xbox Live에 연결되어 있지 않습니다.	#
+
+xbox.disconectionscreen.notSignedIn=친구들과 플레이하고, 게임 점수와 도전 과제를 얻으려면 Xbox Live에 로그인하세요.	#
+xbox.disconectionscreen.multiplayerNotAllowed=이 계정에는 Xbox Live 멀티 플레이 게임에 참가할 수 있는 권한이 없습니다.	#
+xbox.disconectionscreen.accessDenied=이 게임에 참가하려면 게임에 있는 누군가와 친구여야 합니다.	#
 
 platform.model.unknown=알 수 없음	#

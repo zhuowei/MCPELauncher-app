@@ -102,6 +102,7 @@ addServer.resourcePack.disabled=Désactivés	#
 addServer.resourcePack.enabled=Activés	#
 addServer.resourcePack.prompt=Demander	#
 addServer.title=Modification des informations du serveur	#
+addServer.alreadyAdded=Ce serveur a déjà été ajouté	#
 
 advMode.allEntities=Utilisez "@e" pour cibler toutes les entités	#
 advMode.allPlayers=Utilisez "@a" pour cibler tous les joueurs	#
@@ -610,7 +611,9 @@ controls.reset=Reset	#
 controls.resetAll=Réinitialiser les touches	#
 controls.title=Contrôles	#
 
+crafting.badCombination=Aucun résultat valable pour cet objet	#
 crafting.cannotCreate=Vous n'avez pas tous les ingrédients	#
+crafting.insufficientLevel=Votre niveau est trop bas	#
 crafting.noRecipesInventory=Vous devez recueillir des blocs pour construire!	#
 crafting.noRecipesStonecutter=Vous avez besoin de pierre pour construire!	#
 crafting.noRecipesWorkbench=Vous devez recueillir des blocs pour construire!	#
@@ -703,7 +706,7 @@ createWorldScreen.delete.confirm=Supprimer définitivement le monde?	#
 createWorldScreen.game.settings=Paramètres de jeu	#
 createWorldScreen.gameMode=Mode de jeu	#
 createWorldScreen.gameMode.creative=Créatif	#
-createWorldScreen.gameMode.creative.desc=Détruire et placer facilement des blocs. Aucun dommage, voler et autres trucs intéressants.	#
+createWorldScreen.gameMode.creative.desc=Évoluez et volez dans un monde sans risque aux ressources illimitées. Vous ne pourrez pas déverrouiller de succès, même en passant ensuite en mode Survie.	#
 createWorldScreen.gameMode.survival=Survie	#
 createWorldScreen.gameMode.survival.desc=Ressources limitées, vous aurez besoin d'outils. Vous pourriez vous blesser. Faites attention aux monstres.	#
 createWorldScreen.header.delete=Pérennité du monde	#
@@ -819,7 +822,7 @@ disconnectionScreen.invalidName=Nom invalide!	#
 disconnectionScreen.invalidSkin=Skin non valide!	#
 disconnectionScreen.loggedinOtherLocation=Connecté à partir d'un autre endroit	#
 disconnectionScreen.noReason=Vous avez été déconnecté	#
-disconnectionScreen.noWIFI=Vous devez être connecté par Wi-Fi pour jouer sur les serveurs externes	#
+disconnectionScreen.noInternet=Connexion au monde impossible. Vérifiez votre connexion Internet et réessayez.	#
 disconnectionScreen.outdatedClient=Impossible de se connecter : client désuet!	#
 disconnectionScreen.outdatedServer=Impossible de se connecter : serveur désuet!	#
 disconnectionScreen.serverFull=Le serveur est plein!	#
@@ -1649,7 +1652,7 @@ item.carrotOnAStick.name=Carotte sur un bâton	#
 item.carrots.name=Carotte	#
 item.cauldron.name=Chaudron	#
 item.charcoal.name=Charbon de bois	#
-item.chestplateChain.name=Cotte de mailles	#
+item.chestplateChain.name=Plastron en mailles	#
 item.chestplateCloth.name=Tunique en cuir	#
 item.chestplateDiamond.name=Plastron en diamant	#
 item.chestplateGold.name=Plastron en or	#
@@ -1928,7 +1931,7 @@ key.hotbar.7=Case 7 de la barre d'action	#
 key.hotbar.8=Case 8 de la barre d'action	#
 key.hotbar.9=Case 9 de la barre d'action	#
 key.inventory=Ouvrir l'inventaire	#
-key.jump=Sauter	#
+key.jump=Sauter/Voler Haut	#
 key.left=Straffer à gauche	#
 key.mouseButton=Souris %1$s	#
 key.pickItem=Choisir le bloc	#
@@ -1936,7 +1939,7 @@ key.playerlist=Afficher la liste des joueurs	#
 key.right=Straffer à droite	#
 key.screenshot=Prendre un screenshot	#
 key.smoothCamera=Alterner le mode cinématique	#
-key.sneak=Se faufiler	#
+key.sneak=Se faufiler/Voler Bas	#
 key.spectatorOutlines=Afficher l'aura des joueurs	#
 key.sprint=Sprinter	#
 key.streamCommercial=Montrer les publicités de stream	#
@@ -2042,7 +2045,7 @@ options.difficulty.hard=Difficile	#
 options.difficulty.hardcore=Hardcore	#
 options.difficulty.normal=Normale	#
 options.difficulty.peaceful=Paisible	#
-options.dpadscale=Dimension de la croix directionnelle	#
+options.dpadscale=Dimension croix	#
 options.entityShadows=Ombres d'entités	#
 options.fancyskies=Magnifiques cieux	#
 options.farWarning1=Une version 64 bits de Java est recommandée	#
@@ -2068,7 +2071,7 @@ options.group.graphics=Graphiques	#
 options.group.graphics.experimental=Expérimental	#
 options.group.input=Commandes	#
 options.group.realms=Invité dans les Realms Alpha?	#
-options.guiScale=Dimension de la croix directionnelle	#
+options.guiScale=Dimension croix	#
 options.guiScale.auto=Auto	#
 options.guiScale.large=Grande	#
 options.guiScale.normal=Normale	#
@@ -2117,7 +2120,8 @@ options.saturation=Saturation 	#
 options.sensitivity=Sensibilité 	#
 options.sensitivity.max=ULTRARAPIDE !!!	#
 options.sensitivity.min=*bâille*	#
-options.servervisible=Joueurs multiples sur serveur local	#
+options.servervisible=Joueurs multiples local	#
+options.xboxlivevisible=Multijoueur Xbox Live	#
 options.skinCustomisation=Personnalisation du skin...	#
 options.skinCustomisation.title=Personnalisation du skin	#
 options.snooper=Autoriser l'envoi 	#
@@ -2160,7 +2164,7 @@ options.thirdperson=Vue à la troisième personne	#
 options.title=Options	#
 options.touchscreen=Mode écran tactile 	#
 options.usetouchpad=Choix des commandes	#
-options.swapJumpAndSneak=Permuter Sauter et Se faufiler	#
+options.swapJumpAndSneak=Permuter Sauter et se Faufiler	#
 options.usetouchscreen=Jouer avec le pavé tactile	#
 options.vbo=Utiliser les VBO 	#
 options.video=Paramètres graphiques...	#
@@ -2272,7 +2276,7 @@ potion.weakness.postfix=Potion de faiblesse	#
 potion.wither=Décomposition	#
 potion.wither.postfix=Potion de décomposition	#
 
-progressScreen.cantConnect=Impossible de se connecter au serveur. Réessayez.	#
+progressScreen.cantConnect=Connexion au monde impossible. Vérifiez votre connexion Internet et réessayez.	#
 progressScreen.generating=Génération d'un monde	#
 progressScreen.message.building=Génération du terrain	#
 progressScreen.message.done=Terminé!	#
@@ -2281,7 +2285,7 @@ progressScreen.message.waitingForRealms=En attente de minecraftApp Realms	#
 
 recipeBook.setting.full=Plein	#
 recipeBook.setting.discover=Découvrir	#
-recipeBook.setting.off=Non	#
+recipeBook.setting.off=Éteint	#
 
 record.nowPlaying=Lecture : %s	#
 
@@ -2372,7 +2376,7 @@ skin.CityFolk.Baron=Baron	#
 skin.CityFolk.Baroness=Baronne	#
 skin.CityFolk.Blacksmith=Forgeron	#
 skin.CityFolk.Butcher=Boucher	#
-skin.CityFolk.Carpenter=Menuiser	#
+skin.CityFolk.Carpenter=Menuisier	#
 skin.CityFolk.Chef=Chef	#
 skin.CityFolk.HolyMan=Prêtre	#
 skin.CityFolk.HolyWoman=Bonne sœur	#
@@ -2936,30 +2940,28 @@ trial.pauseScreen.buyGame=Acheter Minecraft	#
 trial.survival.welcome=Bienvenue à votre Essai Minecraft!	#
 trial.survival.remainingTime=%d minutes restantes	#
 
+trial.noInvitesOrJoining=Pour jouer entre amis, veuillez acheter le jeu complet	#
+
 trial.upsell.trialLabel=Essai Minecraft	#
 
-## NOTE: The following five lines are shown as a single paragraph in the game. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line.
-trial.upsell.description.line1=Dans cet essai, vous êtes limité à 90	#
-trial.upsell.description.line2=minutes de jeu. Créez, construisez,	#
-trial.upsell.description.line3=explorez et amusez-vous! Votre monde sera	#
-trial.upsell.description.line4=conservé si vous choisissez	#
-trial.upsell.description.line5=d'acheter la version complète.	#
+trial.upsell.description=Dans cette version d'essai, vous êtes limité à 90 minutes de temps de jeu. Fabriquez, construisez, explorez et amusez-vous ! Votre monde sera préservé si vous choisissez d'acheter la version complète.	#
 
-## NOTE: The following seven lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line. In particular, please note that line7 is a continuation of the bullet in line6
-trial.upsell.expiredDescription.line1=La période d'essai est terminée. Veuillez acheter	#
-trial.upsell.expiredDescription.line2=le jeu complet pour continuer :	#
-trial.upsell.expiredDescription.line3=Explorez des mondes sans limite	#
-trial.upsell.expiredDescription.line4=Jouez avec vos amis	#
-trial.upsell.expiredDescription.line5=Créez des centaines d'objets	#
-trial.upsell.expiredDescription.line6=Découvrez des mondes et des	#
-trial.upsell.expiredDescription.line7=structures mystérieuses	#
+## NOTE: The following five lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
+## as opposed to trying to literally translate each line.
+trial.upsell.expiredDescription.line1=Temps écoulé. Déverrouillez le jeu complet pour pouvoir :	#
+trial.upsell.expiredDescription.line2=- explorer des mondes infinis	#
+trial.upsell.expiredDescription.line3=- jouer entre amis	#
+trial.upsell.expiredDescription.line4=- fabriquer des centaines d'objets	#
+trial.upsell.expiredDescription.line5=- découvrir de mystérieux édifices et royaumes	#
 
 ## Xbox Live Strings
 xbox.signin.error.line1=Connectez-vous à votre compte Xbox Live	#
 xbox.signin.error.line2=pour jouer avec des amis,	#
 xbox.signin.error.line3=augmenter votre score de joueur et obtenir des succès.	#
 xbox.connection.error=Aucune connexion à Xbox Live.	#
+
+xbox.disconectionscreen.notSignedIn=Connectez-vous avec votre compte Xbox Live pour jouer entre amis.	#
+xbox.disconectionscreen.multiplayerNotAllowed=Ce compte n'est pas autorisé à rejoindre une partie multijoueur sur Xbox Live.	#
+xbox.disconectionscreen.accessDenied=Vous devez être amis avec un joueur de cette partie pour la rejoindre.	#
 
 platform.model.unknown=INCONNU	#

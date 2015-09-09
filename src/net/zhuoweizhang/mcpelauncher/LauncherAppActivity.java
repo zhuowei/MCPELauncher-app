@@ -125,8 +125,8 @@ public class LauncherAppActivity extends LauncherActivity {
 		shadePopup.showAtLocation(getWindow().getDecorView(), Gravity.TOP | Gravity.LEFT, 0, 0);
 		ScriptManager.nativeSetExitEnabled(false);
 		adHandler.removeMessages(MESSAGE_AD_TIMEOUT);
-		// wait for two seconds
-		adHandler.sendEmptyMessageDelayed(MESSAGE_SHOW_AD, 1000);
+		// wait for 0.5 seconds
+		adHandler.sendEmptyMessageDelayed(MESSAGE_SHOW_AD, 500);
 	}
 
 	private Handler adHandler = new Handler() {

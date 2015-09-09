@@ -320,5 +320,52 @@
         ]
       }}
     ]
+  },
+
+  // Bumpers
+  /////////////////////////////////////////////////////////////////////////////
+
+  "gamepad_icon_left_bumper@gamepad_helper_icon": {
+    "uv": [ 225, 26 ],
+    "uv_size": [ 27, 13 ],
+    "size": [ 27, 13 ]
+  },
+
+  "gamepad_helper_left_bumper@gamepad_helper_common": {
+    "controls": [
+      {"@gamepad_icon_left_bumper": {
+        "controls": [
+          {"@gamepad_helper_description": {
+            "text": "#button_left_bumper_description",
+            "bindings": [
+              {"binding_name": "#button_left_bumper_description",
+               "binding_type": "global" }
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  "gamepad_icon_right_bumper@gamepad_helper_icon": {
+    "uv": [ 225, 42 ],
+    "uv_size": [ 27, 13 ],
+    "size": [ 27, 13 ]
+  },
+
+  "gamepad_helper_right_bumper@gamepad_helper_common": {
+    "controls": [
+      {"@gamepad_icon_right_bumper": {
+        "controls": [
+          {"@gamepad_helper_description": {
+            "text": "#button_right_bumper_description",
+            "bindings": [
+              {"binding_name": "#button_right_bumper_description",
+               "binding_type": "global" }
+            ]
+          }}
+        ]
+      }}
+    ]
   }
 }

@@ -18,7 +18,7 @@ struct PS_Output
 
 void main( in PS_Input PSInput, out PS_Output PSOutput )
 {
-	float4 diffuse = TEXTURE_0.Sample( TextureSampler0, PSInput.uv0 ) * TEXTURE_1.Sample( TextureSampler1, PSInput.uv1 );
+	float4 diffuse = TEXTURE_0.Sample(TextureSampler0, PSInput.uv0);
 
 #ifdef SEASONS_FAR
 	diffuse.a = 1.0f;
@@ -32,10 +32,11 @@ void main( in PS_Input PSInput, out PS_Output PSOutput )
     }
 #endif
 
+	diffuse = diffuse * TEXTURE_1.Sample(TextureSampler1, PSInput.uv1);
+
 #ifndef SEASONS
 
 #if !defined(ALPHA_TEST) && !defined(BLEND)
-	PSInput.color.rgb = lerp(PSInput.color.aaa, PSInput.color.rgb, diffuse.a);
 	diffuse.a = PSInput.color.a;
 #elif defined(BLEND)
 	diffuse.a *= PSInput.color.a;

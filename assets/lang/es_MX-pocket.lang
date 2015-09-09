@@ -102,6 +102,7 @@ addServer.resourcePack.disabled=Deshabilitados	#
 addServer.resourcePack.enabled=SÍ	#
 addServer.resourcePack.prompt=Preguntar	#
 addServer.title=Modificar la información del servidor	#
+addServer.alreadyAdded=Este servidor ya fue agregado	#
 
 advMode.allEntities=Usa "@e" para elegir a todas las entidades	#
 advMode.allPlayers=Usá "@a" para apuntar a todos los jugadores	#
@@ -610,7 +611,9 @@ controls.reset=Reiniciar	#
 controls.resetAll=Reiniciar teclas	#
 controls.title=Controles	#
 
+crafting.badCombination=No hay resultados válidos para ese elemento	#
 crafting.cannotCreate=¡Te faltan ingredientes!	#
+crafting.insufficientLevel=Tu nivel es demasiado bajo	#
 crafting.noRecipesInventory=¡Necesitas recoger bloques para crear!	#
 crafting.noRecipesStonecutter=¡Necesitas materiales de piedra para crear!	#
 crafting.noRecipesWorkbench=¡Necesitas recoger bloques para crear!	#
@@ -703,7 +706,7 @@ createWorldScreen.delete.confirm=¿Quieres borrar el mundo para siempre?	#
 createWorldScreen.game.settings=Configuración del juego	#
 createWorldScreen.gameMode=Modo de juego	#
 createWorldScreen.gameMode.creative=Creativo	#
-createWorldScreen.gameMode.creative.desc=Destruye y coloca bloques fácilmente. No sufrirás daño, puedes volar y hacer otras cosas geniales.	#
+createWorldScreen.gameMode.creative.desc=Recursos ilimitados. Sin daños. Volar. Sin logros aunque te cambies a modo de supervivencia más tarde.	#
 createWorldScreen.gameMode.survival=Supervivencia	#
 createWorldScreen.gameMode.survival.desc=Recursos limitados, necesitarás herramientas. Te puedes lastimar. Cuidado con los monstruos.	#
 createWorldScreen.header.delete=Permanencia del mundo	#
@@ -819,7 +822,7 @@ disconnectionScreen.invalidName=¡Nombre inválido!	#
 disconnectionScreen.invalidSkin=¡Aspecto no válido!	#
 disconnectionScreen.loggedinOtherLocation=Iniciaste sesión desde otra ubicación	#
 disconnectionScreen.noReason=Te has desconectado.	#
-disconnectionScreen.noWIFI=Debes conectarte por medio de Wifi para poder jugar en servidores externos.	#
+disconnectionScreen.noInternet=No se puede conectar con el mundo. Verifica tu conexión a Internet e inténtalo de nuevo.	#
 disconnectionScreen.outdatedClient=Fue imposible conectarse: ¡cliente desactualizado!	#
 disconnectionScreen.outdatedServer=Fue imposible conectarse: ¡servidor desactualizado!	#
 disconnectionScreen.serverFull=¡El servidor está lleno!	#
@@ -1928,7 +1931,7 @@ key.hotbar.7=Acceso rápido 7	#
 key.hotbar.8=Acceso rápido 8	#
 key.hotbar.9=Acceso rápido 9	#
 key.inventory=Inventario	#
-key.jump=Saltar	#
+key.jump=Saltar/Volar hacia arriba	#
 key.left=Caminar hacia la izquierda	#
 key.mouseButton=Botón %1$s	#
 key.pickItem=Copiar bloque	#
@@ -1936,7 +1939,7 @@ key.playerlist=Lista de jugadores	#
 key.right=Caminar hacia la derecha	#
 key.screenshot=Captura de pantalla	#
 key.smoothCamera=Cámara cinemática	#
-key.sneak=Agacharse	#
+key.sneak=Acechar/Volar hacia abajo	#
 key.spectatorOutlines=Destacar jugadores (espectadores)	#
 key.sprint=Correr	#
 key.streamCommercial=Mostrar anuncios	#
@@ -2042,7 +2045,7 @@ options.difficulty.hard=Difícil	#
 options.difficulty.hardcore=Extremo	#
 options.difficulty.normal=Normal	#
 options.difficulty.peaceful=Pacífico	#
-options.dpadscale=Tamaño de la cruz de control	#
+options.dpadscale=Tamaño cruceta	#
 options.entityShadows=Sombras de entidades	#
 options.fancyskies=Cielos hermosos	#
 options.farWarning1=Se recomienda instalar Java de 64 bits	#
@@ -2118,6 +2121,7 @@ options.sensitivity=Sensibilidad	#
 options.sensitivity.max=¡¡¡HIPER VELOZ!!!	#
 options.sensitivity.min=*zzz*	#
 options.servervisible=Multijugador en servidor local	#
+options.xboxlivevisible=Xbox Live multijugador	#
 options.skinCustomisation=Personalizar aspecto...	#
 options.skinCustomisation.title=Personalizar aspecto	#
 options.snooper=Enviar informes	#
@@ -2272,7 +2276,7 @@ potion.weakness.postfix=Poción de debilidad	#
 potion.wither=Wither	#
 potion.wither.postfix=Poción de decaimiento	#
 
-progressScreen.cantConnect=No se pudo conectar al servidor, inténtalo de nuevo.	#
+progressScreen.cantConnect=No se puede conectar con el mundo. Verifica tu conexión a Internet e inténtalo de nuevo.	#
 progressScreen.generating=Generando mundo...	#
 progressScreen.message.building=Generando terreno...	#
 progressScreen.message.done=¡Terminado!	#
@@ -2391,7 +2395,7 @@ skin.TownFolk.Bandit=Bandida	#
 skin.TownFolk.Bard=Bardo	#
 skin.TownFolk.Castaway=Náufrago	#
 skin.TownFolk.Farmer=Granjero	#
-skin.TownFolk.Forester=Forestador	#
+skin.TownFolk.Forester=Guardabosque	#
 skin.TownFolk.Gardener=Jardinera	#
 skin.TownFolk.Mime=Mimo	#
 skin.TownFolk.Miner=Minero	#
@@ -2936,30 +2940,28 @@ trial.pauseScreen.buyGame=Comprar Minecraft	#
 trial.survival.welcome=¡Te damos la bienvenida a la versión de prueba de Minecraft!	#
 trial.survival.remainingTime=Minutos restantes: %d	#
 
+trial.noInvitesOrJoining=Para jugar con amigos, debes comprar el juego completo	#
+
 trial.upsell.trialLabel=Versión de prueba de Minecraft	#
 
-## NOTE: The following five lines are shown as a single paragraph in the game. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line.
-trial.upsell.description.line1=En esta versión de prueba dispones de 90	#
-trial.upsell.description.line2=minutos para disfrutar del juego. Crea, construye,	#
-trial.upsell.description.line3=explora ¡y disfruta! Tu mundo se guardará	#
-trial.upsell.description.line4=si decides comprar	#
-trial.upsell.description.line5=la versión completa.	#
+trial.upsell.description=En la versión de prueba, solo dispones de 90 minutos para jugar. ¡Crea, construye, explora y diviértete! Tu mundo se preservará si eliges comprar la versión completa.	#
 
-## NOTE: The following seven lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line. In particular, please note that line7 is a continuation of the bullet in line6
-trial.upsell.expiredDescription.line1=¡Se agotó el tiempo! Compra la versión completa	#
-trial.upsell.expiredDescription.line2=para seguir disfrutando del juego.	#
-trial.upsell.expiredDescription.line3=- Explora mundos sin límites.	#
-trial.upsell.expiredDescription.line4=- Juega con tus amigos.	#
-trial.upsell.expiredDescription.line5=- Crea cientos de objetos.	#
-trial.upsell.expiredDescription.line6=- Descubre estructuras	#
-trial.upsell.expiredDescription.line7=y reinos misteriosos.	#
+## NOTE: The following five lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
+## as opposed to trying to literally translate each line.
+trial.upsell.expiredDescription.line1=¡Se agotó el tiempo! Para desbloquear el juego, debes comprar la versión completa.	#
+trial.upsell.expiredDescription.line2=-Explora mundos sin límites	#
+trial.upsell.expiredDescription.line3=-Juega con tus amigos	#
+trial.upsell.expiredDescription.line4=-Crea cientos de objetos	#
+trial.upsell.expiredDescription.line5=-Descubre estructuras y realms misteriosos	#
 
 ## Xbox Live Strings
 xbox.signin.error.line1=Debes iniciar sesión con tu cuenta de Xbox Live	#
 xbox.signin.error.line2=para jugar con tus amigos, 	#
 xbox.signin.error.line3=ganar puntuación y obtener logros.	#
 xbox.connection.error=Fallo en la conexión con Xbox Live	#
+
+xbox.disconectionscreen.notSignedIn=Inicia sesión con tu cuenta de Xbox Live para jugar con tus amigos.	#
+xbox.disconectionscreen.multiplayerNotAllowed=Esta cuenta no tiene permiso para unirse a juegos multijugador de Xbox Live.	#
+xbox.disconectionscreen.accessDenied=Para unirte, debes ser amigo de alguien en el juego.	#
 
 platform.model.unknown=DESCONOCIDO	#

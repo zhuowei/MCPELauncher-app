@@ -15,11 +15,6 @@ void main( in PS_Input PSInput, out PS_Output PSOutput ) {
 	
 	PSOutput.color = TEXTURE_0.Sample(TextureSampler0, PSInput.uv);
 
-#ifdef ALPHA_TEST
-	if (PSOutput.color.a < 0.5)
-		discard;
-#endif
-
 	PSOutput.color.a *= PSInput.color.a;
 
 	float2 uv = PSInput.worldPosition.xz;
@@ -30,7 +25,7 @@ void main( in PS_Input PSInput, out PS_Output PSOutput ) {
 	// clamp the uvs
 	float2 uvclamp = saturate(uv);
 	if (uvclamp.x == uv.x && uvclamp.y == uv.y && PSInput.worldPosition.y < occlusionTexture.a) {
-		discard;
+		PSOutput.color.a = 0.0f;
 	}
 
 	float mixAmount = saturate((PSInput.worldPosition.y - occlusionTexture.a)*0.1f);

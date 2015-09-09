@@ -102,6 +102,7 @@ addServer.resourcePack.disabled=Disabled
 addServer.resourcePack.enabled=Enabled
 addServer.resourcePack.prompt=Prompt
 addServer.title=Edit Server Info
+addServer.alreadyAdded=This server has already been added
 
 advMode.allEntities=Use "@e" to target all entities
 advMode.allPlayers=Use "@a" to target all players
@@ -610,7 +611,9 @@ controls.reset=Reset
 controls.resetAll=Reset Keys
 controls.title=Controls
 
+crafting.badCombination=No valid output for that item
 crafting.cannotCreate=You don't have all ingredients
+crafting.insufficientLevel=Your level is too low
 crafting.noRecipesInventory=You need to collect blocks to craft!
 crafting.noRecipesStonecutter=You need stone materials to craft!
 crafting.noRecipesWorkbench=You need to collect blocks to craft!
@@ -703,7 +706,7 @@ createWorldScreen.delete.confirm=Delete world permanently?
 createWorldScreen.game.settings=Game Settings
 createWorldScreen.gameMode=Game Mode
 createWorldScreen.gameMode.creative=Creative
-createWorldScreen.gameMode.creative.desc=Easily destroy and place blocks. No damage, flying and other cool stuff.
+createWorldScreen.gameMode.creative.desc=Unlimited resources. No damage. Flying. No achievements even if you switch to survival later.
 createWorldScreen.gameMode.survival=Survival
 createWorldScreen.gameMode.survival.desc=Limited resources, you'll need tools. You may get hurt. Watch out for Monsters.
 createWorldScreen.header.delete=World Permanence
@@ -819,7 +822,7 @@ disconnectionScreen.invalidName=Invalid name!
 disconnectionScreen.invalidSkin=Invalid or corrupt skin!
 disconnectionScreen.loggedinOtherLocation=Logged in from other location
 disconnectionScreen.noReason=You have been disconnected
-disconnectionScreen.noWIFI=You need to be connected through Wifi to play on External servers
+disconnectionScreen.noInternet=Unable to connect to the world.  Please check your connection to the internet and try again.
 disconnectionScreen.outdatedClient=Could not connect: Outdated client!
 disconnectionScreen.outdatedServer=Could not connect: Outdated server!
 disconnectionScreen.serverFull=Server is full!
@@ -1928,7 +1931,7 @@ key.hotbar.7=Hotbar Slot 7
 key.hotbar.8=Hotbar Slot 8
 key.hotbar.9=Hotbar Slot 9
 key.inventory=Inventory
-key.jump=Jump
+key.jump=Jump/Fly Up
 key.left=Strafe Left
 key.mouseButton=Button %1$s
 key.pickItem=Pick Block
@@ -1936,7 +1939,7 @@ key.playerlist=List Players
 key.right=Strafe Right
 key.screenshot=Take Screenshot
 key.smoothCamera=Toggle Cinematic Camera
-key.sneak=Sneak
+key.sneak=Sneak/Fly Down
 key.spectatorOutlines=Highlight Players (Spectators)
 key.sprint=Sprint
 key.streamCommercial=Show Stream Commercials
@@ -2118,6 +2121,7 @@ options.sensitivity=Sensitivity
 options.sensitivity.max=HYPERSPEED!!!
 options.sensitivity.min=*yawn*
 options.servervisible=Local Server Multiplayer
+options.xboxlivevisible=Xbox Live Multiplayer
 options.skinCustomisation=Skin Customization...
 options.skinCustomisation.title=Skin Customization
 options.snooper=Allow Snooper
@@ -2272,7 +2276,7 @@ potion.weakness.postfix=Potion of Weakness
 potion.wither=Wither
 potion.wither.postfix=Potion of Decay
 
-progressScreen.cantConnect=Could not connect to server. Try again.
+progressScreen.cantConnect=Unable to connect to the world.  Please check your connection to the internet and try again.
 progressScreen.generating=Generating world
 progressScreen.message.building=Building terrain
 progressScreen.message.done=Done!
@@ -2936,30 +2940,28 @@ trial.pauseScreen.buyGame=Buy Minecraft
 trial.survival.welcome=Welcome to your Minecraft Trial!
 trial.survival.remainingTime=%d Minutes Remaining
 
+trial.noInvitesOrJoining=To play with friends please purchase the full game
+
 trial.upsell.trialLabel=Minecraft Trial
 
-## NOTE: The following five lines are shown as a single paragraph in the game. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line.
-trial.upsell.description.line1=In this trial you are limited to 90
-trial.upsell.description.line2=minutes of play time. Craft, build,
-trial.upsell.description.line3=explore, and have fun! Your world will
-trial.upsell.description.line4=be preserved if you choose to
-trial.upsell.description.line5=purchase the full version.
+trial.upsell.description=In this trial you are limited to 90 minutes of play time. Craft, build, explore, and have fun! Your world will be preserved if you choose to purchase the full version.
 
-## NOTE: The following seven lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
-## as opposed to trying to literally translate each line. In particular, please note that line7 is a continuation of the bullet in line6
-trial.upsell.expiredDescription.line1=Time has expired. Please purchase
-trial.upsell.expiredDescription.line2=to unlock the full game:
-trial.upsell.expiredDescription.line3=-Explore limitless worlds
-trial.upsell.expiredDescription.line4=-Play with your friends
-trial.upsell.expiredDescription.line5=-Craft hundreds of items
-trial.upsell.expiredDescription.line6=-Discover mysterious structures
-trial.upsell.expiredDescription.line7=and realms
+## NOTE: The following five lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
+## as opposed to trying to literally translate each line.
+trial.upsell.expiredDescription.line1=Time has expired. Please purchase to unlock the full game:
+trial.upsell.expiredDescription.line2=-Explore limitless worlds
+trial.upsell.expiredDescription.line3=-Play with your friends
+trial.upsell.expiredDescription.line4=-Craft hundreds of items
+trial.upsell.expiredDescription.line5=-Discover mysterious structures and realms
 
 ## Xbox Live Strings
 xbox.signin.error.line1=Please sign in with your Xbox Live account
 xbox.signin.error.line2=to play with friends, 
 xbox.signin.error.line3=earn gamerscore and achievements.
 xbox.connection.error=No connection to Xbox Live.
+
+xbox.disconectionscreen.notSignedIn=Please sign in with your Xbox Live account to play with friends.
+xbox.disconectionscreen.multiplayerNotAllowed=This account does not have permission to join Xbox Live multiplayer games.
+xbox.disconectionscreen.accessDenied=You must be friends with someone in this game in order to join.
 
 platform.model.unknown=UNKNOWN

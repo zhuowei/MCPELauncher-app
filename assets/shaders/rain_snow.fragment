@@ -25,7 +25,7 @@ void main()
 	// clamp the uvs
 	vec2 uvclamp = clamp(occlusionUV, 0.0, 1.0);
 	if (uvclamp.x == occlusionUV.x && uvclamp.y == occlusionUV.y && worldPosition.y < occlusionTexture.a) {
-		discard;
+		albedo.a = 0.0;
 	}
 
 	float mixAmount = clamp ( (worldPosition.y - occlusionTexture.a)*0.1, 0.0, 1.0);

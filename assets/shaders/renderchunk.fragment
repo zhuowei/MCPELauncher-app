@@ -14,7 +14,7 @@ uniform sampler2D TEXTURE_2;
 
 void main()
 {
-	vec4 diffuse = texture2D( TEXTURE_0, uv0 ) * texture2D( TEXTURE_1, uv1 );
+	vec4 diffuse = texture2D( TEXTURE_0, uv0 );
 	vec4 inColor = color;
 	
 #ifdef SEASONS_FAR
@@ -27,10 +27,11 @@ void main()
 	 	discard;
 #endif
 	
+	diffuse = diffuse * texture2D( TEXTURE_1, uv1 );
+
 #ifndef SEASONS
 
 #if !defined(ALPHA_TEST) && !defined(BLEND)
-	inColor.rgb = mix(inColor.aaa, inColor.rgb, diffuse.a);
 	diffuse.a = inColor.a;
 #elif defined(BLEND)
 	diffuse.a *= inColor.a;

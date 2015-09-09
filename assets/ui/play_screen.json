@@ -174,7 +174,7 @@
     "z_order": 5,
     "uv": [ 0, 0 ],
     "uv_size": [ 15, 15 ],
-    "size": [ 15, 15 ]
+    "size": [ 7, 7 ]
   },
 
   "game_offline_icon": {
@@ -183,7 +183,7 @@
     "z_order": 5,
     "uv": [ 0, 0 ],
     "uv_size": [ 15, 15 ],
-    "size": [ 15, 15 ]
+    "size": [ 7, 7 ]
   },
   
   "game_unavailable_icon": {
@@ -192,7 +192,7 @@
     "z_order": 5,
     "uv": [ 0, 0 ],
     "uv_size": [ 15, 15 ],
-    "size": [ 15, 15 ]
+    "size": [ 7, 7 ]
   },
 
   //---------------------------------------------------------------------------
@@ -270,6 +270,8 @@
   "local_world_header@local_world_text": {
     "text": "#header",
     "offset": [ 38, 2 ],
+    "size": [ "100%-38px", 0 ],
+    "clip": true,
     "binding_collection_name": "#local_world_item",
     "bindings": [
       { "binding_name": "#header",
@@ -545,8 +547,8 @@
     "type": "panel",
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
-    "size": [ 14, 14 ],
-    "offset": [ -3, 0 ],
+    "size": [ 7, 7 ],
+    "offset": [ -7, -1 ],
     "controls": [
       {"@game_online_icon": {
         "binding_collection_name": "#network_world_item",
@@ -1356,6 +1358,31 @@
               "default@play.tab_text": {
                 "text": "selectWorld.tab.friends",
                 "color": [ 1.0, 1.0, 1.0 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "gamepad_helpers": {
+          "type": "panel",
+          "size": [ "100%", 13 ],
+          "offset": [ 0, "-50% + 12px" ],
+          "controls": [
+            {
+              "@common.gamepad_helper_left_bumper": {
+                "size": [ 27, "100%" ],
+                "offset": [ -27, 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "@common.gamepad_helper_right_bumper": {
+                "size": [ 27, "100%" ],
+                "offset": [ 27, 0 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
               }
             }
           ]
