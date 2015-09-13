@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.zhuoweizhang.mcpelauncher"
-    android:versionCode="86"
-    android:versionName="1.10"
+    android:versionCode="89"
+    android:versionName="1.10.3"
     android:installLocation="auto">
 
     <permission
@@ -22,6 +22,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- Kamcord -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
 
     <application
         android:name="net.zhuoweizhang.mcpelauncher.BlockLauncher"
