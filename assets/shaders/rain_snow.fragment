@@ -5,6 +5,7 @@ uniform sampler2D TEXTURE_1;
 varying vec2 uv;
 varying vec4 color;
 varying vec4 worldPosition;
+varying vec4 fogColor;
 
 void main()
 {
@@ -32,6 +33,10 @@ void main()
 	vec3 lighting = mix(occlusionTexture.rgb, color.rgb, mixAmount);
 	gl_FragColor = albedo;
 	gl_FragColor.rgb *= lighting.rgb;
+
+	//apply fog
+	gl_FragColor.rgb = mix( gl_FragColor.rgb, fogColor.rgb, fogColor.a );
+
 }
 
 

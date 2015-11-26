@@ -1,0 +1,279 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+  "namespace": "chest",
+
+  "gamepad_helpers": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "98%", 16 ],
+    "controls": [
+      {
+        "@common.gamepad_helper_a": {
+          "size": [ 36, "100%" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+        }
+      },
+      {
+        "@common.gamepad_helper_b": {
+          "offset": [ 36, 0 ],
+          "size": [ 72, "100%" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+        }
+      },
+      {
+        "@common.gamepad_helper_x": {
+          "offset": [ -100, 0 ],
+          "size": [ 72, "100%" ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle"
+        }
+      },
+      {
+        "@common.gamepad_helper_y": {
+          "size": [ 100, "100%" ],
+          "offset": [ -10, 0 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle"
+        }
+      }
+    ]
+  },
+
+  ////---------------------------------------------------------------------------
+  //// #slot region area
+  ////---------------------------------------------------------------------------
+
+  "chest_item_icon@common.item_renderer": {
+    "binding_collection_name": "chest_items",
+    "bindings": [
+      {
+        "binding_name": "#item_id_aux",
+        "binding_type": "collection"
+      }
+    ]
+  },
+
+  "chest_item_foil@common.item_foil_renderer": {
+    "binding_collection_name": "chest_items",
+    "bindings": [
+      {
+        "binding_name": "#item_id_aux",
+        "binding_type": "collection"
+      }
+    ]
+  },
+
+  "chest_item_button@common.inventory_slot_button_prototype": {
+    "layer": 2,
+    "binding_collection_name": "chest_items",
+    "controls": [
+      {
+        "hover@common.highlight_slot": {
+          "controls": [
+            {
+              "chest_hover_text@common.hover_text": {
+                "binding_collection_name": "chest_items",
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "chest_label": {
+    "type": "label",
+    "size": [ 1, 1 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 15 ],
+    "alignment": "top_left",
+    "text": "container.chest",
+    "color": [ 0.25, 0.25, 0.25, 1.0 ],
+    "layer": 2
+  },
+
+  "chest_grid_item": {
+    "type": "grid_item",
+    "size": [ 18, 18 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "@common.cell_image": {
+        }
+      },
+      {
+        "@chest_item_icon": {
+        }
+      },
+      {
+        "@chest_item_foil": {
+        }
+      },
+      {
+        "@chest_item_button": {
+        }
+      },
+      {
+        "@common.stack_count_label": {
+          "binding_collection_name": "chest_items"
+        }
+      },
+      {
+        "@common.durability_bar": {
+          "binding_collection_name": "chest_items"
+        }
+      }
+    ]
+  },
+
+  "small_chest_grid": {
+    "type": "grid",
+    "size": [ 162, 54 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 9, 3 ],
+    "grid_item_template": "chest_grid_item"
+  },
+
+  "large_chest_grid": {
+    "type": "grid",
+    "size": [ 162, 108 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 9, 6 ],
+    "grid_item_template": "chest_grid_item"
+  },
+
+  //// #endregion
+
+  ////---------------------------------------------------------------------------
+  //// #region chest area
+  ////---------------------------------------------------------------------------
+
+  "small_chest_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", "50%" ],
+    "offset": [ 0, 7 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      {
+        "@chest_label": {
+          "alignment": "top_left",
+          "offset": [ 7, 0 ],
+          "text": "container.chest"
+        }
+      },
+      {
+        "@small_chest_grid": {
+          "offset": [ 7, 9 ]
+        }
+      }
+    ]
+  },
+
+  "large_chest_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", 132 ],
+    "offset": [ 0, 7 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      {
+        "@chest_label": {
+          "alignment": "top_left",
+          "offset": [ 7, 0 ],
+          "text": "container.chest"
+        }
+      },
+      {
+        "@large_chest_grid": {
+          "offset": [ 7, 9 ]
+        }
+      }
+    ]
+  },
+
+  //// #endregion
+
+  ////---------------------------------------------------------------------------
+  //// #region screen
+  ////---------------------------------------------------------------------------
+
+  "small_chest_screen@common.inventory_screen_common": {
+    "controls": [
+      { "@chest.gamepad_helpers": { } },
+      { "@common.screen_background": { } },
+      {
+        "@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            { "@common.input_panel": { } },
+            { "@common.common_panel": { } },
+            {
+              "chest_panel": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  { "@chest.small_chest_panel_top_half": { } },
+                  { "@common.inventory_panel_bottom_half_with_label": { } },
+                  { "@common.inventory_hold_icon_button": { } }
+                ]
+              }
+            },
+            { "@common.inventory_selected_icon_button": { } },
+            { "@common.inventory_selected_foil_button": { } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "large_chest_screen@common.inventory_screen_common": {
+    "controls": [
+      { "@chest.gamepad_helpers": { } },
+      { "@common.screen_background": { } },
+      {
+        "@common.root_panel": {
+          "size": [ 176, 220 ],
+          "layer": 1,
+          "controls": [
+            { "@common.input_panel": { } },
+            { "@common.common_panel": { } },
+            {
+              "chest_panel": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  { "@chest.large_chest_panel_top_half": { } },
+                  { "@common.inventory_panel_bottom_half_with_label": { } },
+                  { "@common.inventory_hold_icon_button": { } }
+                ]
+              }
+            },
+            { "@common.inventory_selected_icon_button": { } },
+            { "@common.inventory_selected_foil_button": { } }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+// #endregion
+

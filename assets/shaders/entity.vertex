@@ -47,6 +47,8 @@ float lightIntensity() {
 #ifdef FANCY
     vec3 N = normalize( WORLD * NORMAL ).xyz;
 
+    N.y *= TILE_LIGHT_COLOR.w; //TILE_LIGHT_COLOR.w contains the direction of the light
+
     //take care of double sided polygons on materials without culling
 #ifdef FLIP_BACKFACES
     vec3 viewDir = normalize((WORLD * POSITION).xyz);

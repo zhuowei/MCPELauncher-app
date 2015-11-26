@@ -9,7 +9,7 @@
   "normal_stroke_button": {
     "type": "image",
     "texture": "gui/newgui/NormalButtonStroke.png",
-    "z_order": 2,
+    "layer": 2,
     "nineslice_size": 4.0,
     "uv": [ 0, 0 ],
     "uv_size": [ 12, 12 ]
@@ -17,41 +17,40 @@
 
   "normal_description_label": {
     "type": "label",
-    "size": [ 215, 30 ],
     "color": [ 0.25, 0.25, 0.25, 1.0 ],
-    "alignment": "left",
+    "alignment": "top_left",
     "wrap": true,
-    "anchor_from": "left_middle",
-    "anchor_to": "left_middle",
-    "z_order": 2
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 2
   },
 
   "trialTime": {
     "type": "custom",
     "renderer": "trial_time_renderer",
-    "size": [ 0, 10 ],
-    "offset": [ -5, 5 ],
-    "alignment": "right",
-    "z_order": 2,
-    "anchor_from": "top_right",
-    "anchor_to": "top_right"
+    "size": [0, 10],
+    "offset": [ 0, "1%"],
+    "alignment": "top_right",
+    "layer": 3,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left"
   },
 
   "trial_label": {
     "type": "label",
-    "size": [ 50, 10 ],
-    "offset": [ 0, 5 ],
+    "offset": [ 0, "3%" ],
     "color": [ 0.25, 0.25, 0.25, 1.0 ],
-    "alignment": "center",
-    "z_order": 2,
+    "alignment": "top_middle",
+    "layer": 2,
     "text": "trial.upsell.trialLabel",
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle"
+    "anchor_from": "center",
+    "anchor_to": "center"
   },
 
   "trial_description_panel": {
     "type": "panel",
-    "offset": [ 8, -10 ],
+    "size": [ "94%", "100%" ],
+    "offset": [ 0, "15%"],
     "controls": [
       { "description_text@normal_description_label": { "text": "trial.upsell.description" } }
     ]
@@ -59,34 +58,114 @@
 
   "trial_expired_description_panel": {
     "type": "panel",
-    "offset": [ 8, -30 ],
+    "size": [ "94%", "100%" ],
+    "offset": [ 0, "15%" ],
     "controls": [
       { "line1@normal_description_label": { "text": "trial.upsell.expiredDescription.line1" } },
-      { "line2@normal_description_label": { "offset": [ 0, 30 ], "text": "trial.upsell.expiredDescription.line2" } },
-      { "line3@normal_description_label": { "offset": [ 0, 40 ], "text": "trial.upsell.expiredDescription.line3" } },
-      { "line4@normal_description_label": { "offset": [ 0, 50 ], "text": "trial.upsell.expiredDescription.line4" } },
-      { "line5@normal_description_label": { "offset": [ 0, 60 ], "text": "trial.upsell.expiredDescription.line5" } }
+      { "line2@normal_description_label": { "offset": [ 0, "23%" ], "text": "trial.upsell.expiredDescription.line2" } },
+      { "line3@normal_description_label": { "offset": [ 0, "30%" ], "text": "trial.upsell.expiredDescription.line3" } },
+      { "line4@normal_description_label": { "offset": [ 0, "37%" ], "text": "trial.upsell.expiredDescription.line4" } },
+      { "line5@normal_description_label": { "offset": [ 0, "44%" ], "text": "trial.upsell.expiredDescription.line5" } }
     ]
   },
 
-  "continue_button": {
-    "type": "button",
-    "size": [ 40, 20 ],
-    "anchor_to": "bottom_left",
-    "anchor_from": "bottom_left",
+  "continue_button@common.button": {
     "default_control": "default",
     "hover_control": "hover",
     "pressed_control": "pressed",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_continue",
+        "condition": "hover"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_continue",
+        "condition": "focus"
+      }
+    ],
     "controls": [
-      { "default@common.button_default_state": { } },
-      { "hover@common.button_default_state": { } },
-      { "pressed@common.button_default_state": { } }
+      { "default@common.button_default_state": { 
+        "uv": [ 0, 66 ],
+        "controls": [
+          {"@common.button_text": {
+            "text": "demo.help.later"
+          }}
+        ]
+      }},
+      { "hover@common.button_default_state": { 
+        "uv": [ 0, 66 ],
+        "controls": [
+          {"@common.button_text": {
+            "text": "demo.help.later",
+            "color": [ 1.0, 1.0, 0.2 ]
+          }}
+        ]
+      }},
+      { "pressed@common.button_default_state": { 
+        "alpha": 0.65,
+        "controls": [
+          {"@common.button_text": {
+            "text": "demo.help.later",
+            "color": [ 1.0, 1.0, 0.2 ],
+            "alpha": 0.65
+          }}
+        ]
+      }}
+    ]
+  },
+  
+  "buy_button@common.button": {
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_buy_game",
+        "condition": "hover"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_buy_game",
+        "condition": "focus"
+      }
+    ],
+    "controls": [
+      { "default@common.button_default_state": { 
+        "uv": [ 0, 66 ],
+        "controls": [
+          {"@common.button_text": {
+            "text": "demo.help.buy"
+          }}
+        ]
+      }},
+      { "hover@common.button_default_state": { 
+        "uv": [ 0, 66 ],
+        "controls": [
+          {"@common.button_text": {
+            "text": "demo.help.buy",
+            "color": [ 1.0, 1.0, 0.2 ]
+          }}
+        ]
+      }},
+      { "pressed@common.button_default_state": { 
+        "alpha": 0.65,
+        "controls": [
+          {"@common.button_text": {
+            "text": "demo.help.buy",
+            "color": [ 1.0, 1.0, 0.2 ],
+            "alpha": 0.65
+          }}
+        ]
+      }}
     ]
   },
 
   "root_panel": {
     "type": "panel",
-    "size": [ 210, 125 ],
+    "size": [ "80%", "70%" ],
     "anchor_to": "center",
     "anchor_from": "center"
   },
@@ -94,126 +173,20 @@
   "common_panel": {
     "type": "panel",
     "controls": [
-      { "bg_image@normal_stroke_button": { "z_order": 1 } },
-      { "@trial_label": { } },
-      {
-        "buy@common.button": {
-          "offset": [ 4, -5 ],
-          "anchor_to": "bottom_left",
-          "anchor_from": "bottom_left",
-          "button_mappings": [
-            {
-              "from_button_id": "button.menu_select",
-              "to_button_id": "button.menu_buy_game",
-              "condition": "hover"
-            },
-            {
-              "from_button_id": "button.menu_ok",
-              "to_button_id": "button.menu_buy_game",
-              "condition": "focus"
-            }
-          ],
-          "controls": [
-            {
-              "default@common.button_default_state": {
-                "uv": [ 0, 66 ],
-                "controls": [
-                  {
-                    "@common.button_text": {
-                      "text": "demo.help.buy"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "hover@common.button_default_state": {
-                "controls": [
-                  {
-                    "@common.button_text": {
-                      "text": "demo.help.buy",
-                      "color": [ 1.0, 1.0, 0.2 ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "pressed@common.button_default_state": {
-                "alpha": 0.65,
-                "controls": [
-                  {
-                    "@common.button_text": {
-                      "text": "demo.help.buy",
-                      "color": [ 1.0, 1.0, 0.2 ],
-                      "alpha": 0.65
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "continue@common.button": {
-          "offset": [ -4, -5 ],
-          "anchor_to": "bottom_right",
-          "anchor_from": "bottom_right",
-          "button_mappings": [
-            {
-              "from_button_id": "button.menu_select",
-              "to_button_id": "button.menu_continue",
-              "condition": "hover"
-            },
-            {
-              "from_button_id": "button.menu_ok",
-              "to_button_id": "button.menu_continue",
-              "condition": "focus"
-            }
-          ],
-          "controls": [
-            {
-              "default@common.button_default_state": {
-                "uv": [ 0, 66 ],
-                "controls": [
-                  {
-                    "@common.button_text": {
-                      "text": "demo.help.later"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "hover@common.button_default_state": {
-                "controls": [
-                  {
-                    "@common.button_text": {
-                      "text": "demo.help.later",
-                      "color": [ 1.0, 1.0, 0.2 ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "pressed@common.button_default_state": {
-                "alpha": 0.65,
-                "controls": [
-                  {
-                    "@common.button_text": {
-                      "text": "demo.help.later",
-                      "color": [ 1.0, 1.0, 0.2 ],
-                      "alpha": 0.65
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
+      {"bg_image@normal_stroke_button": { "layer": 1 } },
+      {"@trial_label": { } },
+      {"buy@buy_button": {
+        "size": [ "48%", "15%" ],
+        "offset": [ "2%", "-3%" ],
+        "anchor_to": "bottom_left",
+        "anchor_from": "bottom_left"
+      }},
+      {"continue@continue_button": {
+        "size": [ "48%", "15%" ],
+        "offset": [ "-2%", "-3%" ],
+        "anchor_to": "bottom_right",
+        "anchor_from": "bottom_right"
+      }}
     ]
   },
 

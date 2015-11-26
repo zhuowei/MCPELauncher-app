@@ -1,12 +1,14 @@
 {
-	"particles_opaque": {
-		"vertexShader" : "shaders/color_uv.vertex",
-		"fragmentShader" : "shaders/color_texture.fragment"
-	},
+  "particles_opaque": {
+    "defines": [ "ENABLE_FOG" ],
+
+    "vertexShader": "shaders/color_uv.vertex",
+    "fragmentShader": "shaders/color_texture.fragment"
+  },
 
 	"particles_alpha": {
 
-		"defines":["ALPHA_TEST"],
+		"defines":["ALPHA_TEST", "ENABLE_FOG"],
 		
 		"vertexShader" : "shaders/color_uv.vertex",
 		"fragmentShader" : "shaders/color_texture.fragment"

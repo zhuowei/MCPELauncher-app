@@ -4,7 +4,7 @@
   "language_icon": {
     "type": "image",
     "texture": "gui/newgui/Language18.png",
-    "z_order": 3,
+    "layer": 3,
     "uv": [ 0, 0 ],
     "uv_size": [ 18, 18 ],
     "size": [ 18, 18 ]
@@ -56,7 +56,7 @@
             {
               "title_image": {
                 "type": "image",
-                "z_order": 1,
+                "layer": 1,
                 "texture": "gui/titleOriginal.png",
                 "uv": [ 0, 0 ],
                 "uv_size": [ 1936, 375 ]
@@ -70,8 +70,8 @@
           "type": "label",
           "size": [ 50, 10 ],
           "offset": [ 1, 0 ],
-          "alignment": "left",
-          "z_order": 2,
+          "alignment": "top_left",
+          "layer": 2,
           "text": "menu.copyright",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left"
@@ -82,7 +82,7 @@
           "type": "label",
           "size": [ 50, 10 ],
           "alignment": "center",
-          "z_order": 2,
+          "layer": 2,
           "text": "#development_version",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -95,8 +95,8 @@
         "version": {
           "type": "label",
           "size": [ 50, 10 ],
-          "alignment": "right",
-          "z_order": 2,
+          "alignment": "top_right",
+          "layer": 2,
           "text": "#version",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",

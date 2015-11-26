@@ -5,6 +5,9 @@ uniform MAT4 WORLDVIEWPROJ;
 uniform vec2 UV_OFFSET;
 uniform vec2 UV_ROTATION;
 uniform vec2 GLINT_UV_SCALE;
+uniform vec4 FOG_COLOR;
+uniform vec2 FOG_CONTROL;
+uniform float RENDER_DISTANCE;
 
 attribute mediump vec4 POSITION;
 attribute vec4 COLOR;
@@ -12,6 +15,10 @@ attribute vec2 TEXCOORD_0;
 
 varying vec4 color;
 varying vec2 uv;
+
+#ifdef ENABLE_FOG
+varying vec4 fogColor;
+#endif
 
 #ifdef GLINT
 varying vec2 layer1UV;
@@ -36,6 +43,12 @@ void main()
 
 	color = COLOR;
 	uv = TEXCOORD_0;
+
+#ifdef ENABLE_FOG
+	//fog
+    fogColor.rgb = FOG_COLOR.rgb;
+    fogColor.a = clamp(((gl_Position.z / RENDER_DISTANCE) - FOG_CONTROL.x) / (FOG_CONTROL.y - FOG_CONTROL.x), 0.0, 1.0);
+#endif
 
 #ifdef GLINT
 	layer1UV = calculateLayerUV(UV_OFFSET.x, UV_ROTATION.x);

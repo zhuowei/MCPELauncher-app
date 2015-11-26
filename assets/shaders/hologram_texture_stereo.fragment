@@ -1,0 +1,9 @@
+#version 100
+//This file is purely here to let the code compile. It is used only for HoloWall, which currently runs only on DX11 compatible devices
+
+
+void main()
+{
+
+	gl_FragColor = vec4(1,0,1,1);
+}

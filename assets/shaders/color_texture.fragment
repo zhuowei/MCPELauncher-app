@@ -7,6 +7,10 @@ uniform vec4 CHANGE_COLOR;
 varying vec4 color;
 varying vec2 uv;
 
+#ifdef ENABLE_FOG
+varying vec4 fogColor;
+#endif
+
 #ifdef GLINT
 	varying vec2 layer1UV;
 	varying vec2 layer2UV;
@@ -40,6 +44,11 @@ void main()
 #ifdef USE_OVERLAY
 	//use either the diffuse or the OVERLAY_COLOR
 	diffuse.rgb = mix(diffuse, OVERLAY_COLOR, OVERLAY_COLOR.a).rgb;
+#endif
+
+#ifdef ENABLE_FOG
+	//apply fog
+	diffuse.rgb = mix( diffuse.rgb, fogColor.rgb, fogColor.a );
 #endif
 
 	gl_FragColor = diffuse * color;

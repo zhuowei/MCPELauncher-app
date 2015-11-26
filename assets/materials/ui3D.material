@@ -29,13 +29,19 @@
   },
 
   "cracks_overlay:block_overlay": {
-
     "blendSrc": "DestColor",
     "blendDst": "Zero",
 
     "depthFunc": "LessEqual",
 
     "fragmentShader": "shaders/texture.fragment"
+  },
+
+  "cracks_overlay_alpha_test:cracks_overlay": {
+    "states": [
+      "DisableCulling"
+    ],
+    "defines": [ "ALPHA_TEST" ]
   },
 
   "cracks_overlay_tile_entity:cracks_overlay": {

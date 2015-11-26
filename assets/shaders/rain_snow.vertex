@@ -9,6 +9,9 @@ uniform vec4	LIGHTING;
 uniform vec4	FORWARD;
 uniform vec4	UV_INFO;
 uniform vec4	PARTICLE_BOX;
+uniform vec4	FOG_COLOR;
+uniform vec2	FOG_CONTROL;
+uniform float	RENDER_DISTANCE;
 
 attribute mediump vec4 POSITION;
 attribute vec2 TEXCOORD_0;
@@ -17,6 +20,7 @@ attribute vec4 COLOR;
 varying vec2 uv;
 varying vec4 color;
 varying vec4 worldPosition;
+varying vec4 fogColor;
 
 void main()
 {
@@ -57,6 +61,10 @@ void main()
 	gl_Position.xy += (0.5 - TEXCOORD_0.x) * dirPerp * SIZE_SCALE.x;
 	
 	color = ALPHA.rgba;
+
+	//fog
+    fogColor.rgb = FOG_COLOR.rgb;
+    fogColor.a = clamp(((bottom.z / RENDER_DISTANCE) - FOG_CONTROL.x) / (FOG_CONTROL.y - FOG_CONTROL.x), 0.0, 1.0);
 
 	worldPositionBottom.xz *= 1.0 / 64.0;	// Scale by 1/TextureDimensions to get values between
 	worldPositionBottom.xz += 0.5;			// Offset so that center of view is in the center of occlusion texture

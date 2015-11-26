@@ -13,25 +13,8 @@
     "terrain_blend:terrain_opaque": {
         "defines": [ "BLEND", "NEAR_WATER" ],
         "states": [
-            "Blending",
-            "EnableStencilTest"
-        ],
-
-        "frontFace": {
-            "stencilFunc": "NotEqual",
-            "stencilFailOp": "Keep",
-            "stencilDepthFailOp": "Keep",
-            "stencilPassOp": "Keep"
-        },
-
-        "backFace": {
-            "stencilFunc": "NotEqual",
-            "stencilFailOp": "Keep",
-            "stencilDepthFailOp": "Keep",
-            "stencilPassOp": "Keep"
-        },
-
-        "stencilRef": 1
+            "Blending"
+        ]
     },
 
     "terrain_blend_below:terrain_blend": {

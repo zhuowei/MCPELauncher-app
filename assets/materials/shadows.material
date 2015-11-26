@@ -86,12 +86,12 @@
         "stencilWriteMask": 0
     },
 
-    "water_hole_front:shadow_front" : { 
-        "stencilRef" :  1
-    },
+    "water_hole": { 
+        "states": [
+            "DisableColorWrite"
+        ],
 
-    "water_hole_back:shadow_back" : { 
-        "stencilRef" :  0
+        "vertexShader": "shaders/position.vertex",
+        "fragmentShader": "shaders/flat_white.fragment"
     }
-
 }
