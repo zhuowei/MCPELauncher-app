@@ -1,4 +1,4 @@
-﻿## Comments can be added anywhere on a valid line by starting with '##'
+## Comments can be added anywhere on a valid line by starting with '##'
 ##
 ## Note, trailing spaces will NOT be trimmed. If you want room between the end of the string and the start of a
 ## comment on the same line, use TABs.
@@ -53,7 +53,7 @@ achievement.makeBread.desc=Convierte trigo en pan	#
 achievement.mineWood=Madera de líder	#
 achievement.mineWood.desc=Pégale a un árbol hasta que salga un bloque de madera	#
 achievement.onARail=En un Riel	#
-achievement.onARail.desc=Viaja en vagoneta al menos 1 km en línea recta desde el punto en el que te encuentras.	#
+achievement.onARail.desc=Viaja en vagoneta al menos 1 km en línea recta desde el punto en el que te encuentras.	#
 achievement.openInventory=Haciendo el Inventario	#
 achievement.openInventory.desc=Presiona '%1$s' para abrir tu inventario.	#
 achievement.overkill=Matanza	#
@@ -2464,6 +2464,23 @@ skin.PvPWarriors.TundraHunter=Buscapleitos del desierto	#
 skin.PvPWarriors.TundraStray=Domador del desierto	#
 skin.PvPWarriors.TundraTamer=Vaina del desierto	#
 
+skinpack.Festive=Pack de aspectos para las fiestas 2015
+skin.Festive.Santa=Santa Claus
+skin.Festive.FatherXmas=Papá Noel
+skin.Festive.MotherXmas=Mamá Noel
+skin.Festive.Rudolph=Rodolfo
+skin.Festive.GreenElf=Duendecito
+skin.Festive.Snowsuit=Mullido
+skin.Festive.Tomte=Tomte
+skin.Festive.GingerbreadMan=Gingerbread delicioso
+skin.Festive.PajamaKidSlim=Dormilón
+skin.Festive.SkiBibsSlim=Cómodo
+skin.Festive.SweaterAlex=Lanitas
+skin.Festive.MrsClaus=Sra. Claus
+skin.Festive.ParkaSteve=¿Parka?
+skin.Festive.SweaterSteve=¿Suéter?
+skin.Festive.GingerbreadCreeper=Gingerbread Creeper
+
 skins.browse=Examinar	#
 skins.buy.buyButton=Comprar	#
 skins.buy.cancelButton=Cancelar	#
@@ -3015,16 +3032,16 @@ trial.upsell.description=En la versión de prueba, solo dispones de 90 minutos p
 ## NOTE: The following five lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
 ## as opposed to trying to literally translate each line.
 trial.upsell.expiredDescription.line1=Se agotó el tiempo. Compra la versión completa para desbloquear el juego:	#
-trial.upsell.expiredDescription.line2=- Explora mundos sin límites	#
-trial.upsell.expiredDescription.line3=- Juega con tus amigos	#
-trial.upsell.expiredDescription.line4=- Crea cientos de objetos	#
-trial.upsell.expiredDescription.line5=- Descubre misteriosas estructuras y realms	#
+trial.upsell.expiredDescription.line2=- Explora mundos sin límites	#
+trial.upsell.expiredDescription.line3=- Juega con tus amigos	#
+trial.upsell.expiredDescription.line4=- Crea cientos de objetos	#
+trial.upsell.expiredDescription.line5=- Descubre misteriosas estructuras y realms	#
 
 ## Xbox Live Strings
-xbox.signin.error.line1=Debes iniciar sesión con tu cuenta de Xbox Live	#
+xbox.signin.error.line1=Debes iniciar sesión con tu cuenta de Xbox Live	#
 xbox.signin.error.line2=para jugar con tus amigos, 	#
 xbox.signin.error.line3=ganar puntuación y obtener logros.	#
-xbox.connection.error=Fallo en la conexión con Xbox Live	#
+xbox.connection.error=Fallo en la conexión con Xbox Live	#
 
 xbox.disconectionscreen.notSignedIn=Inicia sesión con tu cuenta de Xbox Live para jugar con tus amigos.	#
 xbox.disconectionscreen.multiplayerNotAllowed=Esta cuenta no tiene permiso para unirse a juegos multijugador de Xbox Live.	#

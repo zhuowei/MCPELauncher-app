@@ -1,4 +1,4 @@
-﻿## Comments can be added anywhere on a valid line by starting with '##'
+## Comments can be added anywhere on a valid line by starting with '##'
 ##
 ## Note, trailing spaces will NOT be trimmed. If you want room between the end of the string and the start of a
 ## comment on the same line, use TABs.
@@ -551,7 +551,7 @@ container.inventory=Inventaire	#
 container.isLocked=%s est verrouillé(e) !	#
 container.minecart=Wagonnet	#
 container.repair=Réparer et renommer	#
-container.repair.cost=Coût en EXP : %1$d	#
+container.repair.cost=Coût en EXP : %1$d	#
 container.repair.expensive=Trop coûteux !	#
 container.stonecutter=Tailleur de pierre	#
 
@@ -823,8 +823,8 @@ disconnectionScreen.invalidSkin=Skin non valide!	#
 disconnectionScreen.loggedinOtherLocation=Connecté à partir d'un autre endroit	#
 disconnectionScreen.noReason=Vous avez été déconnecté	#
 disconnectionScreen.noInternet=Connexion au monde impossible. Vérifiez votre connexion Internet et réessayez.	#
-disconnectionScreen.outdatedClient=Impossible de se connecter : client désuet!	#
-disconnectionScreen.outdatedServer=Impossible de se connecter : serveur désuet!	#
+disconnectionScreen.outdatedClient=Impossible de se connecter : client désuet!	#
+disconnectionScreen.outdatedServer=Impossible de se connecter : serveur désuet!	#
 disconnectionScreen.serverFull=Le serveur est plein!	#
 disconnectionScreen.sessionNotFound=Connexion au monde impossible. Il n'est plus possible de rejoindre ce monde.	#
 
@@ -2125,7 +2125,7 @@ options.sensitivity.max=ULTRARAPIDE !!!	#
 options.sensitivity.min=*bâille*	#
 options.multiplayergame=Partie multijoueur	#
 options.servervisible=Diffuser en LAN	#
-options.xboxlivevisible=Diffuser sur Xbox Live	#
+options.xboxlivevisible=Diffuser sur Xbox Live	#
 options.skinCustomisation=Personnalisation du skin...	#
 options.skinCustomisation.title=Personnalisation du skin	#
 options.snooper=Autoriser l'envoi 	#
@@ -2194,7 +2194,7 @@ playscreen.lastPlayed.today=Aujourd'hui	#
 playscreen.lastPlayed.weeksAgo=Il y a %1 semaine(s)	#
 playscreen.lastPlayed.yesterday=Hier	#
 playscreen.new=Nouveau	#
-playscreen.remoteWorld=Monde distant à :	#
+playscreen.remoteWorld=Monde distant à :	#
 
 potion.absorption=Absorption	#
 potion.absorption.postfix=Potion d'absorption	#
@@ -2463,6 +2463,23 @@ skin.PvPWarriors.TundraGriefer=Ingénieur du désert	#
 skin.PvPWarriors.TundraHunter=Pugiliste du désert	#
 skin.PvPWarriors.TundraStray=Dompteur du désert	#
 skin.PvPWarriors.TundraTamer=Incarnation du désert	#
+
+skinpack.Festive=Packs de skins festives 2015
+skin.Festive.Santa=Père Noël
+skin.Festive.FatherXmas=Saint Nicolas
+skin.Festive.MotherXmas=Sainte Nicole
+skin.Festive.Rudolph=Nez-Rouge
+skin.Festive.GreenElf=Fabricant de jouets
+skin.Festive.Snowsuit=Doudoune douillette
+skin.Festive.Tomte=Tomte
+skin.Festive.GingerbreadMan=Pain d'épices délicieux
+skin.Festive.PajamaKidSlim=Tricot tranquille
+skin.Festive.SkiBibsSlim=Cocooning coin du feu
+skin.Festive.SweaterAlex=Chouette chandail
+skin.Festive.MrsClaus=Mère Noël
+skin.Festive.ParkaSteve=Parka ?
+skin.Festive.SweaterSteve=Pull-over ?
+skin.Festive.GingerbreadCreeper=Creeper en pain d'épices
 
 skins.browse=Naviguer	#
 skins.buy.buyButton=Acheter	#
@@ -3010,11 +3027,11 @@ trial.noInvitesOrJoining=Pour jouer entre amis, veuillez acheter le jeu complet	
 
 trial.upsell.trialLabel=Essai Minecraft	#
 
-trial.upsell.description=Dans cette version d'essai, vous êtes limité à 90 minutes de temps de jeu. Fabriquez, construisez, explorez et amusez-vous ! Votre monde sera préservé si vous choisissez d'acheter la version complète.	#
+trial.upsell.description=Dans cette version d'essai, vous êtes limité à 90 minutes de temps de jeu. Fabriquez, construisez, explorez et amusez-vous ! Votre monde sera préservé si vous choisissez d'acheter la version complète.	#
 
 ## NOTE: The following five lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
 ## as opposed to trying to literally translate each line.
-trial.upsell.expiredDescription.line1=Temps écoulé. Déverrouillez le jeu complet pour pouvoir :	#
+trial.upsell.expiredDescription.line1=Temps écoulé. Déverrouillez le jeu complet pour pouvoir :	#
 trial.upsell.expiredDescription.line2=- explorer des mondes infinis	#
 trial.upsell.expiredDescription.line3=- jouer entre amis	#
 trial.upsell.expiredDescription.line4=- fabriquer des centaines d'objets	#
@@ -3026,7 +3043,7 @@ xbox.signin.error.line2=pour jouer avec des amis,	#
 xbox.signin.error.line3=augmenter votre score de joueur et obtenir des succès.	#
 xbox.connection.error=Aucune connexion à Xbox Live.	#
 
-xbox.disconectionscreen.notSignedIn=Connectez-vous avec votre compte Xbox Live pour jouer entre amis.	#
+xbox.disconectionscreen.notSignedIn=Connectez-vous avec votre compte Xbox Live pour jouer entre amis.	#
 xbox.disconectionscreen.multiplayerNotAllowed=Ce compte n'est pas autorisé à rejoindre une partie multijoueur sur Xbox Live.	#
 xbox.disconectionscreen.accessDenied=Vous devez être amis avec un joueur de cette partie pour la rejoindre.	#
 

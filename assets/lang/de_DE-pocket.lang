@@ -1,4 +1,4 @@
-﻿## Comments can be added anywhere on a valid line by starting with '##'
+## Comments can be added anywhere on a valid line by starting with '##'
 ##
 ## Note, trailing spaces will NOT be trimmed. If you want room between the end of the string and the start of a
 ## comment on the same line, use TABs.
@@ -717,8 +717,8 @@ createWorldScreen.header.realmsReset=Realm zurücksetzen?	#
 createWorldScreen.levelName=Name	#
 createWorldScreen.levelSeed=Startwert	#
 createWorldScreen.multiplayer.settings=Mehrspielereinstellungen	#
-createWorldScreen.progress.local=Neue Welt wird erschaffen ...	#
-createWorldScreen.progress.realms=Realm wird zurückgesetzt ...	#
+createWorldScreen.progress.local=Neue Welt wird erschaffen ...	#
+createWorldScreen.progress.realms=Realm wird zurückgesetzt ...	#
 createWorldScreen.seed.desc=Gib einen Startwert ein, um das gleiche Gelände erneut zu erstellen. Lass das Feld leer, um eine zufällige Welt zu erstellen.	#
 createWorldScreen.worldType=Welttyp	#
 
@@ -2085,7 +2085,7 @@ options.invertMouse=Maus umkehren	#
 options.invertYAxis=Y-Achse umkehren	#
 options.keyboardLayout=Tastenbelegung	#
 options.language=Sprache ...	#
-options.languageWarning=Die Übersetzungen sind möglicherweise nicht zu 100 % korrekt	#
+options.languageWarning=Die Übersetzungen sind möglicherweise nicht zu 100 % korrekt	#
 options.lefthanded=Linkshänder	#
 options.mipmapLevels=Mipmap-Level	#
 options.modelPart.cape=Umhang	#
@@ -2463,6 +2463,23 @@ skin.PvPWarriors.TundraGriefer=Wüsteningenieur	#
 skin.PvPWarriors.TundraHunter=Wüstenraufbold	#
 skin.PvPWarriors.TundraStray=Wüstenzähmer	#
 skin.PvPWarriors.TundraTamer=Wüstenschale	#
+
+skinpack.Festive=Weihnachts-Skinpaket 2015
+skin.Festive.Santa=Santa Claus
+skin.Festive.FatherXmas=Weihnachtsmann
+skin.Festive.MotherXmas=Weihnachtsfrau
+skin.Festive.Rudolph=Rote Nase
+skin.Festive.GreenElf=Minecraftswichtel
+skin.Festive.Snowsuit=Gut gefüttert
+skin.Festive.Tomte=Tomte
+skin.Festive.GingerbreadMan=Lecker Lebkuchen
+skin.Festive.PajamaKidSlim=Heiß und cool
+skin.Festive.SkiBibsSlim=Wohlfühlbequem
+skin.Festive.SweaterAlex=Wollig warm
+skin.Festive.MrsClaus=Mrs. Claus
+skin.Festive.ParkaSteve=Parka?
+skin.Festive.SweaterSteve=Pulli?
+skin.Festive.GingerbreadCreeper=Lebkuchen-Creeper
 
 skins.browse=Durchsuchen	#
 skins.buy.buyButton=Kaufen	#

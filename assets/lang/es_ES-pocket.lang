@@ -1,4 +1,4 @@
-﻿## Comments can be added anywhere on a valid line by starting with '##'
+## Comments can be added anywhere on a valid line by starting with '##'
 ##
 ## Note, trailing spaces will NOT be trimmed. If you want room between the end of the string and the start of a
 ## comment on the same line, use TABs.
@@ -463,7 +463,7 @@ commands.testforblock.success=Encontrado con éxito el bloque en %d,%d,%d.	#
 commands.testforblock.usage=/testforblock <x> <y> <z> <nombre del bloque> [valor de datos] [dataTag]	#
 commands.time.added=Se ha añadido %d al tiempo	#
 commands.time.query=El tiempo está %d	#
-commands.time.set=Tiempo ajustado a %d	#
+commands.time.set=Tiempo ajustado a %d	#
 commands.time.usage=/time <set|add|query> <valor>	#
 commands.title.success=El comando /title se ha ejecutado con éxito	#
 commands.title.usage=/title <jugador> <title|subtitle|clear|reset|times> ...	#
@@ -2464,6 +2464,23 @@ skin.PvPWarriors.TundraHunter=Matón del desierto	#
 skin.PvPWarriors.TundraStray=Domador del desierto	#
 skin.PvPWarriors.TundraTamer=Pusilánime del desierto	#
 
+skinpack.Festive=Pack de aspectos vacacionales 2015
+skin.Festive.Santa=Papá Noel
+skin.Festive.FatherXmas=Papá Navidad
+skin.Festive.MotherXmas=Mamá Navidad
+skin.Festive.Rudolph=Rodolfo
+skin.Festive.GreenElf=Fabricante de juguetes
+skin.Festive.Snowsuit=Abrigado hasta arriba
+skin.Festive.Tomte=Tomte
+skin.Festive.GingerbreadMan=Muñeco de jengibre delicioso
+skin.Festive.PajamaKidSlim=Bien arropado
+skin.Festive.SkiBibsSlim=Informal y cómodo
+skin.Festive.SweaterAlex=Lanita calentita
+skin.Festive.MrsClaus=Señora Noel
+skin.Festive.ParkaSteve=¿Parka?
+skin.Festive.SweaterSteve=¿Jersey?
+skin.Festive.GingerbreadCreeper=Creeper de jengibre
+
 skins.browse=Examinar	#
 skins.buy.buyButton=Comprar	#
 skins.buy.cancelButton=Cancelar	#
@@ -3015,18 +3032,18 @@ trial.upsell.description=Para esta prueba, el tiempo de juego está limitado a 9
 ## NOTE: The following five lines are all related and shown together. When localizing, you may add line breaks to fit the paragraph,
 ## as opposed to trying to literally translate each line.
 trial.upsell.expiredDescription.line1=¡Se ha agotado el tiempo! Compra para desbloquear la versión completa:	#
-trial.upsell.expiredDescription.line2=- Explora mundos sin límites.	#
-trial.upsell.expiredDescription.line3=- Juega con tus amigos.	#
-trial.upsell.expiredDescription.line4=- Crea cientos de objetos.	#
-trial.upsell.expiredDescription.line5=- Descubre estructuras y reinos misteriosos.	#
+trial.upsell.expiredDescription.line2=- Explora mundos sin límites.	#
+trial.upsell.expiredDescription.line3=- Juega con tus amigos.	#
+trial.upsell.expiredDescription.line4=- Crea cientos de objetos.	#
+trial.upsell.expiredDescription.line5=- Descubre estructuras y reinos misteriosos.	#
 
 ## Xbox Live Strings
 xbox.signin.error.line1=Inicia sesión con tu cuenta Xbox Live	#
 xbox.signin.error.line2=para jugar con amigos, 	#
 xbox.signin.error.line3=ganar puntuación de jugador y logros.	#
-xbox.connection.error=Fallo en la conexión con Xbox Live	#
+xbox.connection.error=Fallo en la conexión con Xbox Live	#
 
-xbox.disconectionscreen.notSignedIn=Tienes que iniciar sesión con tu cuenta de Xbox Live para jugar con tus amigos.	#
+xbox.disconectionscreen.notSignedIn=Tienes que iniciar sesión con tu cuenta de Xbox Live para jugar con tus amigos.	#
 xbox.disconectionscreen.multiplayerNotAllowed=Esta cuenta no tiene permiso para unirse a partidas multijugador en Xbox Live.	#
 xbox.disconectionscreen.accessDenied=Para unirte a esta partida debes ser amigo de alguno de sus participantes.	#
 
