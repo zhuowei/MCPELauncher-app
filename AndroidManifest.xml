@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.zhuoweizhang.mcpelauncher"
-    android:versionCode="93"
-    android:versionName="1.11.2"
+    android:versionCode="159"
+    android:versionName="1.22"
     android:installLocation="auto">
 
     <permission
@@ -13,7 +13,7 @@
 
     <uses-sdk
         android:minSdkVersion="9"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="27" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -21,15 +21,17 @@
     <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- Kamcord -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-feature android:name="android.hardware.microphone" android:required="false" />
+    <!-- Xbox Live SDK -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
 
     <application
         android:name="net.zhuoweizhang.mcpelauncher.BlockLauncher"
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:largeHeap="true" >
+        android:largeHeap="true"
+        android:theme="@style/BlockLauncherTheme">
         <activity
             android:name="net.zhuoweizhang.mcpelauncher.LauncherAppActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -45,6 +47,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
                 <!-- Samsung's multiwindow intent -->
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file" />
+                <data android:mimeType="*/*" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.mcworld" />
+                <data android:pathPattern=".*\\..*\\.mcworld" />
+                <data android:pathPattern=".*\\..*\\..*\\.mcworld" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.mcworld" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="*/*" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.mcworld" />
+                <data android:pathPattern=".*\\..*\\.mcworld" />
+                <data android:pathPattern=".*\\..*\\..*\\.mcworld" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.mcworld" />
             </intent-filter>
         </activity>
         <activity android:name="net.zhuoweizhang.mcpelauncher.MainMenuOptionsAppActivity"/>
@@ -110,6 +134,11 @@
 
                 <data android:mimeType="*/*" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="net.zhuoweizhang.mcpelauncher.action.REPLACE_TEXTUREPACK" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file"/>
+            </intent-filter>
         </activity>
         <activity
             android:name="net.zhuoweizhang.mcpelauncher.api.ImportScriptActivity"
@@ -173,41 +202,63 @@
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
 
-        <!-- Kamcord -->
+        <!-- Xbox Live SDK -->
 
-        <activity
-            android:name="com.kamcord.android.ui.KamcordActivity"
-            android:configChanges="keyboardHidden|keyboard"
-            android:windowSoftInputMode="stateHidden|adjustPan"
-            android:windowActionBar="false"
-            android:theme="@style/KamcordTheme"
-            android:hardwareAccelerated="true" >
+        <activity android:name="com.microsoft.xbox.idp.ui.AuthFlowActivity" android:theme="@style/OnlineidUiTheme" android:windowSoftInputMode="adjustPan|stateUnchanged"/>
+        <activity android:name="com.microsoft.xbox.idp.ui.ErrorActivity" android:theme="@style/OnlineidUiTheme"/>
+        <activity android:name="com.microsoft.onlineid.interop.xbox.ui.SignUpActivity" android:theme="@style/OnlineidUiTheme"/>
+        <activity android:name="com.microsoft.onlineid.interop.xbox.ui.SignInErrorActivity" android:theme="@style/OnlineidUiTheme"/>
+        <activity android:name="com.microsoft.onlineid.interop.xbox.ui.XUIDCreationErrorActivity" android:theme="@style/OnlineidUiTheme"/>
+        <activity android:name="com.microsoft.onlineid.interop.xbox.ui.WelcomeActivity" android:theme="@style/OnlineidUiTheme"/>
+        <activity android:name="com.microsoft.onlineid.interop.singleaccount.SingleAccountActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.interop.singleaccount.SingleAccountActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
-
-        <activity
-            android:name="com.kamcord.android.ui.ReplayActivity"
-            android:label="Watch"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-            android:parentActivityName="com.kamcord.android.ui.KamcordActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden"
-            android:hardwareAccelerated="true" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.kamcord.android.KamcordActivity" />
+        <activity android:exported="false" android:icon="@drawable/msa_ms_logo" android:label="@string/webflow_header" android:name="com.microsoft.onlineid.authenticator.AccountAddPendingActivity" android:theme="@style/Theme.MSA"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.microsoft.onlineid.internal.ui.WebFlowActivity" android:theme="@style/Theme.MSA" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:icon="@drawable/msa_ms_logo" android:label="@string/webflow_header" android:name="com.microsoft.onlineid.ui.AddAccountActivity" android:theme="@style/Theme.MSA" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.ADD_ACCOUNT"/>
+                <action android:name="com.microsoft.onlineid.internal.SIGN_UP_ACCOUNT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
-
-        <activity
-            android:name="com.kamcord.android.ui.WebActivity"
-            android:label="Login"
-            android:theme="@style/KamcordLoginTheme"
-            android:parentActivityName="com.kamcord.android.ui.KamcordActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.kamcord.android.KamcordActivity" />
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.microsoft.onlineid.ui.SignOutActivity" android:theme="@style/Theme.MSA.Transparent"/>
+        <activity android:exported="false" android:icon="@drawable/msa_ms_logo" android:label="@string/webflow_header" android:name="com.microsoft.onlineid.internal.ui.AccountPickerActivity" android:theme="@style/Theme.MSA.Dialog">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.PICK_ACCOUNT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
-
-        <service android:name="com.kamcord.android.UploadService" />
+        <activity android:exported="false" android:icon="@drawable/msa_ms_logo" android:label="@string/webflow_header" android:name="com.microsoft.onlineid.internal.ui.InterruptResolutionActivity" android:theme="@style/Theme.MSA"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.microsoft.xboxtcui.FbLoginShimActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.microsoft.xboxtcui.FbShareShimActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="false" android:name="com.microsoft.onlineid.internal.sso.client.BackupService">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.sso.client.PUSH_BACKUP"/>
+                <action android:name="com.microsoft.onlineid.internal.sso.client.PUSH_BACKUP_IF_NEEDED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.microsoft.onlineid.internal.MsaService">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.GET_TICKET"/>
+                <action android:name="com.microsoft.onlineid.internal.UPDATE_PROFILE"/>
+                <action android:name="com.microsoft.onlineid.internal.SIGN_OUT"/>
+                <action android:name="com.microsoft.onlineid.internal.SIGN_OUT_ALL_APPS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.microsoft.onlineid.internal.sso.service.MsaSsoService">
+            <intent-filter>
+                <action android:name="com.microsoft.msa.action.SSO_SERVICE"/>
+            </intent-filter>
+            <meta-data android:name="com.microsoft.msa.service.sso_version" android:value="2"/>
+            <meta-data android:name="com.microsoft.msa.service.sdk_version" android:value="@string/sdk_version_name"/>
+        </service>
 
         <!-- Samsung's multiwindow metadata -->
         <meta-data

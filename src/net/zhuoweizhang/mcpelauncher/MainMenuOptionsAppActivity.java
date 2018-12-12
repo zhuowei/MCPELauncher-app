@@ -48,10 +48,7 @@ public class MainMenuOptionsAppActivity extends MainMenuOptionsActivity {
 		adView = new AdView(this);
 		adView.setAdUnitId(AdConfiguration.AD_UNIT_ID);
 		adView.setAdSize(AdSize.SMART_BANNER);
-		AdRequest adRequest = new AdRequest.Builder()
-			.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-			.addTestDevice(AdConfiguration.DEVICE_ID_TESTER)
-			.build();
+		AdRequest adRequest = AdConfiguration.buildRequest();
 		content.addView(adView, 0);
 		adView.loadAd(adRequest);
 	}

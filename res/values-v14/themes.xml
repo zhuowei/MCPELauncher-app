@@ -1,4 +1,0 @@
-<resources>
-    <style name="FullscreenTheme" parent="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
-    </style>
-</resources>

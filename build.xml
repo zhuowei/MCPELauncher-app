@@ -89,4 +89,101 @@
     <!-- version-tag: 1 -->
     <import file="${sdk.dir}/tools/ant/build.xml" />
 
+    <!-- BEGIN added by Ruboto -->
+
+    <property name="second_dex_file" value="${out.absolute.dir}/classes2.dex" />
+
+    <macrodef name="dex-helper">
+        <element name="external-libs" optional="yes" />
+        <attribute name="nolocals" default="false" />
+        <sequential>
+            <!-- sets the primary input for dex. If a pre-dex task sets it to
+                 something else this has no effect -->
+            <property name="out.dex.input.absolute.dir" value="${out.classes.absolute.dir}" />
+
+            <!-- set the secondary dx input: the project (and library) jar files
+                 If a pre-dex task sets it to something else this has no effect -->
+            <if>
+                <condition>
+                    <isreference refid="out.dex.jar.input.ref" />
+                </condition>
+                <else>
+                    <path id="out.dex.jar.input.ref">
+                        <path refid="project.all.jars.path" />
+                    </path>
+                </else>
+            </if>
+
+            <dex executable="dexwrapper"
+                    output="${intermediate.dex.file}"
+                    dexedlibs="${out.dexed.absolute.dir}"
+                    nolocals="@{nolocals}"
+                    forceJumbo="${dex.force.jumbo}"
+                    disableDexMerger="true"
+                    verbose="${verbose}">
+                <path path="${out.dex.input.absolute.dir}"/>
+                <path refid="out.dex.jar.input.ref" />
+                <external-libs />
+            </dex>
+        </sequential>
+    </macrodef>
+
+
+    <!-- This is copied directly from <android-sdk>/tools/ant/build.xml,
+         just added the "-post-package-resources" dependency -->
+    <target name="-package" depends="-dex, -package-resources, -post-package-resources">
+        <!-- only package apk if *not* a library project -->
+        <do-only-if-not-library elseText="Library project: do not package apk..." >
+            <if condition="${build.is.instrumented}">
+                <then>
+                    <package-helper>
+                        <extra-jars>
+                            <!-- Injected from external file -->
+                            <jarfile path="${emma.dir}/emma_device.jar" />
+                        </extra-jars>
+                    </package-helper>
+                </then>
+                <else>
+                    <package-helper />
+                </else>
+            </if>
+        </do-only-if-not-library>
+    </target>
+
+    <target name="-post-package-resources">
+        <!-- FIXME(uwe):  This is hardcoded for one extra dex file.
+                          It should iterate over all classes?.dex files -->
+        <property name="second_dex_path" value="classes2.dex" />
+        <property name="second_dex_jar" value="${out.dexed.absolute.dir}/${second_dex_path}" />
+        <property name="second_dex_copy" value="${out.dexed.absolute.dir}/classes.dex" />
+        <if>
+            <condition>
+              <and>
+                <available file="${second_dex_file}" />
+                <or>
+                  <not>
+                    <uptodate srcfile="${second_dex_file}" targetfile="${out.absolute.dir}/${resource.package.file.name}" />
+                  </not>
+                  <uptodate srcfile="${out.absolute.dir}/${resource.package.file.name}" targetfile="${out.absolute.dir}/${resource.package.file.name}.d" />
+                </or>
+              </and>
+            </condition>
+            <then>
+                <echo>Adding ${second_dex_path} to ${resource.package.file.name}</echo>
+                <exec executable="aapt" dir="${out.absolute.dir}">
+                  <arg line='remove -v "${out.absolute.dir}/${resource.package.file.name}" ${second_dex_path}'/>
+                </exec>
+
+                <!-- FIXME(uwe): Use zip instead of aapt? -->
+                <exec executable="aapt" dir="${out.absolute.dir}" failonerror="true">
+                  <arg line='add -v "${out.absolute.dir}/${resource.package.file.name}" ${second_dex_path}'/>
+                </exec>
+                <!-- EMXIF -->
+
+            </then>
+        </if>
+    </target>
+    <!-- END added by Ruboto -->
+
+
 </project>

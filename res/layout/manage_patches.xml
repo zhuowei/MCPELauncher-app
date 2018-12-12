@@ -13,15 +13,14 @@
                            ads:adSize="SMART_BANNER"
                            ads:adUnitId="a151b8f9c5d33b5"/>
 
-    <Button android:id="@+id/manage_patches_import_button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/manage_patches_import"
-        android:layout_alignParentTop="true"/>
-
     <ListView android:id="@android:id/list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"/>
+    <ImageButton android:id="@+id/manage_patches_import_button"
+        style="@style/simple_fab"
         android:layout_above="@id/ad"
-        android:layout_below="@id/manage_patches_import_button"/>
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_white_24dp"/>
 </RelativeLayout>

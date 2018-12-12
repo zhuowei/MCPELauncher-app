@@ -12,10 +12,7 @@ public class ManageScriptsAppActivity extends ManageScriptsActivity {
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		adView = (AdView) findViewById(R.id.ad);
-		AdRequest adRequest = new AdRequest.Builder()
-			.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-			.addTestDevice(AdConfiguration.DEVICE_ID_TESTER)
-			.build();
+		AdRequest adRequest = AdConfiguration.buildRequest();
 		adView.loadAd(adRequest);
 	}	
 }

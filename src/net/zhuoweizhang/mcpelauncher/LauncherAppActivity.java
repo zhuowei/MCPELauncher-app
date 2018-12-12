@@ -58,10 +58,7 @@ public class LauncherAppActivity extends LauncherActivity {
 			adView.setId(0xbeefbeef);
 			view.addView(adView);
 		}
-		AdRequest adRequest = new AdRequest.Builder()
-			.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-			.addTestDevice(AdConfiguration.DEVICE_ID_TESTER)
-			.build();
+		AdRequest adRequest = AdConfiguration.buildRequest();
 		adView.loadAd(adRequest);
 	}
 	private boolean hasCalledShowAdvertisement = false;
@@ -110,23 +107,22 @@ public class LauncherAppActivity extends LauncherActivity {
 				adOver();
 			}
 		});
-		AdRequest adRequest = new AdRequest.Builder()
-			.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-			.addTestDevice("DF28838C26BDFAE7EB063BFEB7A241D3")
-			.build();
+		AdRequest adRequest = AdConfiguration.buildRequest();
 		interstitial.loadAd(adRequest);
 	}
 
 	public void showAdvertisement() {
+		if (BuildConfig.DEBUG) System.out.println("Calling showAdvertisement - adError " + adError);
 		if (adError) {
 			loadInterstitialAdvertisement(); // try again next time.
 			return;
 		}
-		shadePopup.showAtLocation(getWindow().getDecorView(), Gravity.TOP | Gravity.LEFT, 0, 0);
-		ScriptManager.nativeSetExitEnabled(false);
+		//shadePopup.showAtLocation(getWindow().getDecorView(), Gravity.TOP | Gravity.LEFT, 0, 0);
+		//ScriptManager.nativeSetExitEnabled(false);
 		adHandler.removeMessages(MESSAGE_AD_TIMEOUT);
 		// wait for 0.5 seconds
-		adHandler.sendEmptyMessageDelayed(MESSAGE_SHOW_AD, 500);
+		//adHandler.sendEmptyMessageDelayed(MESSAGE_SHOW_AD, 500);
+		actuallyShowAdvertisement();
 	}
 
 	private Handler adHandler = new Handler() {
@@ -141,13 +137,17 @@ public class LauncherAppActivity extends LauncherActivity {
 	};
 
 	private void actuallyShowAdvertisement() {
-		ScriptManager.nativeSetExitEnabled(true);
+		if (BuildConfig.DEBUG) System.out.println("Calling actuallyShowAdvertisement: shade "
+			+ shadePopup.isShowing() + " loaded: " + interstitial.isLoaded() + " adError: " + adError);
+		//ScriptManager.nativeSetExitEnabled(true);
+		/*
 		if (!shadePopup.isShowing()) {
 			// WTF?!
 			System.out.println("No longer ready to show ad.");
 			needsShowAd = false;
 			return;
 		}
+		*/
 		if (interstitial.isLoaded()) {
 			needsShowAd = false;
 			interstitial.show();
@@ -166,7 +166,7 @@ public class LauncherAppActivity extends LauncherActivity {
 
 	private void adOver() {
 		needsShowAd = false;
-		shadePopup.dismiss();
+		//shadePopup.dismiss();
 		ScriptManager.nativeSetExitEnabled(true);
 	}
 
