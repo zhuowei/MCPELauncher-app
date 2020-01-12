@@ -1,9 +1,0 @@
-#version 100
-//This file is purely here to let the code compile. It is used only for Hololens, which currently runs only on DX11 compatible devices
-
-varying vec4 color;
-
-void main()
-{
-	gl_FragColor = color;
-}
