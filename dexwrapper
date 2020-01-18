@@ -1,4 +1,4 @@
 #!/bin/sh
 mypath=`dirname "$3"`
 shift 3 # --dex --output path
-exec /home/zhuowei/downloads/android-sdk-linux_86/build-tools/23.0.3/dx -JXmx3G -JXms3G --dex --multi-dex --output "$mypath" "$@"
+exec "$ANDROID_HOME/build-tools/23.0.3/dx" -JXmx3G -JXms3G --dex --multi-dex --output "$mypath" "$@"
